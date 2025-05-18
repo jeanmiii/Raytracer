@@ -1,0 +1,188 @@
+\doxysection{Raytracer\+::Camera Class Reference}
+\hypertarget{classRaytracer_1_1Camera}{}\label{classRaytracer_1_1Camera}\index{Raytracer::Camera@{Raytracer::Camera}}
+
+
+Represents a camera in the raytracer.  
+
+
+
+
+{\ttfamily \#include $<$Camera.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1Camera_a2a0d7f9f9a9fdc34a9253270a02d12cf}{Camera}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{classRaytracer_1_1Camera}{Camera} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1Camera_abb0574f2f4b759d4467103c7c84914bb}{set\+Position}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&pos)
+\begin{DoxyCompactList}\small\item\em Set the camera\textquotesingle{}s position in 3D space. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1Camera_a7fcae67bf3be06f869d10e8a4ea7ddab}{set\+Rotation}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&rot)
+\begin{DoxyCompactList}\small\item\em Set the camera\textquotesingle{}s rotation in degrees (pitch, yaw, roll). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1Camera_a73f6e4b6c120f11c26af721984b65181}{set\+Field\+Of\+View}} (float fov)
+\begin{DoxyCompactList}\small\item\em Set the camera\textquotesingle{}s field of view (FOV). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1Camera_a64ba4e2d6e0095bb2ba96dc9ee24dc54}{set\+Resolution}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Set the rendering resolution of the camera. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \& \mbox{\hyperlink{classRaytracer_1_1Camera_afa902f5beacc9271d84f3295a15a4b80}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get the current position of the camera. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \& \mbox{\hyperlink{classRaytracer_1_1Camera_acdc8c214aae5138a8002b45096f3bf4d}{get\+Rotation}} () const
+\begin{DoxyCompactList}\small\item\em Get the current rotation of the camera. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classRaytracer_1_1Camera_a70caed1f5bd34e1dc90ba701f6ecdc52}{get\+Field\+Of\+View}} () const
+\begin{DoxyCompactList}\small\item\em Get the field of view of the camera. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRaytracer_1_1Camera_a8f8e880309e4ba9cb701d799866826f4}{get\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Get the width of the resolution. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRaytracer_1_1Camera_aade68c5f3e4ea69f2d147c4b7cfe088e}{get\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Get the height of the resolution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a camera in the raytracer. 
+
+Provides control over position, orientation, field of view, and resolution. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1Camera_a2a0d7f9f9a9fdc34a9253270a02d12cf}\index{Raytracer::Camera@{Raytracer::Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Raytracer::Camera@{Raytracer::Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Camera_a2a0d7f9f9a9fdc34a9253270a02d12cf} 
+Raytracer\+::\+Camera\+::\+Camera (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \doxylink{classRaytracer_1_1Camera}{Camera} class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1Camera_a70caed1f5bd34e1dc90ba701f6ecdc52}\index{Raytracer::Camera@{Raytracer::Camera}!getFieldOfView@{getFieldOfView}}
+\index{getFieldOfView@{getFieldOfView}!Raytracer::Camera@{Raytracer::Camera}}
+\doxysubsubsection{\texorpdfstring{getFieldOfView()}{getFieldOfView()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Camera_a70caed1f5bd34e1dc90ba701f6ecdc52} 
+float Raytracer\+::\+Camera\+::get\+Field\+Of\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the field of view of the camera. 
+
+\begin{DoxyReturn}{Returns}
+The FOV in degrees. 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Camera_aade68c5f3e4ea69f2d147c4b7cfe088e}\index{Raytracer::Camera@{Raytracer::Camera}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!Raytracer::Camera@{Raytracer::Camera}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Camera_aade68c5f3e4ea69f2d147c4b7cfe088e} 
+int Raytracer\+::\+Camera\+::get\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the height of the resolution. 
+
+\begin{DoxyReturn}{Returns}
+The height in pixels. 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Camera_afa902f5beacc9271d84f3295a15a4b80}\index{Raytracer::Camera@{Raytracer::Camera}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Raytracer::Camera@{Raytracer::Camera}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Camera_afa902f5beacc9271d84f3295a15a4b80} 
+const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} \& Raytracer\+::\+Camera\+::get\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the current position of the camera. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the position \doxylink{classRaytracer_1_1Vector3}{Vector3}. 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Camera_acdc8c214aae5138a8002b45096f3bf4d}\index{Raytracer::Camera@{Raytracer::Camera}!getRotation@{getRotation}}
+\index{getRotation@{getRotation}!Raytracer::Camera@{Raytracer::Camera}}
+\doxysubsubsection{\texorpdfstring{getRotation()}{getRotation()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Camera_acdc8c214aae5138a8002b45096f3bf4d} 
+const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} \& Raytracer\+::\+Camera\+::get\+Rotation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the current rotation of the camera. 
+
+\begin{DoxyReturn}{Returns}
+A constant reference to the rotation \doxylink{classRaytracer_1_1Vector3}{Vector3}. 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Camera_a8f8e880309e4ba9cb701d799866826f4}\index{Raytracer::Camera@{Raytracer::Camera}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!Raytracer::Camera@{Raytracer::Camera}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Camera_a8f8e880309e4ba9cb701d799866826f4} 
+int Raytracer\+::\+Camera\+::get\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the width of the resolution. 
+
+\begin{DoxyReturn}{Returns}
+The width in pixels. 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Camera_a73f6e4b6c120f11c26af721984b65181}\index{Raytracer::Camera@{Raytracer::Camera}!setFieldOfView@{setFieldOfView}}
+\index{setFieldOfView@{setFieldOfView}!Raytracer::Camera@{Raytracer::Camera}}
+\doxysubsubsection{\texorpdfstring{setFieldOfView()}{setFieldOfView()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Camera_a73f6e4b6c120f11c26af721984b65181} 
+void Raytracer\+::\+Camera\+::set\+Field\+Of\+View (\begin{DoxyParamCaption}\item[{float}]{fov}{}\end{DoxyParamCaption})}
+
+
+
+Set the camera\textquotesingle{}s field of view (FOV). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fov} & The field of view in degrees. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRaytracer_1_1Camera_abb0574f2f4b759d4467103c7c84914bb}\index{Raytracer::Camera@{Raytracer::Camera}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Raytracer::Camera@{Raytracer::Camera}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Camera_abb0574f2f4b759d4467103c7c84914bb} 
+void Raytracer\+::\+Camera\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{pos}{}\end{DoxyParamCaption})}
+
+
+
+Set the camera\textquotesingle{}s position in 3D space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & A \doxylink{classRaytracer_1_1Vector3}{Vector3} representing the new position. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRaytracer_1_1Camera_a64ba4e2d6e0095bb2ba96dc9ee24dc54}\index{Raytracer::Camera@{Raytracer::Camera}!setResolution@{setResolution}}
+\index{setResolution@{setResolution}!Raytracer::Camera@{Raytracer::Camera}}
+\doxysubsubsection{\texorpdfstring{setResolution()}{setResolution()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Camera_a64ba4e2d6e0095bb2ba96dc9ee24dc54} 
+void Raytracer\+::\+Camera\+::set\+Resolution (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+
+
+Set the rendering resolution of the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width in pixels. \\
+\hline
+{\em height} & The height in pixels. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRaytracer_1_1Camera_a7fcae67bf3be06f869d10e8a4ea7ddab}\index{Raytracer::Camera@{Raytracer::Camera}!setRotation@{setRotation}}
+\index{setRotation@{setRotation}!Raytracer::Camera@{Raytracer::Camera}}
+\doxysubsubsection{\texorpdfstring{setRotation()}{setRotation()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Camera_a7fcae67bf3be06f869d10e8a4ea7ddab} 
+void Raytracer\+::\+Camera\+::set\+Rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{rot}{}\end{DoxyParamCaption})}
+
+
+
+Set the camera\textquotesingle{}s rotation in degrees (pitch, yaw, roll). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rot} & A \doxylink{classRaytracer_1_1Vector3}{Vector3} representing the rotation. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Core/\mbox{\hyperlink{Camera_8hpp}{Camera.\+hpp}}\item 
+src/\+Core/\mbox{\hyperlink{Camera_8cpp}{Camera.\+cpp}}\end{DoxyCompactItemize}

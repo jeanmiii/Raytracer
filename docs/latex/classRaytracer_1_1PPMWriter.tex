@@ -1,0 +1,96 @@
+\doxysection{Raytracer\+::PPMWriter Class Reference}
+\hypertarget{classRaytracer_1_1PPMWriter}{}\label{classRaytracer_1_1PPMWriter}\index{Raytracer::PPMWriter@{Raytracer::PPMWriter}}
+
+
+Handles writing of images to PPM format files.  
+
+
+
+
+{\ttfamily \#include $<$Ppm\+Writer.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1PPMWriter_aa87a1490cdaddd5aba004834254a4988}{PPMWriter}} (const \mbox{\hyperlink{classRaytracer_1_1Renderer}{Renderer}} \&renderer)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classRaytracer_1_1PPMWriter}{PPMWriter} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRaytracer_1_1PPMWriter_a3b27102c6d26d21254935a49e4af2204}{save\+To\+File}} (const std\+::string \&filename) const
+\begin{DoxyCompactList}\small\item\em Save the renderer\textquotesingle{}s image to a PPM file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classRaytracer_1_1PPMWriter_aa6018ac13ec85584b6cc80bee18507c8}{write}} (const std\+::string \&filename, const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classRaytracer_1_1Color}{Color}} $>$ $>$ \&image)
+\begin{DoxyCompactList}\small\item\em Static method to write any image buffer to PPM format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles writing of images to PPM format files. 
+
+Provides functionality to save rendered images from the ray tracer to PPM files. Can operate either with a \doxylink{classRaytracer_1_1Renderer}{Renderer} reference or directly with an image buffer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1PPMWriter_aa87a1490cdaddd5aba004834254a4988}\index{Raytracer::PPMWriter@{Raytracer::PPMWriter}!PPMWriter@{PPMWriter}}
+\index{PPMWriter@{PPMWriter}!Raytracer::PPMWriter@{Raytracer::PPMWriter}}
+\doxysubsubsection{\texorpdfstring{PPMWriter()}{PPMWriter()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1PPMWriter_aa87a1490cdaddd5aba004834254a4988} 
+Raytracer\+::\+PPMWriter\+::\+PPMWriter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Renderer}{Renderer}} \&}]{renderer}{}\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{classRaytracer_1_1PPMWriter}{PPMWriter} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & Reference to the renderer containing the image to save \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1PPMWriter_a3b27102c6d26d21254935a49e4af2204}\index{Raytracer::PPMWriter@{Raytracer::PPMWriter}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!Raytracer::PPMWriter@{Raytracer::PPMWriter}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1PPMWriter_a3b27102c6d26d21254935a49e4af2204} 
+bool Raytracer\+::\+PPMWriter\+::save\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption}) const}
+
+
+
+Save the renderer\textquotesingle{}s image to a PPM file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the output file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if file was successfully written, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1PPMWriter_aa6018ac13ec85584b6cc80bee18507c8}\index{Raytracer::PPMWriter@{Raytracer::PPMWriter}!write@{write}}
+\index{write@{write}!Raytracer::PPMWriter@{Raytracer::PPMWriter}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1PPMWriter_aa6018ac13ec85584b6cc80bee18507c8} 
+bool Raytracer\+::\+PPMWriter\+::write (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{, }\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classRaytracer_1_1Color}{Color}} $>$ $>$ \&}]{image}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Static method to write any image buffer to PPM format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the output file \\
+\hline
+{\em image} & 2D vector of Colors representing the image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if file was successfully written, false otherwise
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This static method can be used without instantiating \doxylink{classRaytracer_1_1PPMWriter}{PPMWriter} 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Utils/\mbox{\hyperlink{PpmWriter_8hpp}{Ppm\+Writer.\+hpp}}\item 
+src/\+Utils/\mbox{\hyperlink{PpmWriter_8cpp}{Ppm\+Writer.\+cpp}}\end{DoxyCompactItemize}

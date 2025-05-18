@@ -1,0 +1,172 @@
+\doxysection{Raytracer\+::Color Class Reference}
+\hypertarget{classRaytracer_1_1Color}{}\label{classRaytracer_1_1Color}\index{Raytracer::Color@{Raytracer::Color}}
+
+
+RGB color representation with 8-\/bit channels.  
+
+
+
+
+{\ttfamily \#include $<$Color.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1Color_a6468d86314d9da7ace60681d7f229c83}{Color}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor (initializes to black) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Color_acc57b4639c27dab0f282840d73e6029f}{Color}} (int r, int g, int b)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classRaytracer_1_1Color}{Color} object with specified components. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRaytracer_1_1Color_a1e944d8e3ede1f69debc400d400ca222}{getR}} () const
+\begin{DoxyCompactList}\small\item\em Get the red component. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRaytracer_1_1Color_a98137835a75c36143119f1035e1fd553}{getG}} () const
+\begin{DoxyCompactList}\small\item\em Get the green component. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRaytracer_1_1Color_a993e32df000aa4cab2f3e6ebf15f58a1}{getB}} () const
+\begin{DoxyCompactList}\small\item\em Get the blue component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1Color_a457f965347f61735c93acefc6f346fd0}{setR}} (int r)
+\begin{DoxyCompactList}\small\item\em Set the red component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1Color_ab5daef126c94269e55a7f5dee224558c}{setG}} (int g)
+\begin{DoxyCompactList}\small\item\em Set the green component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1Color_a4d884d9985eb6995e1a3500250c0ccee}{setB}} (int b)
+\begin{DoxyCompactList}\small\item\em Set the blue component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1Color_ab11843b6ceb020a9e5ebc9f35d46c149}{clamp}} ()
+\begin{DoxyCompactList}\small\item\em Clamp all color components to valid range \mbox{[}0-\/255\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+RGB color representation with 8-\/bit channels. 
+
+Stores and manipulates color information in RGB format. Provides methods for component access and basic color operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1Color_a6468d86314d9da7ace60681d7f229c83}\index{Raytracer::Color@{Raytracer::Color}!Color@{Color}}
+\index{Color@{Color}!Raytracer::Color@{Raytracer::Color}}
+\doxysubsubsection{\texorpdfstring{Color()}{Color()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Color_a6468d86314d9da7ace60681d7f229c83} 
+Raytracer\+::\+Color\+::\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor (initializes to black) 
+
+\Hypertarget{classRaytracer_1_1Color_acc57b4639c27dab0f282840d73e6029f}\index{Raytracer::Color@{Raytracer::Color}!Color@{Color}}
+\index{Color@{Color}!Raytracer::Color@{Raytracer::Color}}
+\doxysubsubsection{\texorpdfstring{Color()}{Color()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Color_acc57b4639c27dab0f282840d73e6029f} 
+Raytracer\+::\+Color\+::\+Color (\begin{DoxyParamCaption}\item[{int}]{r}{, }\item[{int}]{g}{, }\item[{int}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{classRaytracer_1_1Color}{Color} object with specified components. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Red component (0-\/255) \\
+\hline
+{\em g} & Green component (0-\/255) \\
+\hline
+{\em b} & Blue component (0-\/255) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1Color_ab11843b6ceb020a9e5ebc9f35d46c149}\index{Raytracer::Color@{Raytracer::Color}!clamp@{clamp}}
+\index{clamp@{clamp}!Raytracer::Color@{Raytracer::Color}}
+\doxysubsubsection{\texorpdfstring{clamp()}{clamp()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Color_ab11843b6ceb020a9e5ebc9f35d46c149} 
+void Raytracer\+::\+Color\+::clamp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Clamp all color components to valid range \mbox{[}0-\/255\mbox{]}. 
+
+\Hypertarget{classRaytracer_1_1Color_a993e32df000aa4cab2f3e6ebf15f58a1}\index{Raytracer::Color@{Raytracer::Color}!getB@{getB}}
+\index{getB@{getB}!Raytracer::Color@{Raytracer::Color}}
+\doxysubsubsection{\texorpdfstring{getB()}{getB()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Color_a993e32df000aa4cab2f3e6ebf15f58a1} 
+int Raytracer\+::\+Color\+::getB (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the blue component. 
+
+\begin{DoxyReturn}{Returns}
+int Blue value (0-\/255) 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Color_a98137835a75c36143119f1035e1fd553}\index{Raytracer::Color@{Raytracer::Color}!getG@{getG}}
+\index{getG@{getG}!Raytracer::Color@{Raytracer::Color}}
+\doxysubsubsection{\texorpdfstring{getG()}{getG()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Color_a98137835a75c36143119f1035e1fd553} 
+int Raytracer\+::\+Color\+::getG (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the green component. 
+
+\begin{DoxyReturn}{Returns}
+int Green value (0-\/255) 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Color_a1e944d8e3ede1f69debc400d400ca222}\index{Raytracer::Color@{Raytracer::Color}!getR@{getR}}
+\index{getR@{getR}!Raytracer::Color@{Raytracer::Color}}
+\doxysubsubsection{\texorpdfstring{getR()}{getR()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Color_a1e944d8e3ede1f69debc400d400ca222} 
+int Raytracer\+::\+Color\+::getR (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the red component. 
+
+\begin{DoxyReturn}{Returns}
+int Red value (0-\/255) 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Color_a4d884d9985eb6995e1a3500250c0ccee}\index{Raytracer::Color@{Raytracer::Color}!setB@{setB}}
+\index{setB@{setB}!Raytracer::Color@{Raytracer::Color}}
+\doxysubsubsection{\texorpdfstring{setB()}{setB()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Color_a4d884d9985eb6995e1a3500250c0ccee} 
+void Raytracer\+::\+Color\+::setB (\begin{DoxyParamCaption}\item[{int}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Set the blue component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Blue value (will be clamped to 0-\/255) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRaytracer_1_1Color_ab5daef126c94269e55a7f5dee224558c}\index{Raytracer::Color@{Raytracer::Color}!setG@{setG}}
+\index{setG@{setG}!Raytracer::Color@{Raytracer::Color}}
+\doxysubsubsection{\texorpdfstring{setG()}{setG()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Color_ab5daef126c94269e55a7f5dee224558c} 
+void Raytracer\+::\+Color\+::setG (\begin{DoxyParamCaption}\item[{int}]{g}{}\end{DoxyParamCaption})}
+
+
+
+Set the green component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & Green value (will be clamped to 0-\/255) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRaytracer_1_1Color_a457f965347f61735c93acefc6f346fd0}\index{Raytracer::Color@{Raytracer::Color}!setR@{setR}}
+\index{setR@{setR}!Raytracer::Color@{Raytracer::Color}}
+\doxysubsubsection{\texorpdfstring{setR()}{setR()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Color_a457f965347f61735c93acefc6f346fd0} 
+void Raytracer\+::\+Color\+::setR (\begin{DoxyParamCaption}\item[{int}]{r}{}\end{DoxyParamCaption})}
+
+
+
+Set the red component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Red value (will be clamped to 0-\/255) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Utils/\mbox{\hyperlink{Color_8hpp}{Color.\+hpp}}\item 
+src/\+Utils/\mbox{\hyperlink{Color_8cpp}{Color.\+cpp}}\end{DoxyCompactItemize}

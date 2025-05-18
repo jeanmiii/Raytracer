@@ -1,0 +1,25 @@
+\doxysection{Obj\+Parser.\+hpp}
+\hypertarget{ObjParser_8hpp_source}{}\label{ObjParser_8hpp_source}\index{include/Parser/ObjParser.hpp@{include/Parser/ObjParser.hpp}}
+\mbox{\hyperlink{ObjParser_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Vector3_8hpp}{Utils/Vector3.hpp}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceRaytracer}{Raytracer}}\ \{}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structRaytracer_1_1ParsedTriangle}{ParsedTriangle}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\ \mbox{\hyperlink{structRaytracer_1_1ParsedTriangle_abfdf27fdf5d789b11abcdbb766a38c08}{a}};\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\ \mbox{\hyperlink{structRaytracer_1_1ParsedTriangle_a09f4ad4d0e419084161a6f5a931f901b}{b}};\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\ \mbox{\hyperlink{structRaytracer_1_1ParsedTriangle_a6665859f89175686c43fc965da726bd1}{c}};\ }
+\DoxyCodeLine{00029\ \ \ \ \ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRaytracer_1_1ObjParser}{ObjParser}}\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::vector<ParsedTriangle>\ \mbox{\hyperlink{classRaytracer_1_1ObjParser_aea12fd36cd2cba5529c078af982b8cd8}{loadFromFile}}(\textcolor{keyword}{const}\ std::string\ \&filename,\ \textcolor{keywordtype}{float}\ scale\ =\ 1.0f,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\ \&offset\ =\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}(0.0f,\ 0.0f,\ 0.0f),\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\ \&rotation\ =\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}(0.0f,\ 0.0f,\ 0.0f));}
+\DoxyCodeLine{00055\ \ \ \ \ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \}}
+
+\end{DoxyCode}

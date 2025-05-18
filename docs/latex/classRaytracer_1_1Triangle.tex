@@ -1,0 +1,180 @@
+\doxysection{Raytracer\+::Triangle Class Reference}
+\hypertarget{classRaytracer_1_1Triangle}{}\label{classRaytracer_1_1Triangle}\index{Raytracer::Triangle@{Raytracer::Triangle}}
+
+
+Represents a triangle primitive for raytracing.  
+
+
+
+
+{\ttfamily \#include $<$Triangle.\+hpp$>$}
+
+Inheritance diagram for Raytracer\+::Triangle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRaytracer_1_1Triangle}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1Triangle_a53cb508138c7d6ea73d29ea42d77a7c3}{Triangle}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&a, const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&b, const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&c, const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&material)
+\begin{DoxyCompactList}\small\item\em Constructs a triangle primitive. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRaytracer_1_1Triangle_afa0080778796c25f1d8eb7a4f4cc9222}{intersect}} (const \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}} \&ray, float \&t) const override
+\begin{DoxyCompactList}\small\item\em Tests if a ray intersects with this triangle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1Triangle_a2490c78624ed66940c2a23d8ce7f5b88}{get\+Normal}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Calculates the normal vector of the triangle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Color}{Color}} \mbox{\hyperlink{classRaytracer_1_1Triangle_ac16dd009848df1b7c60088b7e540acbc}{get\+Color}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the color of the triangle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1Triangle_a932257d40bbeef23232d86bd6df86414}{get\+Center}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the center point (centroid) of the triangle. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \& \mbox{\hyperlink{classRaytracer_1_1Triangle_a5ec1eb21e710923eace01ee14c48ac7c}{get\+Material}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the material of the triangle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{Raytracer\+::\+IPrimitive}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classRaytracer_1_1IPrimitive_aa4aea2318383a59a56b7b10db96d55d0}{\texorpdfstring{$\sim$}{\string~}\+IPrimitive}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic cleanup. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a triangle primitive for raytracing. 
+
+The \doxylink{classRaytracer_1_1Triangle}{Triangle} class defines a triangle in 3D space, characterized by three vertices. It provides methods for ray-\/triangle intersection testing using the Möller–\+Trumbore algorithm and normal vector calculation which are essential for the raytracing process. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1Triangle_a53cb508138c7d6ea73d29ea42d77a7c3}\index{Raytracer::Triangle@{Raytracer::Triangle}!Triangle@{Triangle}}
+\index{Triangle@{Triangle}!Raytracer::Triangle@{Raytracer::Triangle}}
+\doxysubsubsection{\texorpdfstring{Triangle()}{Triangle()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Triangle_a53cb508138c7d6ea73d29ea42d77a7c3} 
+Raytracer\+::\+Triangle\+::\+Triangle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{a}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{b}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{c}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&}]{material}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a triangle primitive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First vertex of the triangle \\
+\hline
+{\em b} & Second vertex of the triangle \\
+\hline
+{\em c} & Third vertex of the triangle \\
+\hline
+{\em material} & The material properties of the triangle \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1Triangle_a932257d40bbeef23232d86bd6df86414}\index{Raytracer::Triangle@{Raytracer::Triangle}!getCenter@{getCenter}}
+\index{getCenter@{getCenter}!Raytracer::Triangle@{Raytracer::Triangle}}
+\doxysubsubsection{\texorpdfstring{getCenter()}{getCenter()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Triangle_a932257d40bbeef23232d86bd6df86414} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} Raytracer\+::\+Triangle\+::get\+Center (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the center point (centroid) of the triangle. 
+
+Calculates the centroid of the triangle by averaging the three vertices.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} The center point (centroid) of the triangle 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a48b3fa15f48633c82d04bdd950c4ba3a}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Triangle_ac16dd009848df1b7c60088b7e540acbc}\index{Raytracer::Triangle@{Raytracer::Triangle}!getColor@{getColor}}
+\index{getColor@{getColor}!Raytracer::Triangle@{Raytracer::Triangle}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Triangle_ac16dd009848df1b7c60088b7e540acbc} 
+\mbox{\hyperlink{classRaytracer_1_1Color}{Color}} Raytracer\+::\+Triangle\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the color of the triangle. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Color}{Color} The color derived from the triangle\textquotesingle{}s material 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_adef7febce98bf6b9066679f63e0c2377}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Triangle_a5ec1eb21e710923eace01ee14c48ac7c}\index{Raytracer::Triangle@{Raytracer::Triangle}!getMaterial@{getMaterial}}
+\index{getMaterial@{getMaterial}!Raytracer::Triangle@{Raytracer::Triangle}}
+\doxysubsubsection{\texorpdfstring{getMaterial()}{getMaterial()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Triangle_a5ec1eb21e710923eace01ee14c48ac7c} 
+const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \& Raytracer\+::\+Triangle\+::get\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the material of the triangle. 
+
+\begin{DoxyReturn}{Returns}
+const \doxylink{classRaytracer_1_1Material}{Material}\& Reference to the triangle\textquotesingle{}s material 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a4f3f11706602a77f7aa891adac0e6767}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Triangle_a2490c78624ed66940c2a23d8ce7f5b88}\index{Raytracer::Triangle@{Raytracer::Triangle}!getNormal@{getNormal}}
+\index{getNormal@{getNormal}!Raytracer::Triangle@{Raytracer::Triangle}}
+\doxysubsubsection{\texorpdfstring{getNormal()}{getNormal()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Triangle_a2490c78624ed66940c2a23d8ce7f5b88} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} Raytracer\+::\+Triangle\+::get\+Normal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculates the normal vector of the triangle. 
+
+The normal of a triangle is calculated as the cross product of two edges, which is constant across the entire triangle unless smooth shading is used.
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & The point on the triangle\textquotesingle{}s surface (unused in flat shading) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} The normalized normal vector 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a03a1602232f80f319b587902a6884479}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Triangle_afa0080778796c25f1d8eb7a4f4cc9222}\index{Raytracer::Triangle@{Raytracer::Triangle}!intersect@{intersect}}
+\index{intersect@{intersect}!Raytracer::Triangle@{Raytracer::Triangle}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Triangle_afa0080778796c25f1d8eb7a4f4cc9222} 
+bool Raytracer\+::\+Triangle\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}} \&}]{ray}{, }\item[{float \&}]{t}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Tests if a ray intersects with this triangle. 
+
+Calculates if and where a ray intersects with this triangle using the Möller–\+Trumbore algorithm. The intersection distance is stored in the parameter t if an intersection is found.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to test for intersection \\
+\hline
+{\em t} & Output parameter that will contain the distance to intersection if found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If the ray intersects with the triangle 
+
+false If no intersection is found 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a71209e0c7a44d5746c9796405b9d1787}{Raytracer\+::\+IPrimitive}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Primitives/\mbox{\hyperlink{Triangle_8hpp}{Triangle.\+hpp}}\item 
+src/\+Primitives/\mbox{\hyperlink{Triangle_8cpp}{Triangle.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,182 @@
+\doxysection{Raytracer\+::Cone Class Reference}
+\hypertarget{classRaytracer_1_1Cone}{}\label{classRaytracer_1_1Cone}\index{Raytracer::Cone@{Raytracer::Cone}}
+
+
+Represents a cone primitive for raytracing.  
+
+
+
+
+{\ttfamily \#include $<$Cone.\+hpp$>$}
+
+Inheritance diagram for Raytracer\+::Cone\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRaytracer_1_1Cone}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1Cone_a9846ab01e2d197144c8f139d5381109c}{Cone}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&base\+Center, float radius, float height, const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&rotation, const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&material)
+\begin{DoxyCompactList}\small\item\em Constructs a cone primitive. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRaytracer_1_1Cone_aeecc1d94521dee8cee996c8d345f79fb}{intersect}} (const \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}} \&ray, float \&t) const override
+\begin{DoxyCompactList}\small\item\em Tests if a ray intersects with this cone. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1Cone_a2c0cfa0c25e5e8c00d7076d67c789232}{get\+Normal}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Calculates the normal vector at a point on the cone. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Color}{Color}} \mbox{\hyperlink{classRaytracer_1_1Cone_af7af65105558be4f5a1e23fa31f7083b}{get\+Color}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the color of the cone. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1Cone_a5a221ebf035733807eaa680aea7093cd}{get\+Center}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the center point of the cone. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \& \mbox{\hyperlink{classRaytracer_1_1Cone_abdd1893e72871fc658ed3f5e4b44ec44}{get\+Material}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the material of the cone. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{Raytracer\+::\+IPrimitive}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classRaytracer_1_1IPrimitive_aa4aea2318383a59a56b7b10db96d55d0}{\texorpdfstring{$\sim$}{\string~}\+IPrimitive}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic cleanup. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a cone primitive for raytracing. 
+
+The \doxylink{classRaytracer_1_1Cone}{Cone} class defines a cone in 3D space, characterized by its base center, radius, height, and orientation. It provides methods for ray-\/cone intersection testing and normal vector calculation which are essential for the raytracing process. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1Cone_a9846ab01e2d197144c8f139d5381109c}\index{Raytracer::Cone@{Raytracer::Cone}!Cone@{Cone}}
+\index{Cone@{Cone}!Raytracer::Cone@{Raytracer::Cone}}
+\doxysubsubsection{\texorpdfstring{Cone()}{Cone()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Cone_a9846ab01e2d197144c8f139d5381109c} 
+Raytracer\+::\+Cone\+::\+Cone (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{base\+Center}{, }\item[{float}]{radius}{, }\item[{float}]{height}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{rotation}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&}]{material}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a cone primitive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Center} & The center of the cone\textquotesingle{}s base \\
+\hline
+{\em radius} & The radius of the cone\textquotesingle{}s base \\
+\hline
+{\em height} & The height of the cone (can be infinite) \\
+\hline
+{\em rotation} & The rotation of the cone in degrees (x, y, z angles) \\
+\hline
+{\em material} & The material properties of the cone \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1Cone_a5a221ebf035733807eaa680aea7093cd}\index{Raytracer::Cone@{Raytracer::Cone}!getCenter@{getCenter}}
+\index{getCenter@{getCenter}!Raytracer::Cone@{Raytracer::Cone}}
+\doxysubsubsection{\texorpdfstring{getCenter()}{getCenter()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Cone_a5a221ebf035733807eaa680aea7093cd} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} Raytracer\+::\+Cone\+::get\+Center (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the center point of the cone. 
+
+Returns the center of the cone, which is at a point 1/3 of the height from the base to the apex, along the central axis.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} The center point of the cone 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a48b3fa15f48633c82d04bdd950c4ba3a}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Cone_af7af65105558be4f5a1e23fa31f7083b}\index{Raytracer::Cone@{Raytracer::Cone}!getColor@{getColor}}
+\index{getColor@{getColor}!Raytracer::Cone@{Raytracer::Cone}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Cone_af7af65105558be4f5a1e23fa31f7083b} 
+\mbox{\hyperlink{classRaytracer_1_1Color}{Color}} Raytracer\+::\+Cone\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the color of the cone. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Color}{Color} The color derived from the cone\textquotesingle{}s material 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_adef7febce98bf6b9066679f63e0c2377}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Cone_abdd1893e72871fc658ed3f5e4b44ec44}\index{Raytracer::Cone@{Raytracer::Cone}!getMaterial@{getMaterial}}
+\index{getMaterial@{getMaterial}!Raytracer::Cone@{Raytracer::Cone}}
+\doxysubsubsection{\texorpdfstring{getMaterial()}{getMaterial()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Cone_abdd1893e72871fc658ed3f5e4b44ec44} 
+const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \& Raytracer\+::\+Cone\+::get\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the material of the cone. 
+
+\begin{DoxyReturn}{Returns}
+const \doxylink{classRaytracer_1_1Material}{Material}\& Reference to the cone\textquotesingle{}s material 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a4f3f11706602a77f7aa891adac0e6767}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Cone_a2c0cfa0c25e5e8c00d7076d67c789232}\index{Raytracer::Cone@{Raytracer::Cone}!getNormal@{getNormal}}
+\index{getNormal@{getNormal}!Raytracer::Cone@{Raytracer::Cone}}
+\doxysubsubsection{\texorpdfstring{getNormal()}{getNormal()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Cone_a2c0cfa0c25e5e8c00d7076d67c789232} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} Raytracer\+::\+Cone\+::get\+Normal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculates the normal vector at a point on the cone. 
+
+Determines the normal based on whether the point is on the conical surface or on the base.
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & The point on the cone\textquotesingle{}s surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} The normalized normal vector 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a03a1602232f80f319b587902a6884479}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Cone_aeecc1d94521dee8cee996c8d345f79fb}\index{Raytracer::Cone@{Raytracer::Cone}!intersect@{intersect}}
+\index{intersect@{intersect}!Raytracer::Cone@{Raytracer::Cone}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Cone_aeecc1d94521dee8cee996c8d345f79fb} 
+bool Raytracer\+::\+Cone\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}} \&}]{ray}{, }\item[{float \&}]{t}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Tests if a ray intersects with this cone. 
+
+Calculates if and where a ray intersects with this cone, considering both the conical surface and the base (for finite cones). The intersection distance is stored in the parameter t if an intersection is found.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to test for intersection \\
+\hline
+{\em t} & Output parameter that will contain the distance to intersection if found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If the ray intersects with the cone 
+
+false If no intersection is found 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a71209e0c7a44d5746c9796405b9d1787}{Raytracer\+::\+IPrimitive}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Primitives/\mbox{\hyperlink{Cone_8hpp}{Cone.\+hpp}}\item 
+src/\+Primitives/\mbox{\hyperlink{Cone_8cpp}{Cone.\+cpp}}\end{DoxyCompactItemize}

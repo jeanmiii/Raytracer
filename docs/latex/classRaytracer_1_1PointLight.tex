@@ -1,0 +1,98 @@
+\doxysection{Raytracer\+::Point\+Light Class Reference}
+\hypertarget{classRaytracer_1_1PointLight}{}\label{classRaytracer_1_1PointLight}\index{Raytracer::PointLight@{Raytracer::PointLight}}
+
+
+{\ttfamily \#include $<$Point\+Light.\+hpp$>$}
+
+Inheritance diagram for Raytracer\+::Point\+Light\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRaytracer_1_1PointLight}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1PointLight_a41f70e035416d0c4f7d1e1fc2be28b0e}{Point\+Light}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&position, float intensity=1.\+0f)
+\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1PointLight_a40b63478a4ffd3857835e1a1c9dcd2ee}{get\+Direction\+From}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Get the direction vector from a point to this light. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classRaytracer_1_1PointLight_a6f35857fc8faa6cd4d918260fec5f67d}{get\+Intensity}} () const override
+\begin{DoxyCompactList}\small\item\em Get the intensity of the light. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1PointLight_a44fb0b1fb440259f5247addb01207c4b}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get the position of the light source. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classRaytracer_1_1ILight}{Raytracer\+::\+ILight}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classRaytracer_1_1ILight_a8f8b347664941557a53713a43cf55e7a}{\texorpdfstring{$\sim$}{\string~}\+ILight}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic destruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1PointLight_a41f70e035416d0c4f7d1e1fc2be28b0e}\index{Raytracer::PointLight@{Raytracer::PointLight}!PointLight@{PointLight}}
+\index{PointLight@{PointLight}!Raytracer::PointLight@{Raytracer::PointLight}}
+\doxysubsubsection{\texorpdfstring{PointLight()}{PointLight()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1PointLight_a41f70e035416d0c4f7d1e1fc2be28b0e} 
+Raytracer\+::\+Point\+Light\+::\+Point\+Light (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{position}{, }\item[{float}]{intensity}{ = {\ttfamily 1.0f}}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1PointLight_a40b63478a4ffd3857835e1a1c9dcd2ee}\index{Raytracer::PointLight@{Raytracer::PointLight}!getDirectionFrom@{getDirectionFrom}}
+\index{getDirectionFrom@{getDirectionFrom}!Raytracer::PointLight@{Raytracer::PointLight}}
+\doxysubsubsection{\texorpdfstring{getDirectionFrom()}{getDirectionFrom()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1PointLight_a40b63478a4ffd3857835e1a1c9dcd2ee} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} Raytracer\+::\+Point\+Light\+::get\+Direction\+From (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the direction vector from a point to this light. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & The point from which to calculate the direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} Normalized direction vector pointing toward the light 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1ILight_a62b8eabf93415a4cf0531a1b58979e81}{Raytracer\+::\+ILight}}.
+
+\Hypertarget{classRaytracer_1_1PointLight_a6f35857fc8faa6cd4d918260fec5f67d}\index{Raytracer::PointLight@{Raytracer::PointLight}!getIntensity@{getIntensity}}
+\index{getIntensity@{getIntensity}!Raytracer::PointLight@{Raytracer::PointLight}}
+\doxysubsubsection{\texorpdfstring{getIntensity()}{getIntensity()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1PointLight_a6f35857fc8faa6cd4d918260fec5f67d} 
+float Raytracer\+::\+Point\+Light\+::get\+Intensity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the intensity of the light. 
+
+\begin{DoxyReturn}{Returns}
+float The intensity value of the light 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1ILight_aa61d5ec737f8c14407e821fbe2532845}{Raytracer\+::\+ILight}}.
+
+\Hypertarget{classRaytracer_1_1PointLight_a44fb0b1fb440259f5247addb01207c4b}\index{Raytracer::PointLight@{Raytracer::PointLight}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Raytracer::PointLight@{Raytracer::PointLight}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1PointLight_a44fb0b1fb440259f5247addb01207c4b} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} Raytracer\+::\+Point\+Light\+::get\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the position of the light source. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} The 3D position of the light 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Lights/\mbox{\hyperlink{PointLight_8hpp}{Point\+Light.\+hpp}}\item 
+src/\+Lights/\mbox{\hyperlink{PointLight_8cpp}{Point\+Light.\+cpp}}\end{DoxyCompactItemize}

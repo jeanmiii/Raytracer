@@ -1,0 +1,47 @@
+\doxysection{include/\+Utils/\+Polynomial\+Solver.hpp File Reference}
+\hypertarget{PolynomialSolver_8hpp}{}\label{PolynomialSolver_8hpp}\index{include/Utils/PolynomialSolver.hpp@{include/Utils/PolynomialSolver.hpp}}
+
+
+Polynomial equation solver for ray-\/object intersections.  
+
+
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classRaytracer_1_1PolynomialSolver}{Raytracer\+::\+Polynomial\+Solver}}
+\begin{DoxyCompactList}\small\item\em Static class for solving polynomial equations up to degree 4. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceRaytracer}{Raytracer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Polynomial equation solver for ray-\/object intersections. 
+
+The Polynomial\+Solver class provides static methods for solving quadratic, cubic, and quartic polynomial equations. These are essential for calculating ray-\/object intersections in the ray tracer, particularly for complex shapes like toruses. The solver uses a combination of analytical methods and Newton-\/\+Raphson refinement.
+
+\begin{DoxyAuthor}{Author}
+\mbox{[}Your Name\mbox{]} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 (EPITECH PROJECT) 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+EPITECH PROJECT, 2025
+\end{DoxyCopyright}
+\begin{DoxyNote}{Note}
+Uses Newton-\/\+Raphson method for root refinement 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Solutions may be approximate due to floating-\/point precision 
+\end{DoxyWarning}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000003}{Todo}}]Implement more robust numerical methods for ill-\/conditioned polynomials \end{DoxyRefDesc}

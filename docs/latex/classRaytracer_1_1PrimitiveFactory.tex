@@ -1,0 +1,92 @@
+\doxysection{Raytracer\+::Primitive\+Factory Class Reference}
+\hypertarget{classRaytracer_1_1PrimitiveFactory}{}\label{classRaytracer_1_1PrimitiveFactory}\index{Raytracer::PrimitiveFactory@{Raytracer::PrimitiveFactory}}
+
+
+Factory class for creating geometric primitives in a 3D scene.  
+
+
+
+
+{\ttfamily \#include $<$Primitive\+Factory.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{IPrimitive}} $>$ \mbox{\hyperlink{classRaytracer_1_1PrimitiveFactory_a3309316c36d55d16262ff5aa42d707b2}{create\+Sphere}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&center, float radius, const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&material)
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{IPrimitive}} $>$ \mbox{\hyperlink{classRaytracer_1_1PrimitiveFactory_a2aa71e927339d5ff4770cfbaff8908da}{create\+Plane}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&normal, float position, const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&material)
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{IPrimitive}} $>$ \mbox{\hyperlink{classRaytracer_1_1PrimitiveFactory_abb53208131108f9eeddd274d57a05fb7}{create\+Cylinder}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&base\+Center, float radius, float height, const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&rotation, const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&material)
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{IPrimitive}} $>$ \mbox{\hyperlink{classRaytracer_1_1PrimitiveFactory_a52426d5309f41605f79c6cd49b1105eb}{create\+Cone}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&base\+Center, float radius, float height, const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&rotation, const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&material)
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{IPrimitive}} $>$ \mbox{\hyperlink{classRaytracer_1_1PrimitiveFactory_a12da8be6080c1b87cf78658750fe4b20}{create\+Triangle}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&a, const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&b, const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&c, const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&material)
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{IPrimitive}} $>$ \mbox{\hyperlink{classRaytracer_1_1PrimitiveFactory_a91ab49eb6b547a364b82ee25ee0e2a87}{create\+Torus}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&center, float major\+Radius, float minor\+Radius, const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&rotation, const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&material)
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{IPrimitive}} $>$ \mbox{\hyperlink{classRaytracer_1_1PrimitiveFactory_a2cbc42fd766531cff96bdca35f706a28}{create\+Tangle\+Cube}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&center, float size, const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&material)
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{IPrimitive}} $>$ \mbox{\hyperlink{classRaytracer_1_1PrimitiveFactory_a799ea17b723c819fc861e36c09921401}{create\+Composite\+Primitive}} (const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&material)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Factory class for creating geometric primitives in a 3D scene. 
+
+Provides static methods to create various geometric shapes that implement the \doxylink{classRaytracer_1_1IPrimitive}{IPrimitive} interface. Implements the Factory design pattern to encapsulate object creation logic. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1PrimitiveFactory_a799ea17b723c819fc861e36c09921401}\index{Raytracer::PrimitiveFactory@{Raytracer::PrimitiveFactory}!createCompositePrimitive@{createCompositePrimitive}}
+\index{createCompositePrimitive@{createCompositePrimitive}!Raytracer::PrimitiveFactory@{Raytracer::PrimitiveFactory}}
+\doxysubsubsection{\texorpdfstring{createCompositePrimitive()}{createCompositePrimitive()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1PrimitiveFactory_a799ea17b723c819fc861e36c09921401} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{Raytracer\+::\+IPrimitive}} $>$ Raytracer\+::\+Primitive\+Factory\+::create\+Composite\+Primitive (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classRaytracer_1_1PrimitiveFactory_a52426d5309f41605f79c6cd49b1105eb}\index{Raytracer::PrimitiveFactory@{Raytracer::PrimitiveFactory}!createCone@{createCone}}
+\index{createCone@{createCone}!Raytracer::PrimitiveFactory@{Raytracer::PrimitiveFactory}}
+\doxysubsubsection{\texorpdfstring{createCone()}{createCone()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1PrimitiveFactory_a52426d5309f41605f79c6cd49b1105eb} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{Raytracer\+::\+IPrimitive}} $>$ Raytracer\+::\+Primitive\+Factory\+::create\+Cone (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{base\+Center}{, }\item[{float}]{radius}{, }\item[{float}]{height}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{rotation}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classRaytracer_1_1PrimitiveFactory_abb53208131108f9eeddd274d57a05fb7}\index{Raytracer::PrimitiveFactory@{Raytracer::PrimitiveFactory}!createCylinder@{createCylinder}}
+\index{createCylinder@{createCylinder}!Raytracer::PrimitiveFactory@{Raytracer::PrimitiveFactory}}
+\doxysubsubsection{\texorpdfstring{createCylinder()}{createCylinder()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1PrimitiveFactory_abb53208131108f9eeddd274d57a05fb7} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{Raytracer\+::\+IPrimitive}} $>$ Raytracer\+::\+Primitive\+Factory\+::create\+Cylinder (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{base\+Center}{, }\item[{float}]{radius}{, }\item[{float}]{height}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{rotation}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classRaytracer_1_1PrimitiveFactory_a2aa71e927339d5ff4770cfbaff8908da}\index{Raytracer::PrimitiveFactory@{Raytracer::PrimitiveFactory}!createPlane@{createPlane}}
+\index{createPlane@{createPlane}!Raytracer::PrimitiveFactory@{Raytracer::PrimitiveFactory}}
+\doxysubsubsection{\texorpdfstring{createPlane()}{createPlane()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1PrimitiveFactory_a2aa71e927339d5ff4770cfbaff8908da} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{Raytracer\+::\+IPrimitive}} $>$ Raytracer\+::\+Primitive\+Factory\+::create\+Plane (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{normal}{, }\item[{float}]{position}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classRaytracer_1_1PrimitiveFactory_a3309316c36d55d16262ff5aa42d707b2}\index{Raytracer::PrimitiveFactory@{Raytracer::PrimitiveFactory}!createSphere@{createSphere}}
+\index{createSphere@{createSphere}!Raytracer::PrimitiveFactory@{Raytracer::PrimitiveFactory}}
+\doxysubsubsection{\texorpdfstring{createSphere()}{createSphere()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1PrimitiveFactory_a3309316c36d55d16262ff5aa42d707b2} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{Raytracer\+::\+IPrimitive}} $>$ Raytracer\+::\+Primitive\+Factory\+::create\+Sphere (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{center}{, }\item[{float}]{radius}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classRaytracer_1_1PrimitiveFactory_a2cbc42fd766531cff96bdca35f706a28}\index{Raytracer::PrimitiveFactory@{Raytracer::PrimitiveFactory}!createTangleCube@{createTangleCube}}
+\index{createTangleCube@{createTangleCube}!Raytracer::PrimitiveFactory@{Raytracer::PrimitiveFactory}}
+\doxysubsubsection{\texorpdfstring{createTangleCube()}{createTangleCube()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1PrimitiveFactory_a2cbc42fd766531cff96bdca35f706a28} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{Raytracer\+::\+IPrimitive}} $>$ Raytracer\+::\+Primitive\+Factory\+::create\+Tangle\+Cube (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{center}{, }\item[{float}]{size}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classRaytracer_1_1PrimitiveFactory_a91ab49eb6b547a364b82ee25ee0e2a87}\index{Raytracer::PrimitiveFactory@{Raytracer::PrimitiveFactory}!createTorus@{createTorus}}
+\index{createTorus@{createTorus}!Raytracer::PrimitiveFactory@{Raytracer::PrimitiveFactory}}
+\doxysubsubsection{\texorpdfstring{createTorus()}{createTorus()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1PrimitiveFactory_a91ab49eb6b547a364b82ee25ee0e2a87} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{Raytracer\+::\+IPrimitive}} $>$ Raytracer\+::\+Primitive\+Factory\+::create\+Torus (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{center}{, }\item[{float}]{major\+Radius}{, }\item[{float}]{minor\+Radius}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{rotation}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classRaytracer_1_1PrimitiveFactory_a12da8be6080c1b87cf78658750fe4b20}\index{Raytracer::PrimitiveFactory@{Raytracer::PrimitiveFactory}!createTriangle@{createTriangle}}
+\index{createTriangle@{createTriangle}!Raytracer::PrimitiveFactory@{Raytracer::PrimitiveFactory}}
+\doxysubsubsection{\texorpdfstring{createTriangle()}{createTriangle()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1PrimitiveFactory_a12da8be6080c1b87cf78658750fe4b20} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{Raytracer\+::\+IPrimitive}} $>$ Raytracer\+::\+Primitive\+Factory\+::create\+Triangle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{a}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{b}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{c}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Factory/\mbox{\hyperlink{PrimitiveFactory_8hpp}{Primitive\+Factory.\+hpp}}\item 
+src/\+Factory/\mbox{\hyperlink{PrimitiveFactory_8cpp}{Primitive\+Factory.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\doxysection{Global\+Exception Class Reference}
+\hypertarget{classGlobalException}{}\label{classGlobalException}\index{GlobalException@{GlobalException}}
+
+
+Custom exception class for the \doxylink{namespaceRaytracer}{Raytracer} project.  
+
+
+
+
+{\ttfamily \#include $<$Global\+Exception.\+hpp$>$}
+
+Inheritance diagram for Global\+Exception\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGlobalException}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGlobalException_a3a3413ea70680e6aa5e29f683788abec}{Global\+Exception}} (const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classGlobalException}{Global\+Exception} with an error message. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGlobalException_ac1bf5b7e106dc2224c519c93fd8bc543}{what}} () const noexcept override
+\begin{DoxyCompactList}\small\item\em Gets the exception message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Custom exception class for the \doxylink{namespaceRaytracer}{Raytracer} project. 
+
+This exception class extends std\+::exception to provide custom error handling with descriptive messages. It\textquotesingle{}s used throughout the project to handle various error conditions consistently. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGlobalException_a3a3413ea70680e6aa5e29f683788abec}\index{GlobalException@{GlobalException}!GlobalException@{GlobalException}}
+\index{GlobalException@{GlobalException}!GlobalException@{GlobalException}}
+\doxysubsubsection{\texorpdfstring{GlobalException()}{GlobalException()}}
+{\footnotesize\ttfamily \label{classGlobalException_a3a3413ea70680e6aa5e29f683788abec} 
+Global\+Exception\+::\+Global\+Exception (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructs a \doxylink{classGlobalException}{Global\+Exception} with an error message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The error description to be associated with this exception. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGlobalException_ac1bf5b7e106dc2224c519c93fd8bc543}\index{GlobalException@{GlobalException}!what@{what}}
+\index{what@{what}!GlobalException@{GlobalException}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily \label{classGlobalException_ac1bf5b7e106dc2224c519c93fd8bc543} 
+const char \texorpdfstring{$\ast$}{*} Global\+Exception\+::what (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the exception message. 
+
+\begin{DoxyReturn}{Returns}
+C-\/style string containing the error message. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This override is marked noexcept as required by std\+::exception. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{GlobalException_8hpp}{Global\+Exception.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,176 @@
+\doxysection{Raytracer\+::Sphere Class Reference}
+\hypertarget{classRaytracer_1_1Sphere}{}\label{classRaytracer_1_1Sphere}\index{Raytracer::Sphere@{Raytracer::Sphere}}
+
+
+Represents a sphere primitive for raytracing.  
+
+
+
+
+{\ttfamily \#include $<$Sphere.\+hpp$>$}
+
+Inheritance diagram for Raytracer\+::Sphere\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRaytracer_1_1Sphere}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1Sphere_a6694574115dbb27fd4f401ae6c4d737f}{Sphere}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&center, float radius, const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&material)
+\begin{DoxyCompactList}\small\item\em Constructs a sphere primitive. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRaytracer_1_1Sphere_a726c90a75fef977a7a1f588461ebc71e}{intersect}} (const \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}} \&ray, float \&t) const override
+\begin{DoxyCompactList}\small\item\em Tests if a ray intersects with this sphere. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1Sphere_a0ac4aade406b91bfeb32dd03f273d17d}{get\+Normal}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Calculates the normal vector at a point on the sphere. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Color}{Color}} \mbox{\hyperlink{classRaytracer_1_1Sphere_a86cedbe54c54accc329ffcdced03bbc0}{get\+Color}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the color of the sphere. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1Sphere_ab038632e9c87ee4f303011b9233cc6e6}{get\+Center}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the center position of the sphere. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \& \mbox{\hyperlink{classRaytracer_1_1Sphere_a942e95782a88dabafad9056805d95498}{get\+Material}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the material of the sphere. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{Raytracer\+::\+IPrimitive}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classRaytracer_1_1IPrimitive_aa4aea2318383a59a56b7b10db96d55d0}{\texorpdfstring{$\sim$}{\string~}\+IPrimitive}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic cleanup. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a sphere primitive for raytracing. 
+
+The \doxylink{classRaytracer_1_1Sphere}{Sphere} class defines a sphere in 3D space, characterized by its center point and radius. It provides methods for ray-\/sphere intersection testing and normal vector calculation which are essential for the raytracing process. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1Sphere_a6694574115dbb27fd4f401ae6c4d737f}\index{Raytracer::Sphere@{Raytracer::Sphere}!Sphere@{Sphere}}
+\index{Sphere@{Sphere}!Raytracer::Sphere@{Raytracer::Sphere}}
+\doxysubsubsection{\texorpdfstring{Sphere()}{Sphere()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Sphere_a6694574115dbb27fd4f401ae6c4d737f} 
+Raytracer\+::\+Sphere\+::\+Sphere (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{center}{, }\item[{float}]{radius}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&}]{material}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a sphere primitive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & The center position of the sphere in 3D space \\
+\hline
+{\em radius} & The radius of the sphere \\
+\hline
+{\em material} & The material properties of the sphere \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1Sphere_ab038632e9c87ee4f303011b9233cc6e6}\index{Raytracer::Sphere@{Raytracer::Sphere}!getCenter@{getCenter}}
+\index{getCenter@{getCenter}!Raytracer::Sphere@{Raytracer::Sphere}}
+\doxysubsubsection{\texorpdfstring{getCenter()}{getCenter()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Sphere_ab038632e9c87ee4f303011b9233cc6e6} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} Raytracer\+::\+Sphere\+::get\+Center (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the center position of the sphere. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} The center point of the sphere 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a48b3fa15f48633c82d04bdd950c4ba3a}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Sphere_a86cedbe54c54accc329ffcdced03bbc0}\index{Raytracer::Sphere@{Raytracer::Sphere}!getColor@{getColor}}
+\index{getColor@{getColor}!Raytracer::Sphere@{Raytracer::Sphere}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Sphere_a86cedbe54c54accc329ffcdced03bbc0} 
+\mbox{\hyperlink{classRaytracer_1_1Color}{Raytracer\+::\+Color}} Raytracer\+::\+Sphere\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the color of the sphere. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Color}{Color} The color derived from the sphere\textquotesingle{}s material 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_adef7febce98bf6b9066679f63e0c2377}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Sphere_a942e95782a88dabafad9056805d95498}\index{Raytracer::Sphere@{Raytracer::Sphere}!getMaterial@{getMaterial}}
+\index{getMaterial@{getMaterial}!Raytracer::Sphere@{Raytracer::Sphere}}
+\doxysubsubsection{\texorpdfstring{getMaterial()}{getMaterial()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Sphere_a942e95782a88dabafad9056805d95498} 
+const \mbox{\hyperlink{classRaytracer_1_1Material}{Raytracer\+::\+Material}} \& Raytracer\+::\+Sphere\+::get\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the material of the sphere. 
+
+\begin{DoxyReturn}{Returns}
+const \doxylink{classRaytracer_1_1Material}{Material}\& Reference to the sphere\textquotesingle{}s material 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a4f3f11706602a77f7aa891adac0e6767}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Sphere_a0ac4aade406b91bfeb32dd03f273d17d}\index{Raytracer::Sphere@{Raytracer::Sphere}!getNormal@{getNormal}}
+\index{getNormal@{getNormal}!Raytracer::Sphere@{Raytracer::Sphere}}
+\doxysubsubsection{\texorpdfstring{getNormal()}{getNormal()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Sphere_a0ac4aade406b91bfeb32dd03f273d17d} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} Raytracer\+::\+Sphere\+::get\+Normal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculates the normal vector at a point on the sphere. 
+
+The normal of a sphere at any point is simply the normalized vector from the sphere\textquotesingle{}s center to that point.
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & The point on the sphere\textquotesingle{}s surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} The normalized normal vector 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a03a1602232f80f319b587902a6884479}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Sphere_a726c90a75fef977a7a1f588461ebc71e}\index{Raytracer::Sphere@{Raytracer::Sphere}!intersect@{intersect}}
+\index{intersect@{intersect}!Raytracer::Sphere@{Raytracer::Sphere}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Sphere_a726c90a75fef977a7a1f588461ebc71e} 
+bool Raytracer\+::\+Sphere\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}} \&}]{ray}{, }\item[{float \&}]{t}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Tests if a ray intersects with this sphere. 
+
+Calculates if and where a ray intersects with this sphere using the quadratic formula. The intersection distance is stored in the parameter t if an intersection is found.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to test for intersection \\
+\hline
+{\em t} & Output parameter that will contain the distance to intersection if found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If the ray intersects with the sphere 
+
+false If no intersection is found 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a71209e0c7a44d5746c9796405b9d1787}{Raytracer\+::\+IPrimitive}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Primitives/\mbox{\hyperlink{Sphere_8hpp}{Sphere.\+hpp}}\item 
+src/\+Primitives/\mbox{\hyperlink{Sphere_8cpp}{Sphere.\+cpp}}\end{DoxyCompactItemize}

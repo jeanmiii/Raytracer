@@ -1,0 +1,182 @@
+\doxysection{Raytracer\+::Cylinder Class Reference}
+\hypertarget{classRaytracer_1_1Cylinder}{}\label{classRaytracer_1_1Cylinder}\index{Raytracer::Cylinder@{Raytracer::Cylinder}}
+
+
+Represents a cylinder primitive for raytracing.  
+
+
+
+
+{\ttfamily \#include $<$Cylinder.\+hpp$>$}
+
+Inheritance diagram for Raytracer\+::Cylinder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRaytracer_1_1Cylinder}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1Cylinder_aac47ae69bf1fca7e851dc61d482c54d5}{Cylinder}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&base\+Center, float radius, float height, const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&rotation, const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&material)
+\begin{DoxyCompactList}\small\item\em Constructs a cylinder primitive. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRaytracer_1_1Cylinder_a3ec8527b7d6e7b4d2138e766915a2abb}{intersect}} (const \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}} \&ray, float \&t) const override
+\begin{DoxyCompactList}\small\item\em Tests if a ray intersects with this cylinder. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1Cylinder_ab139db71428bbd11676e78cbbef85e38}{get\+Normal}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Calculates the normal vector at a point on the cylinder. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Color}{Color}} \mbox{\hyperlink{classRaytracer_1_1Cylinder_a5faa23fb62c86e97ffa42f902816765d}{get\+Color}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the color of the cylinder. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1Cylinder_ac78e76c6556cf64ca091571d541b30f2}{get\+Center}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the center point of the cylinder. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \& \mbox{\hyperlink{classRaytracer_1_1Cylinder_aee8c02c202bd5d045f7a8d11d9bd1f59}{get\+Material}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the material of the cylinder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{Raytracer\+::\+IPrimitive}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classRaytracer_1_1IPrimitive_aa4aea2318383a59a56b7b10db96d55d0}{\texorpdfstring{$\sim$}{\string~}\+IPrimitive}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic cleanup. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a cylinder primitive for raytracing. 
+
+The \doxylink{classRaytracer_1_1Cylinder}{Cylinder} class defines a cylinder in 3D space, characterized by its base center, radius, height, and orientation. It provides methods for ray-\/cylinder intersection testing and normal vector calculation which are essential for the raytracing process. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1Cylinder_aac47ae69bf1fca7e851dc61d482c54d5}\index{Raytracer::Cylinder@{Raytracer::Cylinder}!Cylinder@{Cylinder}}
+\index{Cylinder@{Cylinder}!Raytracer::Cylinder@{Raytracer::Cylinder}}
+\doxysubsubsection{\texorpdfstring{Cylinder()}{Cylinder()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Cylinder_aac47ae69bf1fca7e851dc61d482c54d5} 
+Raytracer\+::\+Cylinder\+::\+Cylinder (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{base\+Center}{, }\item[{float}]{radius}{, }\item[{float}]{height}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{rotation}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&}]{material}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a cylinder primitive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Center} & The center of the cylinder\textquotesingle{}s base \\
+\hline
+{\em radius} & The radius of the cylinder \\
+\hline
+{\em height} & The height of the cylinder (can be infinite) \\
+\hline
+{\em rotation} & The rotation of the cylinder in degrees (x, y, z angles) \\
+\hline
+{\em material} & The material properties of the cylinder \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1Cylinder_ac78e76c6556cf64ca091571d541b30f2}\index{Raytracer::Cylinder@{Raytracer::Cylinder}!getCenter@{getCenter}}
+\index{getCenter@{getCenter}!Raytracer::Cylinder@{Raytracer::Cylinder}}
+\doxysubsubsection{\texorpdfstring{getCenter()}{getCenter()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Cylinder_ac78e76c6556cf64ca091571d541b30f2} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} Raytracer\+::\+Cylinder\+::get\+Center (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the center point of the cylinder. 
+
+Returns the center of the cylinder, which is halfway between the base and the top along the central axis.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} The center point of the cylinder 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a48b3fa15f48633c82d04bdd950c4ba3a}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Cylinder_a5faa23fb62c86e97ffa42f902816765d}\index{Raytracer::Cylinder@{Raytracer::Cylinder}!getColor@{getColor}}
+\index{getColor@{getColor}!Raytracer::Cylinder@{Raytracer::Cylinder}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Cylinder_a5faa23fb62c86e97ffa42f902816765d} 
+\mbox{\hyperlink{classRaytracer_1_1Color}{Color}} Raytracer\+::\+Cylinder\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the color of the cylinder. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Color}{Color} The color derived from the cylinder\textquotesingle{}s material 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_adef7febce98bf6b9066679f63e0c2377}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Cylinder_aee8c02c202bd5d045f7a8d11d9bd1f59}\index{Raytracer::Cylinder@{Raytracer::Cylinder}!getMaterial@{getMaterial}}
+\index{getMaterial@{getMaterial}!Raytracer::Cylinder@{Raytracer::Cylinder}}
+\doxysubsubsection{\texorpdfstring{getMaterial()}{getMaterial()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Cylinder_aee8c02c202bd5d045f7a8d11d9bd1f59} 
+const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \& Raytracer\+::\+Cylinder\+::get\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the material of the cylinder. 
+
+\begin{DoxyReturn}{Returns}
+const \doxylink{classRaytracer_1_1Material}{Material}\& Reference to the cylinder\textquotesingle{}s material 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a4f3f11706602a77f7aa891adac0e6767}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Cylinder_ab139db71428bbd11676e78cbbef85e38}\index{Raytracer::Cylinder@{Raytracer::Cylinder}!getNormal@{getNormal}}
+\index{getNormal@{getNormal}!Raytracer::Cylinder@{Raytracer::Cylinder}}
+\doxysubsubsection{\texorpdfstring{getNormal()}{getNormal()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Cylinder_ab139db71428bbd11676e78cbbef85e38} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} Raytracer\+::\+Cylinder\+::get\+Normal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculates the normal vector at a point on the cylinder. 
+
+Determines the normal based on whether the point is on the curved surface or one of the end caps.
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & The point on the cylinder\textquotesingle{}s surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} The normalized normal vector 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a03a1602232f80f319b587902a6884479}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Cylinder_a3ec8527b7d6e7b4d2138e766915a2abb}\index{Raytracer::Cylinder@{Raytracer::Cylinder}!intersect@{intersect}}
+\index{intersect@{intersect}!Raytracer::Cylinder@{Raytracer::Cylinder}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Cylinder_a3ec8527b7d6e7b4d2138e766915a2abb} 
+bool Raytracer\+::\+Cylinder\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}} \&}]{ray}{, }\item[{float \&}]{t}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Tests if a ray intersects with this cylinder. 
+
+Calculates if and where a ray intersects with this cylinder, considering both the curved surface and the end caps (for finite cylinders). The intersection distance is stored in the parameter t if an intersection is found.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to test for intersection \\
+\hline
+{\em t} & Output parameter that will contain the distance to intersection if found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If the ray intersects with the cylinder 
+
+false If no intersection is found 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a71209e0c7a44d5746c9796405b9d1787}{Raytracer\+::\+IPrimitive}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Primitives/\mbox{\hyperlink{Cylinder_8hpp}{Cylinder.\+hpp}}\item 
+src/\+Primitives/\mbox{\hyperlink{Cylinder_8cpp}{Cylinder.\+cpp}}\end{DoxyCompactItemize}

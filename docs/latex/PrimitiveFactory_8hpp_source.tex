@@ -1,0 +1,39 @@
+\doxysection{Primitive\+Factory.\+hpp}
+\hypertarget{PrimitiveFactory_8hpp_source}{}\label{PrimitiveFactory_8hpp_source}\index{include/Factory/PrimitiveFactory.hpp@{include/Factory/PrimitiveFactory.hpp}}
+\mbox{\hyperlink{PrimitiveFactory_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Raytracer}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ PrimitiveFactory.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Material_8hpp}{Material/Material.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IPrimitive_8hpp}{Primitives/IPrimitive.hpp}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Vector3_8hpp}{Utils/Vector3.hpp}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceRaytracer}{Raytracer}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRaytracer_1_1PrimitiveFactory}{PrimitiveFactory}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<IPrimitive>\ \mbox{\hyperlink{classRaytracer_1_1PrimitiveFactory_a3309316c36d55d16262ff5aa42d707b2}{createSphere}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ center,\ \textcolor{keywordtype}{float}\ radius,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Material}{Material}}\&\ material);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<IPrimitive>\ \mbox{\hyperlink{classRaytracer_1_1PrimitiveFactory_a2aa71e927339d5ff4770cfbaff8908da}{createPlane}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ normal,\ \textcolor{keywordtype}{float}\ position,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Material}{Material}}\&\ material);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<IPrimitive>\ \mbox{\hyperlink{classRaytracer_1_1PrimitiveFactory_abb53208131108f9eeddd274d57a05fb7}{createCylinder}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ baseCenter,\ \textcolor{keywordtype}{float}\ radius,\ \textcolor{keywordtype}{float}\ height,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ rotation,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Material}{Material}}\&\ material);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<IPrimitive>\ \mbox{\hyperlink{classRaytracer_1_1PrimitiveFactory_a52426d5309f41605f79c6cd49b1105eb}{createCone}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ baseCenter,\ \textcolor{keywordtype}{float}\ radius,\ \textcolor{keywordtype}{float}\ height,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ rotation,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Material}{Material}}\&\ material);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<IPrimitive>\ \mbox{\hyperlink{classRaytracer_1_1PrimitiveFactory_a12da8be6080c1b87cf78658750fe4b20}{createTriangle}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ a,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ b,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ c,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Material}{Material}}\&\ material);}
+\DoxyCodeLine{00035\ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<IPrimitive>\ \mbox{\hyperlink{classRaytracer_1_1PrimitiveFactory_a91ab49eb6b547a364b82ee25ee0e2a87}{createTorus}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ center,\ \textcolor{keywordtype}{float}\ majorRadius,\ \textcolor{keywordtype}{float}\ minorRadius,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ rotation,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Material}{Material}}\&\ material);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<IPrimitive>\ \mbox{\hyperlink{classRaytracer_1_1PrimitiveFactory_a2cbc42fd766531cff96bdca35f706a28}{createTangleCube}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ center,\ \textcolor{keywordtype}{float}\ size,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Material}{Material}}\&\ material);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<IPrimitive>\ \mbox{\hyperlink{classRaytracer_1_1PrimitiveFactory_a799ea17b723c819fc861e36c09921401}{createCompositePrimitive}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Material}{Material}}\&\ material);}
+\DoxyCodeLine{00041\ \ \ \};\}}
+
+\end{DoxyCode}

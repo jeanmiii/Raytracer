@@ -1,0 +1,65 @@
+\doxysection{Raytracer\+::Scene\+Parser Class Reference}
+\hypertarget{classRaytracer_1_1SceneParser}{}\label{classRaytracer_1_1SceneParser}\index{Raytracer::SceneParser@{Raytracer::SceneParser}}
+
+
+Parser for scene configuration files.  
+
+
+
+
+{\ttfamily \#include $<$Scene\+Parser.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1SceneParser_a95c779de42e429db41d8f92e8428b80d}{Scene\+Parser}} (const std\+::string \&filename, \mbox{\hyperlink{classRaytracer_1_1Scene}{Scene}} \&scene)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classRaytracer_1_1Scene}{Scene} Parser object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRaytracer_1_1SceneParser_af3a13fb8d6447e5aec212e23998c830f}{parse}} ()
+\begin{DoxyCompactList}\small\item\em Parse the configuration file and populate the scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parser for scene configuration files. 
+
+This class provides functionality to read and parse scene description files in libconfig format. It extracts scene elements such as camera properties, lights, and various geometric primitives, then populates a \doxylink{classRaytracer_1_1Scene}{Scene} object with these elements. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1SceneParser_a95c779de42e429db41d8f92e8428b80d}\index{Raytracer::SceneParser@{Raytracer::SceneParser}!SceneParser@{SceneParser}}
+\index{SceneParser@{SceneParser}!Raytracer::SceneParser@{Raytracer::SceneParser}}
+\doxysubsubsection{\texorpdfstring{SceneParser()}{SceneParser()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1SceneParser_a95c779de42e429db41d8f92e8428b80d} 
+Raytracer\+::\+Scene\+Parser\+::\+Scene\+Parser (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{, }\item[{\mbox{\hyperlink{classRaytracer_1_1Scene}{Scene}} \&}]{scene}{}\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{classRaytracer_1_1Scene}{Scene} Parser object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the scene configuration file \\
+\hline
+{\em scene} & Reference to the \doxylink{classRaytracer_1_1Scene}{Scene} object to be populated \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1SceneParser_af3a13fb8d6447e5aec212e23998c830f}\index{Raytracer::SceneParser@{Raytracer::SceneParser}!parse@{parse}}
+\index{parse@{parse}!Raytracer::SceneParser@{Raytracer::SceneParser}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1SceneParser_af3a13fb8d6447e5aec212e23998c830f} 
+bool Raytracer\+::\+Scene\+Parser\+::parse (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Parse the configuration file and populate the scene. 
+
+\begin{DoxyReturn}{Returns}
+bool True if parsing was successful, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Parser/\mbox{\hyperlink{SceneParser_8hpp}{Scene\+Parser.\+hpp}}\item 
+src/\+Parser/\mbox{\hyperlink{SceneParser_8cpp}{Scene\+Parser.\+cpp}}\end{DoxyCompactItemize}

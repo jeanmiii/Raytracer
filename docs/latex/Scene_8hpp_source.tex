@@ -1,0 +1,57 @@
+\doxysection{Scene.\+hpp}
+\hypertarget{Scene_8hpp_source}{}\label{Scene_8hpp_source}\index{include/Core/Scene.hpp@{include/Core/Scene.hpp}}
+\mbox{\hyperlink{Scene_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ raytracer}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Scene}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Camera_8hpp}{Core/Camera.hpp}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ILight_8hpp}{Lights/ILight.hpp}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IPrimitive_8hpp}{Primitives/IPrimitive.hpp}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{CompositePrimitive_8hpp}{Primitives/CompositePrimitive.hpp}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{CompositeLight_8hpp}{Lights/CompositeLight.hpp}}"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceRaytracer}{Raytracer}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRaytracer_1_1Scene_aa3e9644ee24fdd33b5642a546b5b9314}{Scene}}\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Scene_aa3e9644ee24fdd33b5642a546b5b9314}{Scene}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRaytracer_1_1Scene_a2d123d7322eaa47583b8f588d03620a7}{setCamera}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Camera}{Camera}}\&\ cam);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Camera}{Camera}}\&\ \mbox{\hyperlink{classRaytracer_1_1Scene_a25f2cb213bfea3ad533122532710e0df}{getCamera}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{comment}{//\ Méthodes\ pour\ ajouter\ des\ primitives}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRaytracer_1_1Scene_a19d8cdb19c773293e5fbdf35f3ce97a3}{addPrimitive}}(std::shared\_ptr<IPrimitive>\ primitive);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<IPrimitive>>\&\ \mbox{\hyperlink{classRaytracer_1_1Scene_a1274a4c56b03b4b179e32fe4da5399c9}{getPrimitives}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \textcolor{comment}{//\ Accès\ au\ composite\ principal\ des\ primitives}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ std::shared\_ptr<CompositePrimitive>\ \mbox{\hyperlink{classRaytracer_1_1Scene_a4a308558db66fadad9d94cbc3a0d406b}{getRootCompositePrimitive}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \textcolor{comment}{//\ Méthodes\ pour\ ajouter\ des\ lumières}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRaytracer_1_1Scene_a9e0bfea261b7ab62f573d5c3ce5f4744}{addLight}}(std::shared\_ptr<ILight>\ light);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<ILight>>\&\ \mbox{\hyperlink{classRaytracer_1_1Scene_a4aea10b5f5a926e24d036f68c9e707b1}{getLights}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \textcolor{comment}{//\ Accès\ au\ composite\ principal\ des\ lumières}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ std::shared\_ptr<CompositeLight>\ \mbox{\hyperlink{classRaytracer_1_1Scene_aee144f95f896522efae771a873d4674c}{getRootCompositeLight}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRaytracer_1_1Scene_a73f523ef6919f264af31aa1e8edd8b3d}{setAmbientIntensity}}(\textcolor{keywordtype}{float}\ intensity);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Camera}{Camera}}\&\ \mbox{\hyperlink{classRaytracer_1_1Scene_a25f2cb213bfea3ad533122532710e0df}{getCamera}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classRaytracer_1_1Scene_ad2a84d7114537722c9219358e65caef0}{getAmbientIntensity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Camera}{Camera}}\ m\_camera;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ std::vector<std::shared\_ptr<IPrimitive>>\ m\_primitives;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ std::shared\_ptr<CompositePrimitive>\ m\_rootCompositePrimitive;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ std::vector<std::shared\_ptr<ILight>>\ m\_lights;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ std::shared\_ptr<CompositeLight>\ m\_rootCompositeLight;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ m\_ambientIntensity\ =\ 0.0f;}
+\DoxyCodeLine{00057\ \ \ \};}
+\DoxyCodeLine{00058\ \}}
+
+\end{DoxyCode}

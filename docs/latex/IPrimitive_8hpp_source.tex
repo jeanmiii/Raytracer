@@ -1,0 +1,31 @@
+\doxysection{IPrimitive.\+hpp}
+\hypertarget{IPrimitive_8hpp_source}{}\label{IPrimitive_8hpp_source}\index{include/Primitives/IPrimitive.hpp@{include/Primitives/IPrimitive.hpp}}
+\mbox{\hyperlink{IPrimitive_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Material_8hpp}{Material/Material.hpp}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Ray_8hpp}{Maths/Ray.hpp}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Color_8hpp}{Utils/Color.hpp}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Vector3_8hpp}{Utils/Vector3.hpp}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceRaytracer}{Raytracer}}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRaytracer_1_1IPrimitive}{IPrimitive}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classRaytracer_1_1IPrimitive_aa4aea2318383a59a56b7b10db96d55d0}{\string~IPrimitive}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a71209e0c7a44d5746c9796405b9d1787}{intersect}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}}\&\ ray,\ \textcolor{keywordtype}{float}\&\ t)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\ \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a03a1602232f80f319b587902a6884479}{getNormal}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ point)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classRaytracer_1_1Color}{Color}}\ \mbox{\hyperlink{classRaytracer_1_1IPrimitive_adef7febce98bf6b9066679f63e0c2377}{getColor}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Material}{Material}}\&\ \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a4f3f11706602a77f7aa891adac0e6767}{getMaterial}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\ \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a48b3fa15f48633c82d04bdd950c4ba3a}{getCenter}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00091\ \ \ \};}
+\DoxyCodeLine{00092\ \}}
+
+\end{DoxyCode}

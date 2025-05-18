@@ -1,0 +1,168 @@
+\doxysection{Raytracer\+::IPrimitive Class Reference}
+\hypertarget{classRaytracer_1_1IPrimitive}{}\label{classRaytracer_1_1IPrimitive}\index{Raytracer::IPrimitive@{Raytracer::IPrimitive}}
+
+
+Interface for all geometric primitives.  
+
+
+
+
+{\ttfamily \#include $<$IPrimitive.\+hpp$>$}
+
+Inheritance diagram for Raytracer\+::IPrimitive\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{classRaytracer_1_1IPrimitive}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classRaytracer_1_1IPrimitive_aa4aea2318383a59a56b7b10db96d55d0}{\texorpdfstring{$\sim$}{\string~}\+IPrimitive}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic cleanup. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a71209e0c7a44d5746c9796405b9d1787}{intersect}} (const \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}} \&ray, float \&t) const =0
+\begin{DoxyCompactList}\small\item\em Tests if a ray intersects with this primitive. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a03a1602232f80f319b587902a6884479}{get\+Normal}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&point) const =0
+\begin{DoxyCompactList}\small\item\em Calculates the surface normal at a given point. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classRaytracer_1_1Color}{Color}} \mbox{\hyperlink{classRaytracer_1_1IPrimitive_adef7febce98bf6b9066679f63e0c2377}{get\+Color}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the color of the primitive. \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \& \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a4f3f11706602a77f7aa891adac0e6767}{get\+Material}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the material of the primitive. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a48b3fa15f48633c82d04bdd950c4ba3a}{get\+Center}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the center point of the primitive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for all geometric primitives. 
+
+This abstract class defines the interface that all renderable primitives (spheres, planes, cylinders, etc.) must implement to be compatible with the raytracing engine. It provides pure virtual methods for ray intersection, normal calculation, and basic property access. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1IPrimitive_aa4aea2318383a59a56b7b10db96d55d0}\index{Raytracer::IPrimitive@{Raytracer::IPrimitive}!````~IPrimitive@{\texorpdfstring{$\sim$}{\string~}IPrimitive}}
+\index{````~IPrimitive@{\texorpdfstring{$\sim$}{\string~}IPrimitive}!Raytracer::IPrimitive@{Raytracer::IPrimitive}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IPrimitive()}{\string~IPrimitive()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1IPrimitive_aa4aea2318383a59a56b7b10db96d55d0} 
+virtual Raytracer\+::\+IPrimitive\+::\texorpdfstring{$\sim$}{\string~}\+IPrimitive (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for proper polymorphic cleanup. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1IPrimitive_a48b3fa15f48633c82d04bdd950c4ba3a}\index{Raytracer::IPrimitive@{Raytracer::IPrimitive}!getCenter@{getCenter}}
+\index{getCenter@{getCenter}!Raytracer::IPrimitive@{Raytracer::IPrimitive}}
+\doxysubsubsection{\texorpdfstring{getCenter()}{getCenter()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1IPrimitive_a48b3fa15f48633c82d04bdd950c4ba3a} 
+virtual \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} Raytracer\+::\+IPrimitive\+::get\+Center (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the center point of the primitive. 
+
+For primitives like spheres or cubes, this returns their center. For primitives without a well-\/defined center (like planes), implementations may return a representative point.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} The center point or representative position 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_a448efbea1a650c71a81855ba066c0eb4}{Raytracer\+::\+Composite\+Primitive}}, \mbox{\hyperlink{classRaytracer_1_1Cone_a5a221ebf035733807eaa680aea7093cd}{Raytracer\+::\+Cone}}, \mbox{\hyperlink{classRaytracer_1_1Cylinder_ac78e76c6556cf64ca091571d541b30f2}{Raytracer\+::\+Cylinder}}, \mbox{\hyperlink{classRaytracer_1_1Plane_a254b82d59ec55e8bf0e7ad8fc7441c78}{Raytracer\+::\+Plane}}, \mbox{\hyperlink{classRaytracer_1_1Sphere_ab038632e9c87ee4f303011b9233cc6e6}{Raytracer\+::\+Sphere}}, \mbox{\hyperlink{classRaytracer_1_1TangleCube_aa5c967da77468066a3534b69c317bcf0}{Raytracer\+::\+Tangle\+Cube}}, \mbox{\hyperlink{classRaytracer_1_1Torus_a471fb58cbabcc0b322066ed8038c0c09}{Raytracer\+::\+Torus}}, and \mbox{\hyperlink{classRaytracer_1_1Triangle_a932257d40bbeef23232d86bd6df86414}{Raytracer\+::\+Triangle}}.
+
+\Hypertarget{classRaytracer_1_1IPrimitive_adef7febce98bf6b9066679f63e0c2377}\index{Raytracer::IPrimitive@{Raytracer::IPrimitive}!getColor@{getColor}}
+\index{getColor@{getColor}!Raytracer::IPrimitive@{Raytracer::IPrimitive}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1IPrimitive_adef7febce98bf6b9066679f63e0c2377} 
+virtual \mbox{\hyperlink{classRaytracer_1_1Color}{Color}} Raytracer\+::\+IPrimitive\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the color of the primitive. 
+
+\begin{DoxyNote}{Note}
+This is a legacy method. Use \doxylink{classRaytracer_1_1IPrimitive_a4f3f11706602a77f7aa891adac0e6767}{get\+Material()}.\doxylink{classRaytracer_1_1IPrimitive_adef7febce98bf6b9066679f63e0c2377}{get\+Color()} instead for material-\/based rendering.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Color}{Color} The color of the primitive 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_ac7e5080d1275ef6f11bcc0cbbac51170}{Raytracer\+::\+Composite\+Primitive}}, \mbox{\hyperlink{classRaytracer_1_1Cone_af7af65105558be4f5a1e23fa31f7083b}{Raytracer\+::\+Cone}}, \mbox{\hyperlink{classRaytracer_1_1Cylinder_a5faa23fb62c86e97ffa42f902816765d}{Raytracer\+::\+Cylinder}}, \mbox{\hyperlink{classRaytracer_1_1Plane_acb41c6af4cc5a3a17d79120a710f82c5}{Raytracer\+::\+Plane}}, \mbox{\hyperlink{classRaytracer_1_1Sphere_a86cedbe54c54accc329ffcdced03bbc0}{Raytracer\+::\+Sphere}}, \mbox{\hyperlink{classRaytracer_1_1TangleCube_a82dec3675b3392fee812fe6dd9dcb063}{Raytracer\+::\+Tangle\+Cube}}, \mbox{\hyperlink{classRaytracer_1_1Torus_afc502e26f657c96a41347d5f2e208ea7}{Raytracer\+::\+Torus}}, and \mbox{\hyperlink{classRaytracer_1_1Triangle_ac16dd009848df1b7c60088b7e540acbc}{Raytracer\+::\+Triangle}}.
+
+\Hypertarget{classRaytracer_1_1IPrimitive_a4f3f11706602a77f7aa891adac0e6767}\index{Raytracer::IPrimitive@{Raytracer::IPrimitive}!getMaterial@{getMaterial}}
+\index{getMaterial@{getMaterial}!Raytracer::IPrimitive@{Raytracer::IPrimitive}}
+\doxysubsubsection{\texorpdfstring{getMaterial()}{getMaterial()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1IPrimitive_a4f3f11706602a77f7aa891adac0e6767} 
+virtual const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \& Raytracer\+::\+IPrimitive\+::get\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the material of the primitive. 
+
+The material defines how the primitive interacts with light, including its color, reflectivity, transparency, etc.
+
+\begin{DoxyReturn}{Returns}
+const \doxylink{classRaytracer_1_1Material}{Material}\& Reference to the primitive\textquotesingle{}s material 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_a0ff40eb28baed40545a25189f41b811a}{Raytracer\+::\+Composite\+Primitive}}, \mbox{\hyperlink{classRaytracer_1_1Cone_abdd1893e72871fc658ed3f5e4b44ec44}{Raytracer\+::\+Cone}}, \mbox{\hyperlink{classRaytracer_1_1Cylinder_aee8c02c202bd5d045f7a8d11d9bd1f59}{Raytracer\+::\+Cylinder}}, \mbox{\hyperlink{classRaytracer_1_1Plane_aa207d19f19b6dfa5ee015b8ffab70f20}{Raytracer\+::\+Plane}}, \mbox{\hyperlink{classRaytracer_1_1Sphere_a942e95782a88dabafad9056805d95498}{Raytracer\+::\+Sphere}}, \mbox{\hyperlink{classRaytracer_1_1TangleCube_a7e8dbbfdbd29a61166e1e1a006e8b3eb}{Raytracer\+::\+Tangle\+Cube}}, \mbox{\hyperlink{classRaytracer_1_1Torus_afb667f6c07dc7093655f8afba156d25e}{Raytracer\+::\+Torus}}, and \mbox{\hyperlink{classRaytracer_1_1Triangle_a5ec1eb21e710923eace01ee14c48ac7c}{Raytracer\+::\+Triangle}}.
+
+\Hypertarget{classRaytracer_1_1IPrimitive_a03a1602232f80f319b587902a6884479}\index{Raytracer::IPrimitive@{Raytracer::IPrimitive}!getNormal@{getNormal}}
+\index{getNormal@{getNormal}!Raytracer::IPrimitive@{Raytracer::IPrimitive}}
+\doxysubsubsection{\texorpdfstring{getNormal()}{getNormal()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1IPrimitive_a03a1602232f80f319b587902a6884479} 
+virtual \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} Raytracer\+::\+IPrimitive\+::get\+Normal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calculates the surface normal at a given point. 
+
+The normal vector is perpendicular to the surface of the primitive at the specified point and is typically normalized.
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & The point on the surface to calculate the normal at \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} The normalized surface normal vector 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_ae1bae32d698a001156ef9e17aca2a5e6}{Raytracer\+::\+Composite\+Primitive}}, \mbox{\hyperlink{classRaytracer_1_1Cone_a2c0cfa0c25e5e8c00d7076d67c789232}{Raytracer\+::\+Cone}}, \mbox{\hyperlink{classRaytracer_1_1Cylinder_ab139db71428bbd11676e78cbbef85e38}{Raytracer\+::\+Cylinder}}, \mbox{\hyperlink{classRaytracer_1_1Plane_a7e3c3f9d247f4e20027ac0cfd55900ba}{Raytracer\+::\+Plane}}, \mbox{\hyperlink{classRaytracer_1_1Sphere_a0ac4aade406b91bfeb32dd03f273d17d}{Raytracer\+::\+Sphere}}, \mbox{\hyperlink{classRaytracer_1_1TangleCube_afdb1b144efa58f2e2190554f958834e8}{Raytracer\+::\+Tangle\+Cube}}, \mbox{\hyperlink{classRaytracer_1_1Torus_a6d74475852dc2af2a624f673aef3a9b4}{Raytracer\+::\+Torus}}, and \mbox{\hyperlink{classRaytracer_1_1Triangle_a2490c78624ed66940c2a23d8ce7f5b88}{Raytracer\+::\+Triangle}}.
+
+\Hypertarget{classRaytracer_1_1IPrimitive_a71209e0c7a44d5746c9796405b9d1787}\index{Raytracer::IPrimitive@{Raytracer::IPrimitive}!intersect@{intersect}}
+\index{intersect@{intersect}!Raytracer::IPrimitive@{Raytracer::IPrimitive}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1IPrimitive_a71209e0c7a44d5746c9796405b9d1787} 
+virtual bool Raytracer\+::\+IPrimitive\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}} \&}]{ray}{, }\item[{float \&}]{t}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Tests if a ray intersects with this primitive. 
+
+This method determines whether a ray hits this primitive, and if so, at what distance from the ray origin.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to test for intersection \\
+\hline
+{\em t} & Output parameter that will contain the distance to intersection if found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If the ray intersects with the primitive 
+
+false If no intersection is found 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_ab609d54be7b2128a433365c8f87d6443}{Raytracer\+::\+Composite\+Primitive}}, \mbox{\hyperlink{classRaytracer_1_1Cone_aeecc1d94521dee8cee996c8d345f79fb}{Raytracer\+::\+Cone}}, \mbox{\hyperlink{classRaytracer_1_1Cylinder_a3ec8527b7d6e7b4d2138e766915a2abb}{Raytracer\+::\+Cylinder}}, \mbox{\hyperlink{classRaytracer_1_1Plane_a61966396d7e50f89482ae24b126f8bf0}{Raytracer\+::\+Plane}}, \mbox{\hyperlink{classRaytracer_1_1Sphere_a726c90a75fef977a7a1f588461ebc71e}{Raytracer\+::\+Sphere}}, \mbox{\hyperlink{classRaytracer_1_1TangleCube_a1353f2a8318de33167f4183bbab37685}{Raytracer\+::\+Tangle\+Cube}}, \mbox{\hyperlink{classRaytracer_1_1Torus_ad212063b2ef7de8915d23587bfe9490c}{Raytracer\+::\+Torus}}, and \mbox{\hyperlink{classRaytracer_1_1Triangle_afa0080778796c25f1d8eb7a4f4cc9222}{Raytracer\+::\+Triangle}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Primitives/\mbox{\hyperlink{IPrimitive_8hpp}{IPrimitive.\+hpp}}\end{DoxyCompactItemize}

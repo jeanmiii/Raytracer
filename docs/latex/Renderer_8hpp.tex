@@ -1,0 +1,47 @@
+\doxysection{include/\+Renderer/\+Renderer.hpp File Reference}
+\hypertarget{Renderer_8hpp}{}\label{Renderer_8hpp}\index{include/Renderer/Renderer.hpp@{include/Renderer/Renderer.hpp}}
+
+
+Core rendering system for the ray tracer.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include "{}Core/\+Scene.\+hpp"{}}\newline
+{\ttfamily \#include "{}Maths/\+Ray.\+hpp"{}}\newline
+{\ttfamily \#include "{}Utils/\+Color.\+hpp"{}}\newline
+{\ttfamily \#include "{}Utils/\+Vector3.\+hpp"{}}\newline
+{\ttfamily \#include "{}Material/\+Material.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classRaytracer_1_1Renderer}{Raytracer\+::\+Renderer}}
+\begin{DoxyCompactList}\small\item\em Main rendering engine that converts a \doxylink{classRaytracer_1_1Scene}{Scene} into a 2D image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceRaytracer}{Raytracer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Core rendering system for the ray tracer. 
+
+The Renderer class handles the complete rendering pipeline from scene description to final image. It implements recursive ray tracing with Blinn-\/\+Phong shading model, reflections, and shadows. The renderer processes the scene pixel by pixel, computing ray directions through a virtual camera and accumulating lighting effects.
+
+\begin{DoxyAuthor}{Author}
+\mbox{[}Your Name\mbox{]} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 (EPITECH PROJECT) 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+EPITECH PROJECT, 2025
+\end{DoxyCopyright}
+\begin{DoxyNote}{Note}
+Uses recursive ray tracing with configurable maximum depth 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]Implement anti-\/aliasing and acceleration structures \end{DoxyRefDesc}

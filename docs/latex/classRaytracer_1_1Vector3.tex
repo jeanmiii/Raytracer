@@ -1,0 +1,379 @@
+\doxysection{Raytracer\+::Vector3 Class Reference}
+\hypertarget{classRaytracer_1_1Vector3}{}\label{classRaytracer_1_1Vector3}\index{Raytracer::Vector3@{Raytracer::Vector3}}
+
+
+3D vector with common mathematical operations  
+
+
+
+
+{\ttfamily \#include $<$Vector3.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3_a65b103c5d58f746e3c0bd41fd4b0737e}{Vector3}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor (initializes to zero vector) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3_a8972ea924351bf20ade273ee3b6100df}{Vector3}} (float \mbox{\hyperlink{classRaytracer_1_1Vector3_a760e803a0947f697cb8f3eb8c7f7f76e}{x}}, float \mbox{\hyperlink{classRaytracer_1_1Vector3_aaf24290ba89993917e00635253fc9b15}{y}}, float \mbox{\hyperlink{classRaytracer_1_1Vector3_a1d55091b9b1719e82932c7289d3fcd26}{z}})
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classRaytracer_1_1Vector3}{Vector3} with specified components. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1Vector3_a1afe3aec3dc98abe9f6467fc469a954a}{operator+}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&other) const
+\begin{DoxyCompactList}\small\item\em Vector addition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1Vector3_aa7f3c2a00fbd29fcc7cc1350007c31af}{operator-\/}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&other) const
+\begin{DoxyCompactList}\small\item\em Vector subtraction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1Vector3_a72667fbf4cb5319bc874cff9b9c95fb7}{operator\texorpdfstring{$\ast$}{*}}} (float scalar) const
+\begin{DoxyCompactList}\small\item\em Scalar multiplication. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1Vector3_a5a62c93344c4cc12461091c453a98c3f}{operator/}} (float scalar) const
+\begin{DoxyCompactList}\small\item\em Scalar division. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \& \mbox{\hyperlink{classRaytracer_1_1Vector3_a6cc5311fbc41d7b1d09b9a72be9071c2}{operator+=}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&other)
+\begin{DoxyCompactList}\small\item\em Compound vector addition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \& \mbox{\hyperlink{classRaytracer_1_1Vector3_aa2699311495396151327bb15f6277331}{operator-\/=}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&other)
+\begin{DoxyCompactList}\small\item\em Compound vector subtraction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \& \mbox{\hyperlink{classRaytracer_1_1Vector3_a117f8a093010c1e1fb4daf32d4395b80}{operator\texorpdfstring{$\ast$}{*}=}} (float scalar)
+\begin{DoxyCompactList}\small\item\em Compound scalar multiplication. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \& \mbox{\hyperlink{classRaytracer_1_1Vector3_a0d3e5cedad96eb4f21927611c32b7b16}{operator/=}} (float scalar)
+\begin{DoxyCompactList}\small\item\em Compound scalar division. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classRaytracer_1_1Vector3_aee172a5038b34f22029ab0360acf0a7c}{length}} () const
+\begin{DoxyCompactList}\small\item\em Calculate vector length (magnitude) \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classRaytracer_1_1Vector3_a8c3bf7efa57aed536d380bab94ebdbed}{dot}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&other) const
+\begin{DoxyCompactList}\small\item\em Calculate dot product with another vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1Vector3_a7c199ba27794ba50728c4f6f06e875f1}{cross}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&other) const
+\begin{DoxyCompactList}\small\item\em Calculate cross product with another vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1Vector3_af811a2efd8b8e97c67ee00fc4fbcd0c7}{normalized}} () const
+\begin{DoxyCompactList}\small\item\em Get normalized version of the vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classRaytracer_1_1Vector3_a760e803a0947f697cb8f3eb8c7f7f76e}{x}}
+\begin{DoxyCompactList}\small\item\em X component of the vector. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classRaytracer_1_1Vector3_aaf24290ba89993917e00635253fc9b15}{y}}
+\begin{DoxyCompactList}\small\item\em Y component of the vector. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classRaytracer_1_1Vector3_a1d55091b9b1719e82932c7289d3fcd26}{z}}
+\begin{DoxyCompactList}\small\item\em Z component of the vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classRaytracer_1_1Vector3_aac34174a73bd09af706112150105b8bb}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&vec)
+\begin{DoxyCompactList}\small\item\em Output stream operator for \doxylink{classRaytracer_1_1Vector3}{Vector3}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+3D vector with common mathematical operations 
+
+Represents a vector in 3D space with x, y, z components. Provides essential operations for vector mathematics including\+:
+\begin{DoxyItemize}
+\item Arithmetic operations
+\item Dot and cross products
+\item Vector normalization
+\item Length calculations 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1Vector3_a65b103c5d58f746e3c0bd41fd4b0737e}\index{Raytracer::Vector3@{Raytracer::Vector3}!Vector3@{Vector3}}
+\index{Vector3@{Vector3}!Raytracer::Vector3@{Raytracer::Vector3}}
+\doxysubsubsection{\texorpdfstring{Vector3()}{Vector3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Vector3_a65b103c5d58f746e3c0bd41fd4b0737e} 
+Raytracer\+::\+Vector3\+::\+Vector3 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor (initializes to zero vector) 
+
+\Hypertarget{classRaytracer_1_1Vector3_a8972ea924351bf20ade273ee3b6100df}\index{Raytracer::Vector3@{Raytracer::Vector3}!Vector3@{Vector3}}
+\index{Vector3@{Vector3}!Raytracer::Vector3@{Raytracer::Vector3}}
+\doxysubsubsection{\texorpdfstring{Vector3()}{Vector3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Vector3_a8972ea924351bf20ade273ee3b6100df} 
+Raytracer\+::\+Vector3\+::\+Vector3 (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{, }\item[{float}]{z}{}\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{classRaytracer_1_1Vector3}{Vector3} with specified components. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X component \\
+\hline
+{\em y} & Y component \\
+\hline
+{\em z} & Z component \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1Vector3_a7c199ba27794ba50728c4f6f06e875f1}\index{Raytracer::Vector3@{Raytracer::Vector3}!cross@{cross}}
+\index{cross@{cross}!Raytracer::Vector3@{Raytracer::Vector3}}
+\doxysubsubsection{\texorpdfstring{cross()}{cross()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Vector3_a7c199ba27794ba50728c4f6f06e875f1} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} Raytracer\+::\+Vector3\+::cross (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculate cross product with another vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Vector to compute cross product with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} Cross product result 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Vector3_a8c3bf7efa57aed536d380bab94ebdbed}\index{Raytracer::Vector3@{Raytracer::Vector3}!dot@{dot}}
+\index{dot@{dot}!Raytracer::Vector3@{Raytracer::Vector3}}
+\doxysubsubsection{\texorpdfstring{dot()}{dot()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Vector3_a8c3bf7efa57aed536d380bab94ebdbed} 
+float Raytracer\+::\+Vector3\+::dot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculate dot product with another vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Vector to compute dot product with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Dot product result 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Vector3_aee172a5038b34f22029ab0360acf0a7c}\index{Raytracer::Vector3@{Raytracer::Vector3}!length@{length}}
+\index{length@{length}!Raytracer::Vector3@{Raytracer::Vector3}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Vector3_aee172a5038b34f22029ab0360acf0a7c} 
+float Raytracer\+::\+Vector3\+::length (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Calculate vector length (magnitude) 
+
+\begin{DoxyReturn}{Returns}
+float Length of the vector 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Vector3_af811a2efd8b8e97c67ee00fc4fbcd0c7}\index{Raytracer::Vector3@{Raytracer::Vector3}!normalized@{normalized}}
+\index{normalized@{normalized}!Raytracer::Vector3@{Raytracer::Vector3}}
+\doxysubsubsection{\texorpdfstring{normalized()}{normalized()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Vector3_af811a2efd8b8e97c67ee00fc4fbcd0c7} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} Raytracer\+::\+Vector3\+::normalized (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get normalized version of the vector. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} Unit vector in same direction 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Returns zero vector if length is zero 
+\end{DoxyWarning}
+\Hypertarget{classRaytracer_1_1Vector3_a72667fbf4cb5319bc874cff9b9c95fb7}\index{Raytracer::Vector3@{Raytracer::Vector3}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!Raytracer::Vector3@{Raytracer::Vector3}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Vector3_a72667fbf4cb5319bc874cff9b9c95fb7} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} Raytracer\+::\+Vector3\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{float}]{scalar}{}\end{DoxyParamCaption}) const}
+
+
+
+Scalar multiplication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & Multiplication factor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} Scaled vector 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Vector3_a117f8a093010c1e1fb4daf32d4395b80}\index{Raytracer::Vector3@{Raytracer::Vector3}!operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}}
+\index{operator\texorpdfstring{$\ast$}{*}=@{operator\texorpdfstring{$\ast$}{*}=}!Raytracer::Vector3@{Raytracer::Vector3}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}=()}{operator*=()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Vector3_a117f8a093010c1e1fb4daf32d4395b80} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} \& Raytracer\+::\+Vector3\+::operator\texorpdfstring{$\ast$}{*}= (\begin{DoxyParamCaption}\item[{float}]{scalar}{}\end{DoxyParamCaption})}
+
+
+
+Compound scalar multiplication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & Multiplication factor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3}\& Reference to modified vector 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Vector3_a1afe3aec3dc98abe9f6467fc469a954a}\index{Raytracer::Vector3@{Raytracer::Vector3}!operator+@{operator+}}
+\index{operator+@{operator+}!Raytracer::Vector3@{Raytracer::Vector3}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Vector3_a1afe3aec3dc98abe9f6467fc469a954a} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} Raytracer\+::\+Vector3\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Vector addition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Vector to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} Resulting vector 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Vector3_a6cc5311fbc41d7b1d09b9a72be9071c2}\index{Raytracer::Vector3@{Raytracer::Vector3}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Raytracer::Vector3@{Raytracer::Vector3}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Vector3_a6cc5311fbc41d7b1d09b9a72be9071c2} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} \& Raytracer\+::\+Vector3\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Compound vector addition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Vector to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3}\& Reference to modified vector 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Vector3_aa7f3c2a00fbd29fcc7cc1350007c31af}\index{Raytracer::Vector3@{Raytracer::Vector3}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Raytracer::Vector3@{Raytracer::Vector3}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Vector3_aa7f3c2a00fbd29fcc7cc1350007c31af} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} Raytracer\+::\+Vector3\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Vector subtraction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Vector to subtract \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} Resulting vector 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Vector3_aa2699311495396151327bb15f6277331}\index{Raytracer::Vector3@{Raytracer::Vector3}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Raytracer::Vector3@{Raytracer::Vector3}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Vector3_aa2699311495396151327bb15f6277331} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} \& Raytracer\+::\+Vector3\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Compound vector subtraction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Vector to subtract \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3}\& Reference to modified vector 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Vector3_a5a62c93344c4cc12461091c453a98c3f}\index{Raytracer::Vector3@{Raytracer::Vector3}!operator/@{operator/}}
+\index{operator/@{operator/}!Raytracer::Vector3@{Raytracer::Vector3}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Vector3_a5a62c93344c4cc12461091c453a98c3f} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} Raytracer\+::\+Vector3\+::operator/ (\begin{DoxyParamCaption}\item[{float}]{scalar}{}\end{DoxyParamCaption}) const}
+
+
+
+Scalar division. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & Division factor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} Scaled vector 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Division by zero is not checked 
+\end{DoxyWarning}
+\Hypertarget{classRaytracer_1_1Vector3_a0d3e5cedad96eb4f21927611c32b7b16}\index{Raytracer::Vector3@{Raytracer::Vector3}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!Raytracer::Vector3@{Raytracer::Vector3}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Vector3_a0d3e5cedad96eb4f21927611c32b7b16} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} \& Raytracer\+::\+Vector3\+::operator/= (\begin{DoxyParamCaption}\item[{float}]{scalar}{}\end{DoxyParamCaption})}
+
+
+
+Compound scalar division. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & Division factor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3}\& Reference to modified vector 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Division by zero is not checked 
+\end{DoxyWarning}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classRaytracer_1_1Vector3_aac34174a73bd09af706112150105b8bb}\index{Raytracer::Vector3@{Raytracer::Vector3}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Raytracer::Vector3@{Raytracer::Vector3}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Vector3_aac34174a73bd09af706112150105b8bb} 
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{vec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operator for \doxylink{classRaytracer_1_1Vector3}{Vector3}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Output stream \\
+\hline
+{\em vec} & Vector to output \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& Stream with vector representation
+\end{DoxyReturn}
+Outputs vector in format "{}\+Vector3(x, y, z)"{} 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classRaytracer_1_1Vector3_a760e803a0947f697cb8f3eb8c7f7f76e}\index{Raytracer::Vector3@{Raytracer::Vector3}!x@{x}}
+\index{x@{x}!Raytracer::Vector3@{Raytracer::Vector3}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Vector3_a760e803a0947f697cb8f3eb8c7f7f76e} 
+float Raytracer\+::\+Vector3\+::x}
+
+
+
+X component of the vector. 
+
+\Hypertarget{classRaytracer_1_1Vector3_aaf24290ba89993917e00635253fc9b15}\index{Raytracer::Vector3@{Raytracer::Vector3}!y@{y}}
+\index{y@{y}!Raytracer::Vector3@{Raytracer::Vector3}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Vector3_aaf24290ba89993917e00635253fc9b15} 
+float Raytracer\+::\+Vector3\+::y}
+
+
+
+Y component of the vector. 
+
+\Hypertarget{classRaytracer_1_1Vector3_a1d55091b9b1719e82932c7289d3fcd26}\index{Raytracer::Vector3@{Raytracer::Vector3}!z@{z}}
+\index{z@{z}!Raytracer::Vector3@{Raytracer::Vector3}}
+\doxysubsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Vector3_a1d55091b9b1719e82932c7289d3fcd26} 
+float Raytracer\+::\+Vector3\+::z}
+
+
+
+Z component of the vector. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Utils/\mbox{\hyperlink{Vector3_8hpp}{Vector3.\+hpp}}\item 
+src/\+Utils/\mbox{\hyperlink{Vector3_8cpp}{Vector3.\+cpp}}\end{DoxyCompactItemize}

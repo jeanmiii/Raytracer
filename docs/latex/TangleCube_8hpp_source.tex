@@ -1,0 +1,36 @@
+\doxysection{Tangle\+Cube.\+hpp}
+\hypertarget{TangleCube_8hpp_source}{}\label{TangleCube_8hpp_source}\index{include/Primitives/TangleCube.hpp@{include/Primitives/TangleCube.hpp}}
+\mbox{\hyperlink{TangleCube_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IPrimitive_8hpp}{Primitives/IPrimitive.hpp}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Color_8hpp}{Utils/Color.hpp}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Vector3_8hpp}{Utils/Vector3.hpp}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceRaytracer}{Raytracer}}\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRaytracer_1_1TangleCube_a1011a36edde97dc754470a8a17700eca}{TangleCube}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{IPrimitive}}\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1TangleCube_a1011a36edde97dc754470a8a17700eca}{TangleCube}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ center,\ \textcolor{keywordtype}{float}\ size,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Material}{Material}}\&\ material);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classRaytracer_1_1TangleCube_a1353f2a8318de33167f4183bbab37685}{intersect}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}}\&\ ray,\ \textcolor{keywordtype}{float}\&\ t)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\ \mbox{\hyperlink{classRaytracer_1_1TangleCube_afdb1b144efa58f2e2190554f958834e8}{getNormal}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ point)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Color}{Color}}\ \mbox{\hyperlink{classRaytracer_1_1TangleCube_a82dec3675b3392fee812fe6dd9dcb063}{getColor}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\ \mbox{\hyperlink{classRaytracer_1_1TangleCube_aa5c967da77468066a3534b69c317bcf0}{getCenter}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Material}{Material}}\&\ \mbox{\hyperlink{classRaytracer_1_1TangleCube_a7e8dbbfdbd29a61166e1e1a006e8b3eb}{getMaterial}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\ m\_center;\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ m\_size;\ \ \ \ \ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Material}{Material}}\ m\_material;\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ evaluate(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ point)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ \ \ \ \ \};}
+\DoxyCodeLine{00098\ \}\ }
+
+\end{DoxyCode}

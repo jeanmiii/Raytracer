@@ -1,0 +1,106 @@
+\doxysection{Material.\+hpp}
+\hypertarget{Material_8hpp_source}{}\label{Material_8hpp_source}\index{include/Material/Material.hpp@{include/Material/Material.hpp}}
+\mbox{\hyperlink{Material_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Color_8hpp}{Utils/Color.hpp}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceRaytracer}{Raytracer}}\ \{}
+\DoxyCodeLine{00014\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRaytracer_1_1Material_aea05b1ea43d86087eaa48e4649ca7160}{Material}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8f}{Type}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8fa872e5dcd9558f63bae4eb52978a87692}{FLAT\_COLOR}},\ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8fa6ba349754f93272c4329cfebd4288c0e}{LAMBERTIAN}},\ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8fa3db9a7ae58891fde6c69ed13ed0c52ed}{METAL}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8faab2d539bafec1ed5b3b3013dd5ccce35}{DIELECTRIC}},\ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8fa3a8195ba8e9666bb8a09848dbfb6fc79}{EMISSIVE}}\ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Material_aea05b1ea43d86087eaa48e4649ca7160}{Material}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classRaytracer_1_1Material_a8a3427730a11944cf790890b804de56e}{Material}}(\mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8f}{Type}}\ type)\ :\ \_type(type)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Material_aa1b46b6b825cf25653910e86318abc9f}{Material}}(\mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8f}{Type}}\ type,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Color}{Color}}\&\ color)\ :\ \_type(type),\ \_color(color)\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classRaytracer_1_1Material_aadb77e835f24ce1949bf27699be55bb8}{\string~Material}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRaytracer_1_1Material_a1ea2f47a21b93893f4a4fece6d89f906}{setType}}(\mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8f}{Type}}\ type)\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \_type\ =\ type;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRaytracer_1_1Material_af96ac586ec82f19109a3725a239d0cc0}{setRoughness}}(\textcolor{keywordtype}{double}\ roughness)\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \_roughness\ =\ roughness;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRaytracer_1_1Material_a77d085183e0f20b70b7e458695152c39}{setMetalness}}(\textcolor{keywordtype}{double}\ metalness)\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \_metalness\ =\ metalness;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRaytracer_1_1Material_a29f16f09308e02a0530a97d53f4e1114}{setReflectivity}}(\textcolor{keywordtype}{double}\ reflectivity)\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \_reflectivity\ =\ reflectivity;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRaytracer_1_1Material_a4a8c6aed959e01346a6b87354b361207}{setTransparency}}(\textcolor{keywordtype}{double}\ transparency)\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \_transparency\ =\ transparency;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRaytracer_1_1Material_af97b55bd146bc7a156831af328a9d07d}{setRefractiveIndex}}(\textcolor{keywordtype}{double}\ refractiveIndex)\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \_refractiveIndex\ =\ refractiveIndex;}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRaytracer_1_1Material_ab54e71afb7e5c4de0ccc82543155e5d8}{setEmissiveIntensity}}(\textcolor{keywordtype}{double}\ intensity)\ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \_emissiveIntensity\ =\ intensity;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRaytracer_1_1Material_acfa0d44a971c666647e44d8672602fc8}{setColor}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Color}{Color}}\&\ color)\ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \_color\ =\ color;}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8f}{Type}}\ \mbox{\hyperlink{classRaytracer_1_1Material_a3348cea9e9eec69142c154727199447a}{getType}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_type;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classRaytracer_1_1Material_a2799b2b571eb2f385713d0c150697242}{getRoughness}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_roughness;}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classRaytracer_1_1Material_ac2fcadb85b5074761d66430b118a147d}{getMetalness}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_metalness;}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classRaytracer_1_1Material_a144f499677be92eab22fe0a2e8bf4acc}{getReflectivity}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_reflectivity;}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classRaytracer_1_1Material_a9dc0f4d09276e48f7728fb0ae4bb9b55}{getTransparency}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_transparency;}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ }
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classRaytracer_1_1Material_a4d124e241c4e95ea852af485cfb21035}{getRefractiveIndex}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_refractiveIndex;}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classRaytracer_1_1Material_a554c29d5ebe0217898ce3e4d37ea8f0c}{getEmissiveIntensity}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_emissiveIntensity;}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ }
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Color}{Color}}\&\ \mbox{\hyperlink{classRaytracer_1_1Material_a4372816ad05ac91e8224c71a101b287c}{getColor}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_color;}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8f}{Type}}\ \_type\ =\ \mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8fa6ba349754f93272c4329cfebd4288c0e}{LAMBERTIAN}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_roughness\ =\ 0.5;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_metalness\ =\ 0.0;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_reflectivity\ =\ 0.0;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_transparency\ =\ 0.0;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_refractiveIndex\ =\ 1.0;\ \ \ \ \ \ }
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_emissiveIntensity\ =\ 0.0;\ \ \ \ }
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Color}{Color}}\ \_color\ =\ \mbox{\hyperlink{classRaytracer_1_1Color}{Color}}(255,\ 255,\ 255);\ }
+\DoxyCodeLine{00223\ \ \ \};}
+\DoxyCodeLine{00224\ \}\ \ \textcolor{comment}{//\ namespace\ Raytracer}}
+
+\end{DoxyCode}

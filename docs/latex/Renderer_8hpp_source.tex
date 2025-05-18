@@ -1,0 +1,49 @@
+\doxysection{Renderer.\+hpp}
+\hypertarget{Renderer_8hpp_source}{}\label{Renderer_8hpp_source}\index{include/Renderer/Renderer.hpp@{include/Renderer/Renderer.hpp}}
+\mbox{\hyperlink{Renderer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Scene_8hpp}{Core/Scene.hpp}}"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Ray_8hpp}{Maths/Ray.hpp}}"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Color_8hpp}{Utils/Color.hpp}}"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Vector3_8hpp}{Utils/Vector3.hpp}}"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Material_8hpp}{Material/Material.hpp}}"{}}}
+\DoxyCodeLine{00027\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceRaytracer}{Raytracer}}\ \{}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRaytracer_1_1Renderer_a8bcaac1abe85360d3919e37a6ba42d40}{Renderer}}\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Renderer_a8bcaac1abe85360d3919e37a6ba42d40}{Renderer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Scene}{Scene}}\&\ scene,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRaytracer_1_1Renderer_a9abddd4b6654d920ec8e77d86304d3b9}{render}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::vector<Color>>\&\ \mbox{\hyperlink{classRaytracer_1_1Renderer_a2be7acb9fe5e5ea494066555b97826ab}{getImage}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Scene}{Scene}}\&\ m\_scene;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m\_width;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ m\_height;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ std::vector<std::vector<Color>>\ m\_image;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\ computeRayDirection(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Color}{Color}}\ traceRay(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}}\&\ ray,\ \textcolor{keywordtype}{int}\ depth)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Color}{Color}}\ getReflectionColor(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ hitPoint,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ normal,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}}\&\ ray,\ \textcolor{keywordtype}{int}\ depth)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Éclaire\ le\ point\ d'intersection\ selon\ Blinn-\/Phong\ +\ ombres}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Color}{Color}}\ shadeHit(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ hitPoint,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ normal,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Color}{Color}}\&\ baseColor,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Color}{Color}}\&\ reflectionColor,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Material}{Material}}\&\ material)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Écrit\ la\ couleur\ 'color'\ au\ pixel\ (x,y)\ de\ m\_image}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setPixel(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Color}{Color}}\&\ color);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\ rotateX(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ v,\ \textcolor{keywordtype}{float}\ a)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\ rotateY(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ v,\ \textcolor{keywordtype}{float}\ a)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\ rotateZ(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ v,\ \textcolor{keywordtype}{float}\ a)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00125\ \ \ \ \ \};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \}\ \textcolor{comment}{//\ namespace\ Raytracer}}
+
+\end{DoxyCode}

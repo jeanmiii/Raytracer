@@ -1,0 +1,43 @@
+\doxysection{include/\+Utils/\+Ppm\+Writer.hpp File Reference}
+\hypertarget{PpmWriter_8hpp}{}\label{PpmWriter_8hpp}\index{include/Utils/PpmWriter.hpp@{include/Utils/PpmWriter.hpp}}
+
+
+PPM image file writer for the ray tracer.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include "{}Renderer/\+Renderer.\+hpp"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classRaytracer_1_1PPMWriter}{Raytracer\+::\+PPMWriter}}
+\begin{DoxyCompactList}\small\item\em Handles writing of images to PPM format files. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceRaytracer}{Raytracer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+PPM image file writer for the ray tracer. 
+
+The PPMWriter class handles the export of rendered images to PPM (Portable Pix\+Map) format. It supports both direct saving from a Renderer instance and static writing of image buffers. The PPM format is used for its simplicity and compatibility with many image viewers.
+
+\begin{DoxyAuthor}{Author}
+\mbox{[}Your Name\mbox{]} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 (EPITECH PROJECT) 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+EPITECH PROJECT, 2025
+\end{DoxyCopyright}
+\begin{DoxyNote}{Note}
+Outputs PPM files in binary format (P6) 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]Add support for other image formats (PNG, JPEG) \end{DoxyRefDesc}

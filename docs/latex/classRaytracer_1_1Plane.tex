@@ -1,0 +1,178 @@
+\doxysection{Raytracer\+::Plane Class Reference}
+\hypertarget{classRaytracer_1_1Plane}{}\label{classRaytracer_1_1Plane}\index{Raytracer::Plane@{Raytracer::Plane}}
+
+
+Represents an infinite plane primitive for raytracing.  
+
+
+
+
+{\ttfamily \#include $<$Plane.\+hpp$>$}
+
+Inheritance diagram for Raytracer\+::Plane\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRaytracer_1_1Plane}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1Plane_aeb65bcc2f50af9d6da55320a27d5a367}{Plane}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&normal, float distance, const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&material)
+\begin{DoxyCompactList}\small\item\em Constructs a plane primitive. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRaytracer_1_1Plane_a61966396d7e50f89482ae24b126f8bf0}{intersect}} (const \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}} \&ray, float \&t) const override
+\begin{DoxyCompactList}\small\item\em Tests if a ray intersects with this plane. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1Plane_a7e3c3f9d247f4e20027ac0cfd55900ba}{get\+Normal}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Gets the normal vector of the plane. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Color}{Color}} \mbox{\hyperlink{classRaytracer_1_1Plane_acb41c6af4cc5a3a17d79120a710f82c5}{get\+Color}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the color of the plane. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1Plane_a254b82d59ec55e8bf0e7ad8fc7441c78}{get\+Center}} () const override
+\begin{DoxyCompactList}\small\item\em Gets a representative point on the plane. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \& \mbox{\hyperlink{classRaytracer_1_1Plane_aa207d19f19b6dfa5ee015b8ffab70f20}{get\+Material}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the material of the plane. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{Raytracer\+::\+IPrimitive}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classRaytracer_1_1IPrimitive_aa4aea2318383a59a56b7b10db96d55d0}{\texorpdfstring{$\sim$}{\string~}\+IPrimitive}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic cleanup. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an infinite plane primitive for raytracing. 
+
+The \doxylink{classRaytracer_1_1Plane}{Plane} class defines an infinite plane in 3D space, characterized by its normal vector and distance from the origin. It provides methods for ray-\/plane intersection testing and normal vector access which are essential for the raytracing process. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1Plane_aeb65bcc2f50af9d6da55320a27d5a367}\index{Raytracer::Plane@{Raytracer::Plane}!Plane@{Plane}}
+\index{Plane@{Plane}!Raytracer::Plane@{Raytracer::Plane}}
+\doxysubsubsection{\texorpdfstring{Plane()}{Plane()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Plane_aeb65bcc2f50af9d6da55320a27d5a367} 
+Raytracer\+::\+Plane\+::\+Plane (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{normal}{, }\item[{float}]{distance}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&}]{material}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a plane primitive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em normal} & The normal vector of the plane (should be normalized) \\
+\hline
+{\em distance} & The distance from the origin along the normal \\
+\hline
+{\em material} & The material properties of the plane \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1Plane_a254b82d59ec55e8bf0e7ad8fc7441c78}\index{Raytracer::Plane@{Raytracer::Plane}!getCenter@{getCenter}}
+\index{getCenter@{getCenter}!Raytracer::Plane@{Raytracer::Plane}}
+\doxysubsubsection{\texorpdfstring{getCenter()}{getCenter()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Plane_a254b82d59ec55e8bf0e7ad8fc7441c78} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} Raytracer\+::\+Plane\+::get\+Center (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets a representative point on the plane. 
+
+Since a plane has no center, this returns a point on the plane at distance d along the normal vector from the origin.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} A point on the plane 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a48b3fa15f48633c82d04bdd950c4ba3a}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Plane_acb41c6af4cc5a3a17d79120a710f82c5}\index{Raytracer::Plane@{Raytracer::Plane}!getColor@{getColor}}
+\index{getColor@{getColor}!Raytracer::Plane@{Raytracer::Plane}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Plane_acb41c6af4cc5a3a17d79120a710f82c5} 
+\mbox{\hyperlink{classRaytracer_1_1Color}{Color}} Raytracer\+::\+Plane\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the color of the plane. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Color}{Color} The color derived from the plane\textquotesingle{}s material 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_adef7febce98bf6b9066679f63e0c2377}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Plane_aa207d19f19b6dfa5ee015b8ffab70f20}\index{Raytracer::Plane@{Raytracer::Plane}!getMaterial@{getMaterial}}
+\index{getMaterial@{getMaterial}!Raytracer::Plane@{Raytracer::Plane}}
+\doxysubsubsection{\texorpdfstring{getMaterial()}{getMaterial()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Plane_aa207d19f19b6dfa5ee015b8ffab70f20} 
+const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \& Raytracer\+::\+Plane\+::get\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the material of the plane. 
+
+\begin{DoxyReturn}{Returns}
+const \doxylink{classRaytracer_1_1Material}{Material}\& Reference to the plane\textquotesingle{}s material 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a4f3f11706602a77f7aa891adac0e6767}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Plane_a7e3c3f9d247f4e20027ac0cfd55900ba}\index{Raytracer::Plane@{Raytracer::Plane}!getNormal@{getNormal}}
+\index{getNormal@{getNormal}!Raytracer::Plane@{Raytracer::Plane}}
+\doxysubsubsection{\texorpdfstring{getNormal()}{getNormal()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Plane_a7e3c3f9d247f4e20027ac0cfd55900ba} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} Raytracer\+::\+Plane\+::get\+Normal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the normal vector of the plane. 
+
+For a plane, the normal is constant everywhere on its surface.
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & The point on the plane (unused for planes since normal is constant) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} The normal vector of the plane 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a03a1602232f80f319b587902a6884479}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Plane_a61966396d7e50f89482ae24b126f8bf0}\index{Raytracer::Plane@{Raytracer::Plane}!intersect@{intersect}}
+\index{intersect@{intersect}!Raytracer::Plane@{Raytracer::Plane}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Plane_a61966396d7e50f89482ae24b126f8bf0} 
+bool Raytracer\+::\+Plane\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}} \&}]{ray}{, }\item[{float \&}]{t}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Tests if a ray intersects with this plane. 
+
+Calculates if and where a ray intersects with this infinite plane. The intersection distance is stored in the parameter t if an intersection is found.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to test for intersection \\
+\hline
+{\em t} & Output parameter that will contain the distance to intersection if found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If the ray intersects with the plane 
+
+false If no intersection is found (ray is parallel to the plane) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a71209e0c7a44d5746c9796405b9d1787}{Raytracer\+::\+IPrimitive}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Primitives/\mbox{\hyperlink{Plane_8hpp}{Plane.\+hpp}}\item 
+src/\+Primitives/\mbox{\hyperlink{Plane_8cpp}{Plane.\+cpp}}\end{DoxyCompactItemize}

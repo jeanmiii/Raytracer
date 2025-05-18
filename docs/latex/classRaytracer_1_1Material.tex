@@ -1,0 +1,405 @@
+\doxysection{Raytracer\+::Material Class Reference}
+\hypertarget{classRaytracer_1_1Material}{}\label{classRaytracer_1_1Material}\index{Raytracer::Material@{Raytracer::Material}}
+
+
+Represents the material properties of a surface.  
+
+
+
+
+{\ttfamily \#include $<$Material.\+hpp$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8f}{Type}} \{ \newline
+\mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8fa872e5dcd9558f63bae4eb52978a87692}{FLAT\+\_\+\+COLOR}}
+, \mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8fa6ba349754f93272c4329cfebd4288c0e}{LAMBERTIAN}}
+, \mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8fa3db9a7ae58891fde6c69ed13ed0c52ed}{METAL}}
+, \mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8faab2d539bafec1ed5b3b3013dd5ccce35}{DIELECTRIC}}
+, \newline
+\mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8fa3a8195ba8e9666bb8a09848dbfb6fc79}{EMISSIVE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of supported material types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1Material_aea05b1ea43d86087eaa48e4649ca7160}{Material}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Material_a8a3427730a11944cf790890b804de56e}{Material}} (\mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8f}{Type}} type)
+\begin{DoxyCompactList}\small\item\em Constructor with specified material type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Material_aa1b46b6b825cf25653910e86318abc9f}{Material}} (\mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8f}{Type}} type, const \mbox{\hyperlink{classRaytracer_1_1Color}{Color}} \&color)
+\begin{DoxyCompactList}\small\item\em Constructor with material type and color. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classRaytracer_1_1Material_aadb77e835f24ce1949bf27699be55bb8}{\texorpdfstring{$\sim$}{\string~}\+Material}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1Material_a1ea2f47a21b93893f4a4fece6d89f906}{set\+Type}} (\mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8f}{Type}} type)
+\begin{DoxyCompactList}\small\item\em Sets the material type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1Material_af96ac586ec82f19109a3725a239d0cc0}{set\+Roughness}} (double roughness)
+\begin{DoxyCompactList}\small\item\em Sets the material roughness. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1Material_a77d085183e0f20b70b7e458695152c39}{set\+Metalness}} (double metalness)
+\begin{DoxyCompactList}\small\item\em Sets the metalness factor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1Material_a29f16f09308e02a0530a97d53f4e1114}{set\+Reflectivity}} (double reflectivity)
+\begin{DoxyCompactList}\small\item\em Sets the reflectivity factor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1Material_a4a8c6aed959e01346a6b87354b361207}{set\+Transparency}} (double transparency)
+\begin{DoxyCompactList}\small\item\em Sets the transparency factor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1Material_af97b55bd146bc7a156831af328a9d07d}{set\+Refractive\+Index}} (double refractive\+Index)
+\begin{DoxyCompactList}\small\item\em Sets the refractive index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1Material_ab54e71afb7e5c4de0ccc82543155e5d8}{set\+Emissive\+Intensity}} (double intensity)
+\begin{DoxyCompactList}\small\item\em Sets the emissive intensity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1Material_acfa0d44a971c666647e44d8672602fc8}{set\+Color}} (const \mbox{\hyperlink{classRaytracer_1_1Color}{Color}} \&color)
+\begin{DoxyCompactList}\small\item\em Sets the material color. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8f}{Type}} \mbox{\hyperlink{classRaytracer_1_1Material_a3348cea9e9eec69142c154727199447a}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Gets the material type. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classRaytracer_1_1Material_a2799b2b571eb2f385713d0c150697242}{get\+Roughness}} () const
+\begin{DoxyCompactList}\small\item\em Gets the material roughness. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classRaytracer_1_1Material_ac2fcadb85b5074761d66430b118a147d}{get\+Metalness}} () const
+\begin{DoxyCompactList}\small\item\em Gets the material metalness. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classRaytracer_1_1Material_a144f499677be92eab22fe0a2e8bf4acc}{get\+Reflectivity}} () const
+\begin{DoxyCompactList}\small\item\em Gets the material reflectivity. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classRaytracer_1_1Material_a9dc0f4d09276e48f7728fb0ae4bb9b55}{get\+Transparency}} () const
+\begin{DoxyCompactList}\small\item\em Gets the material transparency. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classRaytracer_1_1Material_a4d124e241c4e95ea852af485cfb21035}{get\+Refractive\+Index}} () const
+\begin{DoxyCompactList}\small\item\em Gets the material refractive index. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classRaytracer_1_1Material_a554c29d5ebe0217898ce3e4d37ea8f0c}{get\+Emissive\+Intensity}} () const
+\begin{DoxyCompactList}\small\item\em Gets the material emissive intensity. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classRaytracer_1_1Color}{Color}} \& \mbox{\hyperlink{classRaytracer_1_1Material_a4372816ad05ac91e8224c71a101b287c}{get\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Gets the material color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the material properties of a surface. 
+
+This class encapsulates all properties that define how a surface interacts with light, including its color, reflectivity, transparency, and other physical properties. It supports different material types like lambertian, metal, and dielectric. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8f}\index{Raytracer::Material@{Raytracer::Material}!Type@{Type}}
+\index{Type@{Type}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8f} 
+enum \mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8f}{Raytracer\+::\+Material\+::\+Type}}}
+
+
+
+Enumeration of supported material types. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLAT\_COLOR@{FLAT\_COLOR}!Raytracer::Material@{Raytracer::Material}}\index{Raytracer::Material@{Raytracer::Material}!FLAT\_COLOR@{FLAT\_COLOR}}}\Hypertarget{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8fa872e5dcd9558f63bae4eb52978a87692}\label{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8fa872e5dcd9558f63bae4eb52978a87692} 
+FLAT\+\_\+\+COLOR&Simple flat color with no lighting effects. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LAMBERTIAN@{LAMBERTIAN}!Raytracer::Material@{Raytracer::Material}}\index{Raytracer::Material@{Raytracer::Material}!LAMBERTIAN@{LAMBERTIAN}}}\Hypertarget{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8fa6ba349754f93272c4329cfebd4288c0e}\label{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8fa6ba349754f93272c4329cfebd4288c0e} 
+LAMBERTIAN&Diffuse material with matte appearance. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METAL@{METAL}!Raytracer::Material@{Raytracer::Material}}\index{Raytracer::Material@{Raytracer::Material}!METAL@{METAL}}}\Hypertarget{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8fa3db9a7ae58891fde6c69ed13ed0c52ed}\label{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8fa3db9a7ae58891fde6c69ed13ed0c52ed} 
+METAL&Reflective metal material. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIELECTRIC@{DIELECTRIC}!Raytracer::Material@{Raytracer::Material}}\index{Raytracer::Material@{Raytracer::Material}!DIELECTRIC@{DIELECTRIC}}}\Hypertarget{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8faab2d539bafec1ed5b3b3013dd5ccce35}\label{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8faab2d539bafec1ed5b3b3013dd5ccce35} 
+DIELECTRIC&Transparent material like glass. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EMISSIVE@{EMISSIVE}!Raytracer::Material@{Raytracer::Material}}\index{Raytracer::Material@{Raytracer::Material}!EMISSIVE@{EMISSIVE}}}\Hypertarget{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8fa3a8195ba8e9666bb8a09848dbfb6fc79}\label{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8fa3a8195ba8e9666bb8a09848dbfb6fc79} 
+EMISSIVE&Self-\/illuminating material that acts as a light source. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1Material_aea05b1ea43d86087eaa48e4649ca7160}\index{Raytracer::Material@{Raytracer::Material}!Material@{Material}}
+\index{Material@{Material}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{Material()}{Material()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_aea05b1ea43d86087eaa48e4649ca7160} 
+Raytracer\+::\+Material\+::\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor. 
+
+Creates a material with default properties (lambertian white) \Hypertarget{classRaytracer_1_1Material_a8a3427730a11944cf790890b804de56e}\index{Raytracer::Material@{Raytracer::Material}!Material@{Material}}
+\index{Material@{Material}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{Material()}{Material()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_a8a3427730a11944cf790890b804de56e} 
+Raytracer\+::\+Material\+::\+Material (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8f}{Type}}}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructor with specified material type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of material to create \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRaytracer_1_1Material_aa1b46b6b825cf25653910e86318abc9f}\index{Raytracer::Material@{Raytracer::Material}!Material@{Material}}
+\index{Material@{Material}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{Material()}{Material()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_aa1b46b6b825cf25653910e86318abc9f} 
+Raytracer\+::\+Material\+::\+Material (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8f}{Type}}}]{type}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Color}{Color}} \&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor with material type and color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of material to create \\
+\hline
+{\em color} & The color of the material \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRaytracer_1_1Material_aadb77e835f24ce1949bf27699be55bb8}\index{Raytracer::Material@{Raytracer::Material}!````~Material@{\texorpdfstring{$\sim$}{\string~}Material}}
+\index{````~Material@{\texorpdfstring{$\sim$}{\string~}Material}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Material()}{\string~Material()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_aadb77e835f24ce1949bf27699be55bb8} 
+virtual Raytracer\+::\+Material\+::\texorpdfstring{$\sim$}{\string~}\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1Material_a4372816ad05ac91e8224c71a101b287c}\index{Raytracer::Material@{Raytracer::Material}!getColor@{getColor}}
+\index{getColor@{getColor}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_a4372816ad05ac91e8224c71a101b287c} 
+const \mbox{\hyperlink{classRaytracer_1_1Color}{Color}} \& Raytracer\+::\+Material\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the material color. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the material color 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Material_a554c29d5ebe0217898ce3e4d37ea8f0c}\index{Raytracer::Material@{Raytracer::Material}!getEmissiveIntensity@{getEmissiveIntensity}}
+\index{getEmissiveIntensity@{getEmissiveIntensity}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{getEmissiveIntensity()}{getEmissiveIntensity()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_a554c29d5ebe0217898ce3e4d37ea8f0c} 
+double Raytracer\+::\+Material\+::get\+Emissive\+Intensity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the material emissive intensity. 
+
+\begin{DoxyReturn}{Returns}
+The emissive intensity value 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Material_ac2fcadb85b5074761d66430b118a147d}\index{Raytracer::Material@{Raytracer::Material}!getMetalness@{getMetalness}}
+\index{getMetalness@{getMetalness}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{getMetalness()}{getMetalness()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_ac2fcadb85b5074761d66430b118a147d} 
+double Raytracer\+::\+Material\+::get\+Metalness (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the material metalness. 
+
+\begin{DoxyReturn}{Returns}
+Value between 0.\+0 (non-\/metal) and 1.\+0 (metal) 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Material_a144f499677be92eab22fe0a2e8bf4acc}\index{Raytracer::Material@{Raytracer::Material}!getReflectivity@{getReflectivity}}
+\index{getReflectivity@{getReflectivity}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{getReflectivity()}{getReflectivity()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_a144f499677be92eab22fe0a2e8bf4acc} 
+double Raytracer\+::\+Material\+::get\+Reflectivity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the material reflectivity. 
+
+\begin{DoxyReturn}{Returns}
+Value between 0.\+0 (no reflection) and 1.\+0 (mirror) 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Material_a4d124e241c4e95ea852af485cfb21035}\index{Raytracer::Material@{Raytracer::Material}!getRefractiveIndex@{getRefractiveIndex}}
+\index{getRefractiveIndex@{getRefractiveIndex}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{getRefractiveIndex()}{getRefractiveIndex()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_a4d124e241c4e95ea852af485cfb21035} 
+double Raytracer\+::\+Material\+::get\+Refractive\+Index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the material refractive index. 
+
+\begin{DoxyReturn}{Returns}
+The refractive index value 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Material_a2799b2b571eb2f385713d0c150697242}\index{Raytracer::Material@{Raytracer::Material}!getRoughness@{getRoughness}}
+\index{getRoughness@{getRoughness}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{getRoughness()}{getRoughness()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_a2799b2b571eb2f385713d0c150697242} 
+double Raytracer\+::\+Material\+::get\+Roughness (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the material roughness. 
+
+\begin{DoxyReturn}{Returns}
+Value between 0.\+0 (smooth) and 1.\+0 (rough) 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Material_a9dc0f4d09276e48f7728fb0ae4bb9b55}\index{Raytracer::Material@{Raytracer::Material}!getTransparency@{getTransparency}}
+\index{getTransparency@{getTransparency}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{getTransparency()}{getTransparency()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_a9dc0f4d09276e48f7728fb0ae4bb9b55} 
+double Raytracer\+::\+Material\+::get\+Transparency (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the material transparency. 
+
+\begin{DoxyReturn}{Returns}
+Value between 0.\+0 (opaque) and 1.\+0 (transparent) 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Material_a3348cea9e9eec69142c154727199447a}\index{Raytracer::Material@{Raytracer::Material}!getType@{getType}}
+\index{getType@{getType}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_a3348cea9e9eec69142c154727199447a} 
+\mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8f}{Type}} Raytracer\+::\+Material\+::get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the material type. 
+
+\begin{DoxyReturn}{Returns}
+The material type 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Material_acfa0d44a971c666647e44d8672602fc8}\index{Raytracer::Material@{Raytracer::Material}!setColor@{setColor}}
+\index{setColor@{setColor}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_acfa0d44a971c666647e44d8672602fc8} 
+void Raytracer\+::\+Material\+::set\+Color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Color}{Color}} \&}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the material color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The new color of the material \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRaytracer_1_1Material_ab54e71afb7e5c4de0ccc82543155e5d8}\index{Raytracer::Material@{Raytracer::Material}!setEmissiveIntensity@{setEmissiveIntensity}}
+\index{setEmissiveIntensity@{setEmissiveIntensity}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{setEmissiveIntensity()}{setEmissiveIntensity()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_ab54e71afb7e5c4de0ccc82543155e5d8} 
+void Raytracer\+::\+Material\+::set\+Emissive\+Intensity (\begin{DoxyParamCaption}\item[{double}]{intensity}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the emissive intensity. 
+
+Controls how much light the material emits, for emissive materials.
+
+
+\begin{DoxyParams}{Parameters}
+{\em intensity} & Value \texorpdfstring{$>$}{>}= 0.\+0, where higher values mean brighter emission \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRaytracer_1_1Material_a77d085183e0f20b70b7e458695152c39}\index{Raytracer::Material@{Raytracer::Material}!setMetalness@{setMetalness}}
+\index{setMetalness@{setMetalness}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{setMetalness()}{setMetalness()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_a77d085183e0f20b70b7e458695152c39} 
+void Raytracer\+::\+Material\+::set\+Metalness (\begin{DoxyParamCaption}\item[{double}]{metalness}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the metalness factor. 
+
+Controls how metallic the material appears. Higher values make the material more like metal, affecting how it reflects light.
+
+
+\begin{DoxyParams}{Parameters}
+{\em metalness} & Value between 0.\+0 (non-\/metal) and 1.\+0 (pure metal) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRaytracer_1_1Material_a29f16f09308e02a0530a97d53f4e1114}\index{Raytracer::Material@{Raytracer::Material}!setReflectivity@{setReflectivity}}
+\index{setReflectivity@{setReflectivity}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{setReflectivity()}{setReflectivity()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_a29f16f09308e02a0530a97d53f4e1114} 
+void Raytracer\+::\+Material\+::set\+Reflectivity (\begin{DoxyParamCaption}\item[{double}]{reflectivity}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the reflectivity factor. 
+
+Controls how much light the material reflects.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reflectivity} & Value between 0.\+0 (no reflection) and 1.\+0 (mirror-\/like) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRaytracer_1_1Material_af97b55bd146bc7a156831af328a9d07d}\index{Raytracer::Material@{Raytracer::Material}!setRefractiveIndex@{setRefractiveIndex}}
+\index{setRefractiveIndex@{setRefractiveIndex}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{setRefractiveIndex()}{setRefractiveIndex()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_af97b55bd146bc7a156831af328a9d07d} 
+void Raytracer\+::\+Material\+::set\+Refractive\+Index (\begin{DoxyParamCaption}\item[{double}]{refractive\+Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the refractive index. 
+
+Controls how light bends when passing through the material.
+
+
+\begin{DoxyParams}{Parameters}
+{\em refractive\+Index} & Typical values\+: air (1.\+0), water (1.\+33), glass (1.\+5) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRaytracer_1_1Material_af96ac586ec82f19109a3725a239d0cc0}\index{Raytracer::Material@{Raytracer::Material}!setRoughness@{setRoughness}}
+\index{setRoughness@{setRoughness}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{setRoughness()}{setRoughness()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_af96ac586ec82f19109a3725a239d0cc0} 
+void Raytracer\+::\+Material\+::set\+Roughness (\begin{DoxyParamCaption}\item[{double}]{roughness}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the material roughness. 
+
+Controls how smooth or rough a surface appears. Higher values create more diffuse reflections, while lower values create sharper reflections.
+
+
+\begin{DoxyParams}{Parameters}
+{\em roughness} & Value between 0.\+0 (perfectly smooth) and 1.\+0 (very rough) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRaytracer_1_1Material_a4a8c6aed959e01346a6b87354b361207}\index{Raytracer::Material@{Raytracer::Material}!setTransparency@{setTransparency}}
+\index{setTransparency@{setTransparency}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{setTransparency()}{setTransparency()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_a4a8c6aed959e01346a6b87354b361207} 
+void Raytracer\+::\+Material\+::set\+Transparency (\begin{DoxyParamCaption}\item[{double}]{transparency}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the transparency factor. 
+
+Controls how transparent the material is.
+
+
+\begin{DoxyParams}{Parameters}
+{\em transparency} & Value between 0.\+0 (opaque) and 1.\+0 (fully transparent) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRaytracer_1_1Material_a1ea2f47a21b93893f4a4fece6d89f906}\index{Raytracer::Material@{Raytracer::Material}!setType@{setType}}
+\index{setType@{setType}!Raytracer::Material@{Raytracer::Material}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Material_a1ea2f47a21b93893f4a4fece6d89f906} 
+void Raytracer\+::\+Material\+::set\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRaytracer_1_1Material_ac262de4ff9040371fe80669ae8373a8f}{Type}}}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the material type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The new material type \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Material/\mbox{\hyperlink{Material_8hpp}{Material.\+hpp}}\end{DoxyCompactItemize}

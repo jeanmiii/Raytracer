@@ -1,0 +1,127 @@
+\doxysection{Raytracer\+::Scene Class Reference}
+\hypertarget{classRaytracer_1_1Scene}{}\label{classRaytracer_1_1Scene}\index{Raytracer::Scene@{Raytracer::Scene}}
+
+
+Represents a 3D scene containing camera, objects, and lights.  
+
+
+
+
+{\ttfamily \#include $<$Scene.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1Scene_aa3e9644ee24fdd33b5642a546b5b9314}{Scene}} ()
+\item 
+void \mbox{\hyperlink{classRaytracer_1_1Scene_a2d123d7322eaa47583b8f588d03620a7}{set\+Camera}} (const \mbox{\hyperlink{classRaytracer_1_1Camera}{Camera}} \&cam)
+\item 
+const \mbox{\hyperlink{classRaytracer_1_1Camera}{Camera}} \& \mbox{\hyperlink{classRaytracer_1_1Scene_a25f2cb213bfea3ad533122532710e0df}{get\+Camera}} () const
+\item 
+void \mbox{\hyperlink{classRaytracer_1_1Scene_a19d8cdb19c773293e5fbdf35f3ce97a3}{add\+Primitive}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{IPrimitive}} $>$ primitive)
+\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{IPrimitive}} $>$ $>$ \& \mbox{\hyperlink{classRaytracer_1_1Scene_a1274a4c56b03b4b179e32fe4da5399c9}{get\+Primitives}} () const
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive}{Composite\+Primitive}} $>$ \mbox{\hyperlink{classRaytracer_1_1Scene_a4a308558db66fadad9d94cbc3a0d406b}{get\+Root\+Composite\+Primitive}} () const
+\item 
+void \mbox{\hyperlink{classRaytracer_1_1Scene_a9e0bfea261b7ab62f573d5c3ce5f4744}{add\+Light}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1ILight}{ILight}} $>$ light)
+\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1ILight}{ILight}} $>$ $>$ \& \mbox{\hyperlink{classRaytracer_1_1Scene_a4aea10b5f5a926e24d036f68c9e707b1}{get\+Lights}} () const
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1CompositeLight}{Composite\+Light}} $>$ \mbox{\hyperlink{classRaytracer_1_1Scene_aee144f95f896522efae771a873d4674c}{get\+Root\+Composite\+Light}} () const
+\item 
+void \mbox{\hyperlink{classRaytracer_1_1Scene_a73f523ef6919f264af31aa1e8edd8b3d}{set\+Ambient\+Intensity}} (float intensity)
+\item 
+\mbox{\hyperlink{classRaytracer_1_1Camera}{Camera}} \& \mbox{\hyperlink{classRaytracer_1_1Scene_a056cabb7ec53d1c01f71f041eed1dc76}{get\+Camera}} ()
+\item 
+float \mbox{\hyperlink{classRaytracer_1_1Scene_ad2a84d7114537722c9219358e65caef0}{get\+Ambient\+Intensity}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a 3D scene containing camera, objects, and lights. 
+
+The \doxylink{classRaytracer_1_1Scene}{Scene} class manages all elements of a 3D scene including the camera, geometric primitives (objects), light sources, and ambient lighting. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1Scene_aa3e9644ee24fdd33b5642a546b5b9314}\index{Raytracer::Scene@{Raytracer::Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Raytracer::Scene@{Raytracer::Scene}}
+\doxysubsubsection{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Scene_aa3e9644ee24fdd33b5642a546b5b9314} 
+Raytracer\+::\+Scene\+::\+Scene (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1Scene_a9e0bfea261b7ab62f573d5c3ce5f4744}\index{Raytracer::Scene@{Raytracer::Scene}!addLight@{addLight}}
+\index{addLight@{addLight}!Raytracer::Scene@{Raytracer::Scene}}
+\doxysubsubsection{\texorpdfstring{addLight()}{addLight()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Scene_a9e0bfea261b7ab62f573d5c3ce5f4744} 
+void Raytracer\+::\+Scene\+::add\+Light (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1ILight}{ILight}} $>$}]{light}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classRaytracer_1_1Scene_a19d8cdb19c773293e5fbdf35f3ce97a3}\index{Raytracer::Scene@{Raytracer::Scene}!addPrimitive@{addPrimitive}}
+\index{addPrimitive@{addPrimitive}!Raytracer::Scene@{Raytracer::Scene}}
+\doxysubsubsection{\texorpdfstring{addPrimitive()}{addPrimitive()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Scene_a19d8cdb19c773293e5fbdf35f3ce97a3} 
+void Raytracer\+::\+Scene\+::add\+Primitive (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{IPrimitive}} $>$}]{primitive}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classRaytracer_1_1Scene_ad2a84d7114537722c9219358e65caef0}\index{Raytracer::Scene@{Raytracer::Scene}!getAmbientIntensity@{getAmbientIntensity}}
+\index{getAmbientIntensity@{getAmbientIntensity}!Raytracer::Scene@{Raytracer::Scene}}
+\doxysubsubsection{\texorpdfstring{getAmbientIntensity()}{getAmbientIntensity()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Scene_ad2a84d7114537722c9219358e65caef0} 
+float Raytracer\+::\+Scene\+::get\+Ambient\+Intensity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classRaytracer_1_1Scene_a056cabb7ec53d1c01f71f041eed1dc76}\index{Raytracer::Scene@{Raytracer::Scene}!getCamera@{getCamera}}
+\index{getCamera@{getCamera}!Raytracer::Scene@{Raytracer::Scene}}
+\doxysubsubsection{\texorpdfstring{getCamera()}{getCamera()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Scene_a056cabb7ec53d1c01f71f041eed1dc76} 
+\mbox{\hyperlink{classRaytracer_1_1Camera}{Raytracer\+::\+Camera}} \& Raytracer\+::\+Scene\+::get\+Camera (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classRaytracer_1_1Scene_a25f2cb213bfea3ad533122532710e0df}\index{Raytracer::Scene@{Raytracer::Scene}!getCamera@{getCamera}}
+\index{getCamera@{getCamera}!Raytracer::Scene@{Raytracer::Scene}}
+\doxysubsubsection{\texorpdfstring{getCamera()}{getCamera()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Scene_a25f2cb213bfea3ad533122532710e0df} 
+const \mbox{\hyperlink{classRaytracer_1_1Camera}{Raytracer\+::\+Camera}} \& Raytracer\+::\+Scene\+::get\+Camera (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classRaytracer_1_1Scene_a4aea10b5f5a926e24d036f68c9e707b1}\index{Raytracer::Scene@{Raytracer::Scene}!getLights@{getLights}}
+\index{getLights@{getLights}!Raytracer::Scene@{Raytracer::Scene}}
+\doxysubsubsection{\texorpdfstring{getLights()}{getLights()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Scene_a4aea10b5f5a926e24d036f68c9e707b1} 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1ILight}{Raytracer\+::\+ILight}} $>$ $>$ \& Raytracer\+::\+Scene\+::get\+Lights (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classRaytracer_1_1Scene_a1274a4c56b03b4b179e32fe4da5399c9}\index{Raytracer::Scene@{Raytracer::Scene}!getPrimitives@{getPrimitives}}
+\index{getPrimitives@{getPrimitives}!Raytracer::Scene@{Raytracer::Scene}}
+\doxysubsubsection{\texorpdfstring{getPrimitives()}{getPrimitives()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Scene_a1274a4c56b03b4b179e32fe4da5399c9} 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{Raytracer\+::\+IPrimitive}} $>$ $>$ \& Raytracer\+::\+Scene\+::get\+Primitives (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classRaytracer_1_1Scene_aee144f95f896522efae771a873d4674c}\index{Raytracer::Scene@{Raytracer::Scene}!getRootCompositeLight@{getRootCompositeLight}}
+\index{getRootCompositeLight@{getRootCompositeLight}!Raytracer::Scene@{Raytracer::Scene}}
+\doxysubsubsection{\texorpdfstring{getRootCompositeLight()}{getRootCompositeLight()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Scene_aee144f95f896522efae771a873d4674c} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1CompositeLight}{Raytracer\+::\+Composite\+Light}} $>$ Raytracer\+::\+Scene\+::get\+Root\+Composite\+Light (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classRaytracer_1_1Scene_a4a308558db66fadad9d94cbc3a0d406b}\index{Raytracer::Scene@{Raytracer::Scene}!getRootCompositePrimitive@{getRootCompositePrimitive}}
+\index{getRootCompositePrimitive@{getRootCompositePrimitive}!Raytracer::Scene@{Raytracer::Scene}}
+\doxysubsubsection{\texorpdfstring{getRootCompositePrimitive()}{getRootCompositePrimitive()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Scene_a4a308558db66fadad9d94cbc3a0d406b} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive}{Raytracer\+::\+Composite\+Primitive}} $>$ Raytracer\+::\+Scene\+::get\+Root\+Composite\+Primitive (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classRaytracer_1_1Scene_a73f523ef6919f264af31aa1e8edd8b3d}\index{Raytracer::Scene@{Raytracer::Scene}!setAmbientIntensity@{setAmbientIntensity}}
+\index{setAmbientIntensity@{setAmbientIntensity}!Raytracer::Scene@{Raytracer::Scene}}
+\doxysubsubsection{\texorpdfstring{setAmbientIntensity()}{setAmbientIntensity()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Scene_a73f523ef6919f264af31aa1e8edd8b3d} 
+void Raytracer\+::\+Scene\+::set\+Ambient\+Intensity (\begin{DoxyParamCaption}\item[{float}]{intensity}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classRaytracer_1_1Scene_a2d123d7322eaa47583b8f588d03620a7}\index{Raytracer::Scene@{Raytracer::Scene}!setCamera@{setCamera}}
+\index{setCamera@{setCamera}!Raytracer::Scene@{Raytracer::Scene}}
+\doxysubsubsection{\texorpdfstring{setCamera()}{setCamera()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Scene_a2d123d7322eaa47583b8f588d03620a7} 
+void Raytracer\+::\+Scene\+::set\+Camera (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Camera}{Camera}} \&}]{cam}{}\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Core/\mbox{\hyperlink{Scene_8hpp}{Scene.\+hpp}}\item 
+src/\+Core/\mbox{\hyperlink{Scene_8cpp}{Scene.\+cpp}}\end{DoxyCompactItemize}

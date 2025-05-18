@@ -1,0 +1,69 @@
+\doxysection{Raytracer\+::Graphics Class Reference}
+\hypertarget{classRaytracer_1_1Graphics}{}\label{classRaytracer_1_1Graphics}\index{Raytracer::Graphics@{Raytracer::Graphics}}
+
+
+Handles the graphical display and user interaction for the raytracer.  
+
+
+
+
+{\ttfamily \#include $<$Graphics.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1Graphics_a9ecd2a9e01fc0ed0f6c88f2e1414f397}{Graphics}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classRaytracer_1_1Graphics}{Graphics} instance with specified dimensions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1Graphics_a87da6c98b083257cd1a6bef7006e72c5}{run}} (\mbox{\hyperlink{classRaytracer_1_1Scene}{Scene}} \&scene, \mbox{\hyperlink{classRaytracer_1_1Renderer}{Renderer}} \&renderer)
+\begin{DoxyCompactList}\small\item\em Main execution loop for the graphics system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the graphical display and user interaction for the raytracer. 
+
+This class manages the SFML window, processes user input, and displays the rendered images. It provides the interface between the rendering system and the display/output system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1Graphics_a9ecd2a9e01fc0ed0f6c88f2e1414f397}\index{Raytracer::Graphics@{Raytracer::Graphics}!Graphics@{Graphics}}
+\index{Graphics@{Graphics}!Raytracer::Graphics@{Raytracer::Graphics}}
+\doxysubsubsection{\texorpdfstring{Graphics()}{Graphics()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Graphics_a9ecd2a9e01fc0ed0f6c88f2e1414f397} 
+Raytracer\+::\+Graphics\+::\+Graphics (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classRaytracer_1_1Graphics}{Graphics} instance with specified dimensions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width of the display window in pixels. \\
+\hline
+{\em height} & The height of the display window in pixels. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1Graphics_a87da6c98b083257cd1a6bef7006e72c5}\index{Raytracer::Graphics@{Raytracer::Graphics}!run@{run}}
+\index{run@{run}!Raytracer::Graphics@{Raytracer::Graphics}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Graphics_a87da6c98b083257cd1a6bef7006e72c5} 
+void Raytracer\+::\+Graphics\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRaytracer_1_1Scene}{Scene}} \&}]{scene}{, }\item[{\mbox{\hyperlink{classRaytracer_1_1Renderer}{Renderer}} \&}]{renderer}{}\end{DoxyParamCaption})}
+
+
+
+Main execution loop for the graphics system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & The scene to render and display. \\
+\hline
+{\em renderer} & The renderer to use for generating images. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Graphics/\mbox{\hyperlink{Graphics_8hpp}{Graphics.\+hpp}}\item 
+src/\+Graphics/\mbox{\hyperlink{Graphics_8cpp}{Graphics.\+cpp}}\end{DoxyCompactItemize}

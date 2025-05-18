@@ -1,0 +1,60 @@
+\doxysection{Raytracer\+::Light\+Factory Class Reference}
+\hypertarget{classRaytracer_1_1LightFactory}{}\label{classRaytracer_1_1LightFactory}\index{Raytracer::LightFactory@{Raytracer::LightFactory}}
+
+
+Factory class for creating different types of light sources.  
+
+
+
+
+{\ttfamily \#include $<$Light\+Factory.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1ILight}{ILight}} $>$ \mbox{\hyperlink{classRaytracer_1_1LightFactory_a97db84855b38129580de2986ffc3cde9}{create\+Ambient\+Light}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&position, float intensity=0.\+1f)
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1ILight}{ILight}} $>$ \mbox{\hyperlink{classRaytracer_1_1LightFactory_aa85eba4a2f2d208df0bda895eb86a2e4}{create\+Point\+Light}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&position, float intensity=1.\+0f)
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1ILight}{ILight}} $>$ \mbox{\hyperlink{classRaytracer_1_1LightFactory_a021ef6ed632f59dd6c9a7671191f6270}{create\+Directional\+Light}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&position, const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&direction, float intensity=1.\+0f)
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1ILight}{ILight}} $>$ \mbox{\hyperlink{classRaytracer_1_1LightFactory_a77b2593c6ec5a76a44f2ef7a134ec85f}{create\+Composite\+Light}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Factory class for creating different types of light sources. 
+
+Provides static methods to create various types of lights used in the scene. Implements the Factory design pattern to encapsulate light creation logic. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1LightFactory_a97db84855b38129580de2986ffc3cde9}\index{Raytracer::LightFactory@{Raytracer::LightFactory}!createAmbientLight@{createAmbientLight}}
+\index{createAmbientLight@{createAmbientLight}!Raytracer::LightFactory@{Raytracer::LightFactory}}
+\doxysubsubsection{\texorpdfstring{createAmbientLight()}{createAmbientLight()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1LightFactory_a97db84855b38129580de2986ffc3cde9} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1ILight}{Raytracer\+::\+ILight}} $>$ Raytracer\+::\+Light\+Factory\+::create\+Ambient\+Light (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{position}{, }\item[{float}]{intensity}{ = {\ttfamily 0.1f}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classRaytracer_1_1LightFactory_a77b2593c6ec5a76a44f2ef7a134ec85f}\index{Raytracer::LightFactory@{Raytracer::LightFactory}!createCompositeLight@{createCompositeLight}}
+\index{createCompositeLight@{createCompositeLight}!Raytracer::LightFactory@{Raytracer::LightFactory}}
+\doxysubsubsection{\texorpdfstring{createCompositeLight()}{createCompositeLight()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1LightFactory_a77b2593c6ec5a76a44f2ef7a134ec85f} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1ILight}{Raytracer\+::\+ILight}} $>$ Raytracer\+::\+Light\+Factory\+::create\+Composite\+Light (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classRaytracer_1_1LightFactory_a021ef6ed632f59dd6c9a7671191f6270}\index{Raytracer::LightFactory@{Raytracer::LightFactory}!createDirectionalLight@{createDirectionalLight}}
+\index{createDirectionalLight@{createDirectionalLight}!Raytracer::LightFactory@{Raytracer::LightFactory}}
+\doxysubsubsection{\texorpdfstring{createDirectionalLight()}{createDirectionalLight()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1LightFactory_a021ef6ed632f59dd6c9a7671191f6270} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1ILight}{Raytracer\+::\+ILight}} $>$ Raytracer\+::\+Light\+Factory\+::create\+Directional\+Light (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{position}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{direction}{, }\item[{float}]{intensity}{ = {\ttfamily 1.0f}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classRaytracer_1_1LightFactory_aa85eba4a2f2d208df0bda895eb86a2e4}\index{Raytracer::LightFactory@{Raytracer::LightFactory}!createPointLight@{createPointLight}}
+\index{createPointLight@{createPointLight}!Raytracer::LightFactory@{Raytracer::LightFactory}}
+\doxysubsubsection{\texorpdfstring{createPointLight()}{createPointLight()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1LightFactory_aa85eba4a2f2d208df0bda895eb86a2e4} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1ILight}{Raytracer\+::\+ILight}} $>$ Raytracer\+::\+Light\+Factory\+::create\+Point\+Light (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{position}{, }\item[{float}]{intensity}{ = {\ttfamily 1.0f}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Factory/\mbox{\hyperlink{LightFactory_8hpp}{Light\+Factory.\+hpp}}\item 
+src/\+Factory/\mbox{\hyperlink{LightFactory_8cpp}{Light\+Factory.\+cpp}}\end{DoxyCompactItemize}

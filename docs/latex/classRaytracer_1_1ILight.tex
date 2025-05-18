@@ -1,0 +1,97 @@
+\doxysection{Raytracer\+::ILight Class Reference}
+\hypertarget{classRaytracer_1_1ILight}{}\label{classRaytracer_1_1ILight}\index{Raytracer::ILight@{Raytracer::ILight}}
+
+
+Interface for all light sources in the raytracer.  
+
+
+
+
+{\ttfamily \#include $<$ILight.\+hpp$>$}
+
+Inheritance diagram for Raytracer\+::ILight\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.647059cm]{classRaytracer_1_1ILight}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classRaytracer_1_1ILight_a8f8b347664941557a53713a43cf55e7a}{\texorpdfstring{$\sim$}{\string~}\+ILight}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic destruction. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1ILight_a62b8eabf93415a4cf0531a1b58979e81}{get\+Direction\+From}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&point) const =0
+\begin{DoxyCompactList}\small\item\em Gets the light direction from a specific point in space. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{classRaytracer_1_1ILight_aa61d5ec737f8c14407e821fbe2532845}{get\+Intensity}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the light intensity at a surface point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for all light sources in the raytracer. 
+
+Defines the common interface that all light implementations must provide. This abstract class serves as the base for different light types (directional, point, ambient, etc.) in the rendering system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1ILight_a8f8b347664941557a53713a43cf55e7a}\index{Raytracer::ILight@{Raytracer::ILight}!````~ILight@{\texorpdfstring{$\sim$}{\string~}ILight}}
+\index{````~ILight@{\texorpdfstring{$\sim$}{\string~}ILight}!Raytracer::ILight@{Raytracer::ILight}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ILight()}{\string~ILight()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1ILight_a8f8b347664941557a53713a43cf55e7a} 
+virtual Raytracer\+::\+ILight\+::\texorpdfstring{$\sim$}{\string~}\+ILight (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for proper polymorphic destruction. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1ILight_a62b8eabf93415a4cf0531a1b58979e81}\index{Raytracer::ILight@{Raytracer::ILight}!getDirectionFrom@{getDirectionFrom}}
+\index{getDirectionFrom@{getDirectionFrom}!Raytracer::ILight@{Raytracer::ILight}}
+\doxysubsubsection{\texorpdfstring{getDirectionFrom()}{getDirectionFrom()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1ILight_a62b8eabf93415a4cf0531a1b58979e81} 
+virtual \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} Raytracer\+::\+ILight\+::get\+Direction\+From (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the light direction from a specific point in space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & The 3D point from which to calculate light direction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Normalized direction vector from the point to the light source. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+For ambient lights, this may return a zero vector. 
+\end{DoxyNote}
+
+
+Implemented in \mbox{\hyperlink{classRaytracer_1_1AmbientLight_a0b127812f259bde87200adc5b59c0ecc}{Raytracer\+::\+Ambient\+Light}}, \mbox{\hyperlink{classRaytracer_1_1CompositeLight_acdeb42a8b602e0e05f64101fd8148c68}{Raytracer\+::\+Composite\+Light}}, \mbox{\hyperlink{classRaytracer_1_1DirectionalLight_a1135c87f7c7f3fb881d06aacb42214f5}{Raytracer\+::\+Directional\+Light}}, and \mbox{\hyperlink{classRaytracer_1_1PointLight_a40b63478a4ffd3857835e1a1c9dcd2ee}{Raytracer\+::\+Point\+Light}}.
+
+\Hypertarget{classRaytracer_1_1ILight_aa61d5ec737f8c14407e821fbe2532845}\index{Raytracer::ILight@{Raytracer::ILight}!getIntensity@{getIntensity}}
+\index{getIntensity@{getIntensity}!Raytracer::ILight@{Raytracer::ILight}}
+\doxysubsubsection{\texorpdfstring{getIntensity()}{getIntensity()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1ILight_aa61d5ec737f8c14407e821fbe2532845} 
+virtual float Raytracer\+::\+ILight\+::get\+Intensity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the light intensity at a surface point. 
+
+\begin{DoxyReturn}{Returns}
+The light intensity value (typically between 0.\+0 and 1.\+0). 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+For directional lights, this is usually constant. For point lights, this may vary with distance. 
+\end{DoxyNote}
+
+
+Implemented in \mbox{\hyperlink{classRaytracer_1_1AmbientLight_a75bf6d4e4385651bf6287973b9999526}{Raytracer\+::\+Ambient\+Light}}, \mbox{\hyperlink{classRaytracer_1_1CompositeLight_aa9ebb7055642ba868da9af64c2897346}{Raytracer\+::\+Composite\+Light}}, \mbox{\hyperlink{classRaytracer_1_1DirectionalLight_ad0431ebeb746cd5543851254a15b4d14}{Raytracer\+::\+Directional\+Light}}, and \mbox{\hyperlink{classRaytracer_1_1PointLight_a6f35857fc8faa6cd4d918260fec5f67d}{Raytracer\+::\+Point\+Light}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Lights/\mbox{\hyperlink{ILight_8hpp}{ILight.\+hpp}}\end{DoxyCompactItemize}

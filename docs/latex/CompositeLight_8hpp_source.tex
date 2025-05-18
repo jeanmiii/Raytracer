@@ -1,0 +1,42 @@
+\doxysection{Composite\+Light.\+hpp}
+\hypertarget{CompositeLight_8hpp_source}{}\label{CompositeLight_8hpp_source}\index{include/Lights/CompositeLight.hpp@{include/Lights/CompositeLight.hpp}}
+\mbox{\hyperlink{CompositeLight_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ raytracer}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ CompositeLight}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ILight_8hpp}{Lights/ILight.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceRaytracer}{Raytracer}}\ \{}
+\DoxyCodeLine{00023\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRaytracer_1_1CompositeLight_afa22f386287c3a81651bc9e8edd95422}{CompositeLight}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classRaytracer_1_1ILight}{ILight}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1CompositeLight_afa22f386287c3a81651bc9e8edd95422}{CompositeLight}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1CompositeLight_a81912e92ccdd2133afce4b85c4a5cbca}{\string~CompositeLight}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRaytracer_1_1CompositeLight_ab50f0a665ddf04f062ef3cb2dfcaed62}{addLight}}(std::shared\_ptr<ILight>\ light);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\ \mbox{\hyperlink{classRaytracer_1_1CompositeLight_acdeb42a8b602e0e05f64101fd8148c68}{getDirectionFrom}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\ \&point)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classRaytracer_1_1CompositeLight_aa9ebb7055642ba868da9af64c2897346}{getIntensity}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ std::vector<std::shared\_ptr<ILight>>\ \mbox{\hyperlink{classRaytracer_1_1CompositeLight_ab9f53cc55d30f07f475ef28277b138b9}{getLights}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classRaytracer_1_1CompositeLight_a9e49ac7f838116e72ffa0b71ec4aec0b}{getSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ std::vector<std::shared\_ptr<ILight>>\ m\_lights;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{int}\ m\_currentLightIndex;}
+\DoxyCodeLine{00084\ \ \ \};}
+\DoxyCodeLine{00085\ \}\ }
+
+\end{DoxyCode}

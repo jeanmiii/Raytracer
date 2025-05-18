@@ -1,0 +1,119 @@
+\doxysection{Raytracer\+::Polynomial\+Solver Class Reference}
+\hypertarget{classRaytracer_1_1PolynomialSolver}{}\label{classRaytracer_1_1PolynomialSolver}\index{Raytracer::PolynomialSolver@{Raytracer::PolynomialSolver}}
+
+
+Static class for solving polynomial equations up to degree 4.  
+
+
+
+
+{\ttfamily \#include $<$Polynomial\+Solver.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classRaytracer_1_1PolynomialSolver_ab38f048bdf5c182c67fef990dc6a8069}{solve\+Quartic}} (float a, float b, float c, float d, float e, float roots\mbox{[}4\mbox{]})
+\begin{DoxyCompactList}\small\item\em Solves a quartic equation ax⁴ + bx³ + cx² + dx + e = 0. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classRaytracer_1_1PolynomialSolver_a64d5a5de7af62bdb5deef91ecce48d53}{solve\+Cubic}} (float a, float b, float c, float d, float roots\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Solves a cubic equation ax³ + bx² + cx + d = 0. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classRaytracer_1_1PolynomialSolver_a0f485b24c625176018b0bd828041f447}{solve\+Quadratic}} (float a, float b, float c, float roots\mbox{[}2\mbox{]})
+\begin{DoxyCompactList}\small\item\em Solves a quadratic equation ax² + bx + c = 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Static class for solving polynomial equations up to degree 4. 
+
+Provides numerical methods for finding real roots of\+:
+\begin{DoxyItemize}
+\item Quadratic equations (degree 2)
+\item Cubic equations (degree 3)
+\item Quartic equations (degree 4)
+\end{DoxyItemize}
+
+Used primarily for computing ray-\/object intersection points. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1PolynomialSolver_a64d5a5de7af62bdb5deef91ecce48d53}\index{Raytracer::PolynomialSolver@{Raytracer::PolynomialSolver}!solveCubic@{solveCubic}}
+\index{solveCubic@{solveCubic}!Raytracer::PolynomialSolver@{Raytracer::PolynomialSolver}}
+\doxysubsubsection{\texorpdfstring{solveCubic()}{solveCubic()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1PolynomialSolver_a64d5a5de7af62bdb5deef91ecce48d53} 
+int Raytracer\+::\+Polynomial\+Solver\+::solve\+Cubic (\begin{DoxyParamCaption}\item[{float}]{a}{, }\item[{float}]{b}{, }\item[{float}]{c}{, }\item[{float}]{d}{, }\item[{float}]{roots}{\mbox{[}3\mbox{]}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Solves a cubic equation ax³ + bx² + cx + d = 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & x³ coefficient \\
+\hline
+{\em b} & x² coefficient \\
+\hline
+{\em c} & x coefficient \\
+\hline
+{\em d} & Constant term \\
+\hline
+{\em roots} & Array to store found roots \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Number of real roots found 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1PolynomialSolver_a0f485b24c625176018b0bd828041f447}\index{Raytracer::PolynomialSolver@{Raytracer::PolynomialSolver}!solveQuadratic@{solveQuadratic}}
+\index{solveQuadratic@{solveQuadratic}!Raytracer::PolynomialSolver@{Raytracer::PolynomialSolver}}
+\doxysubsubsection{\texorpdfstring{solveQuadratic()}{solveQuadratic()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1PolynomialSolver_a0f485b24c625176018b0bd828041f447} 
+int Raytracer\+::\+Polynomial\+Solver\+::solve\+Quadratic (\begin{DoxyParamCaption}\item[{float}]{a}{, }\item[{float}]{b}{, }\item[{float}]{c}{, }\item[{float}]{roots}{\mbox{[}2\mbox{]}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Solves a quadratic equation ax² + bx + c = 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & x² coefficient \\
+\hline
+{\em b} & x coefficient \\
+\hline
+{\em c} & Constant term \\
+\hline
+{\em roots} & Array to store found roots \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Number of real roots found (0, 1, or 2) 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1PolynomialSolver_ab38f048bdf5c182c67fef990dc6a8069}\index{Raytracer::PolynomialSolver@{Raytracer::PolynomialSolver}!solveQuartic@{solveQuartic}}
+\index{solveQuartic@{solveQuartic}!Raytracer::PolynomialSolver@{Raytracer::PolynomialSolver}}
+\doxysubsubsection{\texorpdfstring{solveQuartic()}{solveQuartic()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1PolynomialSolver_ab38f048bdf5c182c67fef990dc6a8069} 
+static int Raytracer\+::\+Polynomial\+Solver\+::solve\+Quartic (\begin{DoxyParamCaption}\item[{float}]{a}{, }\item[{float}]{b}{, }\item[{float}]{c}{, }\item[{float}]{d}{, }\item[{float}]{e}{, }\item[{float}]{roots}{\mbox{[}4\mbox{]}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Solves a quartic equation ax⁴ + bx³ + cx² + dx + e = 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & x⁴ coefficient \\
+\hline
+{\em b} & x³ coefficient \\
+\hline
+{\em c} & x² coefficient \\
+\hline
+{\em d} & x coefficient \\
+\hline
+{\em e} & Constant term \\
+\hline
+{\em roots} & Array to store found roots \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Number of real roots found 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Utils/\mbox{\hyperlink{PolynomialSolver_8hpp}{Polynomial\+Solver.\+hpp}}\item 
+src/\+Utils/\mbox{\hyperlink{PolynomialSolver_8cpp}{Polynomial\+Solver.\+cpp}}\end{DoxyCompactItemize}

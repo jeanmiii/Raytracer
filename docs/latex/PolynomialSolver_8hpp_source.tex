@@ -1,0 +1,34 @@
+\doxysection{Polynomial\+Solver.\+hpp}
+\hypertarget{PolynomialSolver_8hpp_source}{}\label{PolynomialSolver_8hpp_source}\index{include/Utils/PolynomialSolver.hpp@{include/Utils/PolynomialSolver.hpp}}
+\mbox{\hyperlink{PolynomialSolver_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceRaytracer}{Raytracer}}\ \{}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRaytracer_1_1PolynomialSolver}{PolynomialSolver}}\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classRaytracer_1_1PolynomialSolver_ab38f048bdf5c182c67fef990dc6a8069}{solveQuartic}}(\textcolor{keywordtype}{float}\ a,\ \textcolor{keywordtype}{float}\ b,\ \textcolor{keywordtype}{float}\ c,\ \textcolor{keywordtype}{float}\ d,\ \textcolor{keywordtype}{float}\ e,\ \textcolor{keywordtype}{float}\ roots[4]);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classRaytracer_1_1PolynomialSolver_a64d5a5de7af62bdb5deef91ecce48d53}{solveCubic}}(\textcolor{keywordtype}{float}\ a,\ \textcolor{keywordtype}{float}\ b,\ \textcolor{keywordtype}{float}\ c,\ \textcolor{keywordtype}{float}\ d,\ \textcolor{keywordtype}{float}\ roots[3]);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classRaytracer_1_1PolynomialSolver_a0f485b24c625176018b0bd828041f447}{solveQuadratic}}(\textcolor{keywordtype}{float}\ a,\ \textcolor{keywordtype}{float}\ b,\ \textcolor{keywordtype}{float}\ c,\ \textcolor{keywordtype}{float}\ roots[2]);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{float}\ EPSILON\ =\ 1e-\/6f;\ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ MAX\_ITERATIONS\ =\ 100;\ \ \ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ newtonRaphson(\textcolor{keywordtype}{float}\ a,\ \textcolor{keywordtype}{float}\ b,\ \textcolor{keywordtype}{float}\ c,\ \textcolor{keywordtype}{float}\ d,\ \textcolor{keywordtype}{float}\ e,\ \textcolor{keywordtype}{float}\ guess);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ isRootValid(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ a,\ \textcolor{keywordtype}{float}\ b,\ \textcolor{keywordtype}{float}\ c,\ \textcolor{keywordtype}{float}\ d,\ \textcolor{keywordtype}{float}\ e);}
+\DoxyCodeLine{00094\ \ \ \ \ \};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \}\ \textcolor{comment}{//\ namespace\ Raytracer}}
+
+\end{DoxyCode}

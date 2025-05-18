@@ -1,0 +1,54 @@
+\doxysection{Raytracer\+::Obj\+Parser Class Reference}
+\hypertarget{classRaytracer_1_1ObjParser}{}\label{classRaytracer_1_1ObjParser}\index{Raytracer::ObjParser@{Raytracer::ObjParser}}
+
+
+Parser utility for Wavefront OBJ files.  
+
+
+
+
+{\ttfamily \#include $<$Obj\+Parser.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{structRaytracer_1_1ParsedTriangle}{Parsed\+Triangle}} $>$ \mbox{\hyperlink{classRaytracer_1_1ObjParser_aea12fd36cd2cba5529c078af982b8cd8}{load\+From\+File}} (const std\+::string \&filename, float scale=1.\+0f, const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&offset=\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}(0.\+0f, 0.\+0f, 0.\+0f), const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&rotation=\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}(0.\+0f, 0.\+0f, 0.\+0f))
+\begin{DoxyCompactList}\small\item\em Load triangles from an OBJ file with transformation options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parser utility for Wavefront OBJ files. 
+
+This class provides static methods for loading and parsing OBJ files, converting the mesh data into a collection of triangles that can be used for raytracing. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1ObjParser_aea12fd36cd2cba5529c078af982b8cd8}\index{Raytracer::ObjParser@{Raytracer::ObjParser}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!Raytracer::ObjParser@{Raytracer::ObjParser}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1ObjParser_aea12fd36cd2cba5529c078af982b8cd8} 
+std\+::vector$<$ \mbox{\hyperlink{structRaytracer_1_1ParsedTriangle}{Parsed\+Triangle}} $>$ Raytracer\+::\+Obj\+Parser\+::load\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{, }\item[{float}]{scale}{ = {\ttfamily 1.0f}, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{offset}{ = {\ttfamily \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}(0.0f,~0.0f,~0.0f)}, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{rotation}{ = {\ttfamily \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}(0.0f,~0.0f,~0.0f)}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Load triangles from an OBJ file with transformation options. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the OBJ file to be loaded \\
+\hline
+{\em scale} & Uniform scale factor to apply to the model (default\+: 1.\+0) \\
+\hline
+{\em offset} & Translation vector to apply to the model (default\+: origin) \\
+\hline
+{\em rotation} & Rotation vector in radians for X, Y, and Z axes (default\+: no rotation) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Parsed\+Triangle$>$ Collection of triangles extracted from the file
+\end{DoxyReturn}
+This method reads an OBJ file, extracts the mesh data, applies the specified transformations (scaling, translation, and rotation), and returns the resulting triangles. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Parser/\mbox{\hyperlink{ObjParser_8hpp}{Obj\+Parser.\+hpp}}\item 
+src/\+Parser/\mbox{\hyperlink{ObjParser_8cpp}{Obj\+Parser.\+cpp}}\end{DoxyCompactItemize}

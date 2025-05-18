@@ -1,0 +1,110 @@
+\doxysection{Raytracer\+::Ambient\+Light Class Reference}
+\hypertarget{classRaytracer_1_1AmbientLight}{}\label{classRaytracer_1_1AmbientLight}\index{Raytracer::AmbientLight@{Raytracer::AmbientLight}}
+
+
+Implements ambient lighting for a 3D scene.  
+
+
+
+
+{\ttfamily \#include $<$Ambient\+Light.\+hpp$>$}
+
+Inheritance diagram for Raytracer\+::Ambient\+Light\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRaytracer_1_1AmbientLight}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1AmbientLight_a0dfa369f089d6f3c974917ebdcf7053a}{Ambient\+Light}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&position, float intensity)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classRaytracer_1_1AmbientLight}{Ambient\+Light} with specified position and intensity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1AmbientLight_a0b127812f259bde87200adc5b59c0ecc}{get\+Direction\+From}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Gets the light direction from a given point (always zero for ambient light). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classRaytracer_1_1AmbientLight_a75bf6d4e4385651bf6287973b9999526}{get\+Intensity}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the intensity of the ambient light. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classRaytracer_1_1ILight}{Raytracer\+::\+ILight}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classRaytracer_1_1ILight_a8f8b347664941557a53713a43cf55e7a}{\texorpdfstring{$\sim$}{\string~}\+ILight}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic destruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements ambient lighting for a 3D scene. 
+
+\doxylink{classRaytracer_1_1AmbientLight}{Ambient\+Light} represents non-\/directional, uniform lighting that affects all objects in the scene equally, simulating indirect illumination. It inherits from \doxylink{classRaytracer_1_1ILight}{ILight} interface and provides basic ambient lighting functionality. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1AmbientLight_a0dfa369f089d6f3c974917ebdcf7053a}\index{Raytracer::AmbientLight@{Raytracer::AmbientLight}!AmbientLight@{AmbientLight}}
+\index{AmbientLight@{AmbientLight}!Raytracer::AmbientLight@{Raytracer::AmbientLight}}
+\doxysubsubsection{\texorpdfstring{AmbientLight()}{AmbientLight()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1AmbientLight_a0dfa369f089d6f3c974917ebdcf7053a} 
+Raytracer\+::\+Ambient\+Light\+::\+Ambient\+Light (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{position}{, }\item[{float}]{intensity}{}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{classRaytracer_1_1AmbientLight}{Ambient\+Light} with specified position and intensity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The 3D position of the light source (though ambient light is non-\/directional). \\
+\hline
+{\em intensity} & The intensity of the ambient light (typically between 0.\+0 and 1.\+0). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1AmbientLight_a0b127812f259bde87200adc5b59c0ecc}\index{Raytracer::AmbientLight@{Raytracer::AmbientLight}!getDirectionFrom@{getDirectionFrom}}
+\index{getDirectionFrom@{getDirectionFrom}!Raytracer::AmbientLight@{Raytracer::AmbientLight}}
+\doxysubsubsection{\texorpdfstring{getDirectionFrom()}{getDirectionFrom()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1AmbientLight_a0b127812f259bde87200adc5b59c0ecc} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} Raytracer\+::\+Ambient\+Light\+::get\+Direction\+From (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the light direction from a given point (always zero for ambient light). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & The point in space from which to calculate direction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zero vector since ambient light has no direction. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Overrides \doxylink{classRaytracer_1_1ILight_a62b8eabf93415a4cf0531a1b58979e81}{ILight\+::get\+Direction\+From()}. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1ILight_a62b8eabf93415a4cf0531a1b58979e81}{Raytracer\+::\+ILight}}.
+
+\Hypertarget{classRaytracer_1_1AmbientLight_a75bf6d4e4385651bf6287973b9999526}\index{Raytracer::AmbientLight@{Raytracer::AmbientLight}!getIntensity@{getIntensity}}
+\index{getIntensity@{getIntensity}!Raytracer::AmbientLight@{Raytracer::AmbientLight}}
+\doxysubsubsection{\texorpdfstring{getIntensity()}{getIntensity()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1AmbientLight_a75bf6d4e4385651bf6287973b9999526} 
+float Raytracer\+::\+Ambient\+Light\+::get\+Intensity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the intensity of the ambient light. 
+
+\begin{DoxyReturn}{Returns}
+The current intensity value. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Overrides \doxylink{classRaytracer_1_1ILight_aa61d5ec737f8c14407e821fbe2532845}{ILight\+::get\+Intensity()}. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1ILight_aa61d5ec737f8c14407e821fbe2532845}{Raytracer\+::\+ILight}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Lights/\mbox{\hyperlink{AmbientLight_8hpp}{Ambient\+Light.\+hpp}}\item 
+src/\+Lights/\mbox{\hyperlink{AmbientLight_8cpp}{Ambient\+Light.\+cpp}}\end{DoxyCompactItemize}

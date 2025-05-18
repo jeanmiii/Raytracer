@@ -1,0 +1,180 @@
+\doxysection{Raytracer\+::Torus Class Reference}
+\hypertarget{classRaytracer_1_1Torus}{}\label{classRaytracer_1_1Torus}\index{Raytracer::Torus@{Raytracer::Torus}}
+
+
+Represents a torus primitive for raytracing.  
+
+
+
+
+{\ttfamily \#include $<$Torus.\+hpp$>$}
+
+Inheritance diagram for Raytracer\+::Torus\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRaytracer_1_1Torus}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1Torus_a3dfba1a95995e56bfee2b0758f95d8f9}{Torus}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&center, float major\+Radius, float minor\+Radius, const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&rotation, const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&material)
+\begin{DoxyCompactList}\small\item\em Constructs a torus primitive. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRaytracer_1_1Torus_ad212063b2ef7de8915d23587bfe9490c}{intersect}} (const \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}} \&ray, float \&t) const override
+\begin{DoxyCompactList}\small\item\em Tests if a ray intersects with this torus. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1Torus_a6d74475852dc2af2a624f673aef3a9b4}{get\+Normal}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Calculates the normal vector at a point on the torus. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Color}{Color}} \mbox{\hyperlink{classRaytracer_1_1Torus_afc502e26f657c96a41347d5f2e208ea7}{get\+Color}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the color of the torus. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1Torus_a471fb58cbabcc0b322066ed8038c0c09}{get\+Center}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the center point of the torus. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \& \mbox{\hyperlink{classRaytracer_1_1Torus_afb667f6c07dc7093655f8afba156d25e}{get\+Material}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the material of the torus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{Raytracer\+::\+IPrimitive}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classRaytracer_1_1IPrimitive_aa4aea2318383a59a56b7b10db96d55d0}{\texorpdfstring{$\sim$}{\string~}\+IPrimitive}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic cleanup. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a torus primitive for raytracing. 
+
+The \doxylink{classRaytracer_1_1Torus}{Torus} class defines a torus (donut shape) in 3D space, characterized by its center, major radius (radius from the center of the torus to the center of the tube), minor radius (radius of the tube), and orientation. It provides methods for ray-\/torus intersection testing and normal vector calculation which are essential for the raytracing process. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1Torus_a3dfba1a95995e56bfee2b0758f95d8f9}\index{Raytracer::Torus@{Raytracer::Torus}!Torus@{Torus}}
+\index{Torus@{Torus}!Raytracer::Torus@{Raytracer::Torus}}
+\doxysubsubsection{\texorpdfstring{Torus()}{Torus()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Torus_a3dfba1a95995e56bfee2b0758f95d8f9} 
+Raytracer\+::\+Torus\+::\+Torus (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{center}{, }\item[{float}]{major\+Radius}{, }\item[{float}]{minor\+Radius}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{rotation}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&}]{material}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a torus primitive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & The center position of the torus \\
+\hline
+{\em major\+Radius} & The radius from the center of the torus to the center of the tube \\
+\hline
+{\em minor\+Radius} & The radius of the tube itself \\
+\hline
+{\em rotation} & The rotation of the torus in degrees (x, y, z angles) \\
+\hline
+{\em material} & The material properties of the torus \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1Torus_a471fb58cbabcc0b322066ed8038c0c09}\index{Raytracer::Torus@{Raytracer::Torus}!getCenter@{getCenter}}
+\index{getCenter@{getCenter}!Raytracer::Torus@{Raytracer::Torus}}
+\doxysubsubsection{\texorpdfstring{getCenter()}{getCenter()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Torus_a471fb58cbabcc0b322066ed8038c0c09} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} Raytracer\+::\+Torus\+::get\+Center (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the center point of the torus. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} The center point of the torus 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a48b3fa15f48633c82d04bdd950c4ba3a}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Torus_afc502e26f657c96a41347d5f2e208ea7}\index{Raytracer::Torus@{Raytracer::Torus}!getColor@{getColor}}
+\index{getColor@{getColor}!Raytracer::Torus@{Raytracer::Torus}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Torus_afc502e26f657c96a41347d5f2e208ea7} 
+\mbox{\hyperlink{classRaytracer_1_1Color}{Color}} Raytracer\+::\+Torus\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the color of the torus. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Color}{Color} The color derived from the torus\textquotesingle{}s material 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_adef7febce98bf6b9066679f63e0c2377}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Torus_afb667f6c07dc7093655f8afba156d25e}\index{Raytracer::Torus@{Raytracer::Torus}!getMaterial@{getMaterial}}
+\index{getMaterial@{getMaterial}!Raytracer::Torus@{Raytracer::Torus}}
+\doxysubsubsection{\texorpdfstring{getMaterial()}{getMaterial()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Torus_afb667f6c07dc7093655f8afba156d25e} 
+const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \& Raytracer\+::\+Torus\+::get\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the material of the torus. 
+
+\begin{DoxyReturn}{Returns}
+const \doxylink{classRaytracer_1_1Material}{Material}\& Reference to the torus\textquotesingle{}s material 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a4f3f11706602a77f7aa891adac0e6767}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Torus_a6d74475852dc2af2a624f673aef3a9b4}\index{Raytracer::Torus@{Raytracer::Torus}!getNormal@{getNormal}}
+\index{getNormal@{getNormal}!Raytracer::Torus@{Raytracer::Torus}}
+\doxysubsubsection{\texorpdfstring{getNormal()}{getNormal()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Torus_a6d74475852dc2af2a624f673aef3a9b4} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} Raytracer\+::\+Torus\+::get\+Normal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculates the normal vector at a point on the torus. 
+
+The normal of a torus at any point is calculated based on the relative position of the point to the central ring of the torus.
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & The point on the torus\textquotesingle{}s surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} The normalized normal vector 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a03a1602232f80f319b587902a6884479}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1Torus_ad212063b2ef7de8915d23587bfe9490c}\index{Raytracer::Torus@{Raytracer::Torus}!intersect@{intersect}}
+\index{intersect@{intersect}!Raytracer::Torus@{Raytracer::Torus}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Torus_ad212063b2ef7de8915d23587bfe9490c} 
+bool Raytracer\+::\+Torus\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}} \&}]{ray}{, }\item[{float \&}]{t}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Tests if a ray intersects with this torus. 
+
+Calculates if and where a ray intersects with this torus using quartic equation solving. The intersection distance is stored in the parameter t if an intersection is found.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to test for intersection \\
+\hline
+{\em t} & Output parameter that will contain the distance to intersection if found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If the ray intersects with the torus 
+
+false If no intersection is found 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a71209e0c7a44d5746c9796405b9d1787}{Raytracer\+::\+IPrimitive}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Primitives/\mbox{\hyperlink{Torus_8hpp}{Torus.\+hpp}}\item 
+src/\+Primitives/\mbox{\hyperlink{Torus_8cpp}{Torus.\+cpp}}\end{DoxyCompactItemize}

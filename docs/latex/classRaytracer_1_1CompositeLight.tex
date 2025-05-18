@@ -1,0 +1,158 @@
+\doxysection{Raytracer\+::Composite\+Light Class Reference}
+\hypertarget{classRaytracer_1_1CompositeLight}{}\label{classRaytracer_1_1CompositeLight}\index{Raytracer::CompositeLight@{Raytracer::CompositeLight}}
+
+
+Implements the Composite pattern for light sources.  
+
+
+
+
+{\ttfamily \#include $<$Composite\+Light.\+hpp$>$}
+
+Inheritance diagram for Raytracer\+::Composite\+Light\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRaytracer_1_1CompositeLight}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1CompositeLight_afa22f386287c3a81651bc9e8edd95422}{Composite\+Light}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classRaytracer_1_1CompositeLight}{Composite\+Light}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1CompositeLight_a81912e92ccdd2133afce4b85c4a5cbca}{\texorpdfstring{$\sim$}{\string~}\+Composite\+Light}} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1CompositeLight_ab50f0a665ddf04f062ef3cb2dfcaed62}{add\+Light}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1ILight}{ILight}} $>$ light)
+\begin{DoxyCompactList}\small\item\em Adds a light source to this composite. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1CompositeLight_acdeb42a8b602e0e05f64101fd8148c68}{get\+Direction\+From}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Gets the direction from a point to this light source. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classRaytracer_1_1CompositeLight_aa9ebb7055642ba868da9af64c2897346}{get\+Intensity}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the combined intensity of all contained lights. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1ILight}{ILight}} $>$ $>$ \mbox{\hyperlink{classRaytracer_1_1CompositeLight_ab9f53cc55d30f07f475ef28277b138b9}{get\+Lights}} () const
+\begin{DoxyCompactList}\small\item\em Gets all child lights contained in this composite. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classRaytracer_1_1CompositeLight_a9e49ac7f838116e72ffa0b71ec4aec0b}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of lights in this composite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classRaytracer_1_1ILight}{Raytracer\+::\+ILight}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classRaytracer_1_1ILight_a8f8b347664941557a53713a43cf55e7a}{\texorpdfstring{$\sim$}{\string~}\+ILight}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic destruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements the Composite pattern for light sources. 
+
+This class allows grouping multiple light sources and treating them as a single entity. It\textquotesingle{}s an implementation of the Composite design pattern, which enables creating a tree structure of light objects in the scene. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1CompositeLight_afa22f386287c3a81651bc9e8edd95422}\index{Raytracer::CompositeLight@{Raytracer::CompositeLight}!CompositeLight@{CompositeLight}}
+\index{CompositeLight@{CompositeLight}!Raytracer::CompositeLight@{Raytracer::CompositeLight}}
+\doxysubsubsection{\texorpdfstring{CompositeLight()}{CompositeLight()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1CompositeLight_afa22f386287c3a81651bc9e8edd95422} 
+Raytracer\+::\+Composite\+Light\+::\+Composite\+Light (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{classRaytracer_1_1CompositeLight}{Composite\+Light}. 
+
+Initializes an empty composite light with no children \Hypertarget{classRaytracer_1_1CompositeLight_a81912e92ccdd2133afce4b85c4a5cbca}\index{Raytracer::CompositeLight@{Raytracer::CompositeLight}!````~CompositeLight@{\texorpdfstring{$\sim$}{\string~}CompositeLight}}
+\index{````~CompositeLight@{\texorpdfstring{$\sim$}{\string~}CompositeLight}!Raytracer::CompositeLight@{Raytracer::CompositeLight}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CompositeLight()}{\string~CompositeLight()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1CompositeLight_a81912e92ccdd2133afce4b85c4a5cbca} 
+Raytracer\+::\+Composite\+Light\+::\texorpdfstring{$\sim$}{\string~}\+Composite\+Light (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1CompositeLight_ab50f0a665ddf04f062ef3cb2dfcaed62}\index{Raytracer::CompositeLight@{Raytracer::CompositeLight}!addLight@{addLight}}
+\index{addLight@{addLight}!Raytracer::CompositeLight@{Raytracer::CompositeLight}}
+\doxysubsubsection{\texorpdfstring{addLight()}{addLight()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1CompositeLight_ab50f0a665ddf04f062ef3cb2dfcaed62} 
+void Raytracer\+::\+Composite\+Light\+::add\+Light (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1ILight}{ILight}} $>$}]{light}{}\end{DoxyParamCaption})}
+
+
+
+Adds a light source to this composite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em light} & Shared pointer to a light object to be added to this composite \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRaytracer_1_1CompositeLight_acdeb42a8b602e0e05f64101fd8148c68}\index{Raytracer::CompositeLight@{Raytracer::CompositeLight}!getDirectionFrom@{getDirectionFrom}}
+\index{getDirectionFrom@{getDirectionFrom}!Raytracer::CompositeLight@{Raytracer::CompositeLight}}
+\doxysubsubsection{\texorpdfstring{getDirectionFrom()}{getDirectionFrom()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1CompositeLight_acdeb42a8b602e0e05f64101fd8148c68} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} Raytracer\+::\+Composite\+Light\+::get\+Direction\+From (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the direction from a point to this light source. 
+
+For a composite light, this cycles through child lights on subsequent calls
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & The 3D point from which to calculate the light direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} Direction vector from the point to the light 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1ILight_a62b8eabf93415a4cf0531a1b58979e81}{Raytracer\+::\+ILight}}.
+
+\Hypertarget{classRaytracer_1_1CompositeLight_aa9ebb7055642ba868da9af64c2897346}\index{Raytracer::CompositeLight@{Raytracer::CompositeLight}!getIntensity@{getIntensity}}
+\index{getIntensity@{getIntensity}!Raytracer::CompositeLight@{Raytracer::CompositeLight}}
+\doxysubsubsection{\texorpdfstring{getIntensity()}{getIntensity()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1CompositeLight_aa9ebb7055642ba868da9af64c2897346} 
+float Raytracer\+::\+Composite\+Light\+::get\+Intensity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the combined intensity of all contained lights. 
+
+\begin{DoxyReturn}{Returns}
+float The sum of all child light intensities, clamped to \mbox{[}0,1\mbox{]} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1ILight_aa61d5ec737f8c14407e821fbe2532845}{Raytracer\+::\+ILight}}.
+
+\Hypertarget{classRaytracer_1_1CompositeLight_ab9f53cc55d30f07f475ef28277b138b9}\index{Raytracer::CompositeLight@{Raytracer::CompositeLight}!getLights@{getLights}}
+\index{getLights@{getLights}!Raytracer::CompositeLight@{Raytracer::CompositeLight}}
+\doxysubsubsection{\texorpdfstring{getLights()}{getLights()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1CompositeLight_ab9f53cc55d30f07f475ef28277b138b9} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1ILight}{Raytracer\+::\+ILight}} $>$ $>$ Raytracer\+::\+Composite\+Light\+::get\+Lights (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets all child lights contained in this composite. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\+ILight$>$$>$ List of all child lights 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1CompositeLight_a9e49ac7f838116e72ffa0b71ec4aec0b}\index{Raytracer::CompositeLight@{Raytracer::CompositeLight}!getSize@{getSize}}
+\index{getSize@{getSize}!Raytracer::CompositeLight@{Raytracer::CompositeLight}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1CompositeLight_a9e49ac7f838116e72ffa0b71ec4aec0b} 
+size\+\_\+t Raytracer\+::\+Composite\+Light\+::get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the number of lights in this composite. 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t Number of child lights 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Lights/\mbox{\hyperlink{CompositeLight_8hpp}{Composite\+Light.\+hpp}}\item 
+src/\+Lights/\mbox{\hyperlink{CompositeLight_8cpp}{Composite\+Light.\+cpp}}\end{DoxyCompactItemize}

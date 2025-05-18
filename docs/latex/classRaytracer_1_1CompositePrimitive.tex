@@ -1,0 +1,254 @@
+\doxysection{Raytracer\+::Composite\+Primitive Class Reference}
+\hypertarget{classRaytracer_1_1CompositePrimitive}{}\label{classRaytracer_1_1CompositePrimitive}\index{Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}}
+
+
+Implements the Composite pattern for 3D primitives.  
+
+
+
+
+{\ttfamily \#include $<$Composite\+Primitive.\+hpp$>$}
+
+Inheritance diagram for Raytracer\+::Composite\+Primitive\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRaytracer_1_1CompositePrimitive}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_a0234dc8eab0536daf7fd99dfa6f5fe68}{Composite\+Primitive}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_a1dedcf6164008f376ebc0a03f6446714}{Composite\+Primitive}} (const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&material)
+\begin{DoxyCompactList}\small\item\em Constructor with material. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_ab1af12164040f33fb05ba7e070b484c7}{\texorpdfstring{$\sim$}{\string~}\+Composite\+Primitive}} () override=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_addba36c00820cd92f43a6dd59b9262c7}{add\+Primitive}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{IPrimitive}} $>$ primitive)
+\begin{DoxyCompactList}\small\item\em Adds a primitive to this composite. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_ab609d54be7b2128a433365c8f87d6443}{intersect}} (const \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}} \&ray, float \&t) const override
+\begin{DoxyCompactList}\small\item\em Tests if a ray intersects with any primitive in this composite. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_ae1bae32d698a001156ef9e17aca2a5e6}{get\+Normal}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Gets the surface normal at a point. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Color}{Color}} \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_ac7e5080d1275ef6f11bcc0cbbac51170}{get\+Color}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the color of the primitive. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \& \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_a0ff40eb28baed40545a25189f41b811a}{get\+Material}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the material of the primitive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_a448efbea1a650c71a81855ba066c0eb4}{get\+Center}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the center point of the primitive. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_aee5bfd8a8b104de02daa76be69d75801}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of primitives in this composite. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{IPrimitive}} $>$ \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_a9c33e1035c500e20bb0ba16339eaf79d}{get\+Primitive\+At}} (size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Gets a primitive at the specified index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{Raytracer\+::\+IPrimitive}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classRaytracer_1_1IPrimitive_aa4aea2318383a59a56b7b10db96d55d0}{\texorpdfstring{$\sim$}{\string~}\+IPrimitive}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic cleanup. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements the Composite pattern for 3D primitives. 
+
+This class allows grouping multiple primitives and treating them as a single entity. It implements the Composite design pattern, enabling hierarchical organization of scene objects. When a ray intersects with a composite, it tests intersection with all contained primitives and returns the closest hit. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1CompositePrimitive_a0234dc8eab0536daf7fd99dfa6f5fe68}\index{Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}!CompositePrimitive@{CompositePrimitive}}
+\index{CompositePrimitive@{CompositePrimitive}!Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}}
+\doxysubsubsection{\texorpdfstring{CompositePrimitive()}{CompositePrimitive()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1CompositePrimitive_a0234dc8eab0536daf7fd99dfa6f5fe68} 
+Raytracer\+::\+Composite\+Primitive\+::\+Composite\+Primitive (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Creates an empty composite with no primitives \Hypertarget{classRaytracer_1_1CompositePrimitive_a1dedcf6164008f376ebc0a03f6446714}\index{Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}!CompositePrimitive@{CompositePrimitive}}
+\index{CompositePrimitive@{CompositePrimitive}!Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}}
+\doxysubsubsection{\texorpdfstring{CompositePrimitive()}{CompositePrimitive()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1CompositePrimitive_a1dedcf6164008f376ebc0a03f6446714} 
+Raytracer\+::\+Composite\+Primitive\+::\+Composite\+Primitive (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor with material. 
+
+Creates an empty composite with the specified material
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & The material to use for this composite \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRaytracer_1_1CompositePrimitive_ab1af12164040f33fb05ba7e070b484c7}\index{Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}!````~CompositePrimitive@{\texorpdfstring{$\sim$}{\string~}CompositePrimitive}}
+\index{````~CompositePrimitive@{\texorpdfstring{$\sim$}{\string~}CompositePrimitive}!Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CompositePrimitive()}{\string~CompositePrimitive()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1CompositePrimitive_ab1af12164040f33fb05ba7e070b484c7} 
+Raytracer\+::\+Composite\+Primitive\+::\texorpdfstring{$\sim$}{\string~}\+Composite\+Primitive (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1CompositePrimitive_addba36c00820cd92f43a6dd59b9262c7}\index{Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}!addPrimitive@{addPrimitive}}
+\index{addPrimitive@{addPrimitive}!Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}}
+\doxysubsubsection{\texorpdfstring{addPrimitive()}{addPrimitive()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1CompositePrimitive_addba36c00820cd92f43a6dd59b9262c7} 
+void Raytracer\+::\+Composite\+Primitive\+::add\+Primitive (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{IPrimitive}} $>$}]{primitive}{}\end{DoxyParamCaption})}
+
+
+
+Adds a primitive to this composite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em primitive} & Shared pointer to a primitive to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRaytracer_1_1CompositePrimitive_a448efbea1a650c71a81855ba066c0eb4}\index{Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}!getCenter@{getCenter}}
+\index{getCenter@{getCenter}!Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}}
+\doxysubsubsection{\texorpdfstring{getCenter()}{getCenter()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1CompositePrimitive_a448efbea1a650c71a81855ba066c0eb4} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} Raytracer\+::\+Composite\+Primitive\+::get\+Center (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the center point of the primitive. 
+
+For a composite, returns the average center of all contained primitives
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} The center point 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a48b3fa15f48633c82d04bdd950c4ba3a}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1CompositePrimitive_ac7e5080d1275ef6f11bcc0cbbac51170}\index{Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}!getColor@{getColor}}
+\index{getColor@{getColor}!Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1CompositePrimitive_ac7e5080d1275ef6f11bcc0cbbac51170} 
+\mbox{\hyperlink{classRaytracer_1_1Color}{Raytracer\+::\+Color}} Raytracer\+::\+Composite\+Primitive\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the color of the primitive. 
+
+For a composite, returns the color of the last primitive that was hit
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Color}{Color} The color of the primitive 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_adef7febce98bf6b9066679f63e0c2377}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1CompositePrimitive_a0ff40eb28baed40545a25189f41b811a}\index{Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}!getMaterial@{getMaterial}}
+\index{getMaterial@{getMaterial}!Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}}
+\doxysubsubsection{\texorpdfstring{getMaterial()}{getMaterial()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1CompositePrimitive_a0ff40eb28baed40545a25189f41b811a} 
+const \mbox{\hyperlink{classRaytracer_1_1Material}{Raytracer\+::\+Material}} \& Raytracer\+::\+Composite\+Primitive\+::get\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the material of the primitive. 
+
+For a composite, returns the material of the last primitive that was hit, or its own material if no primitive was hit yet
+
+\begin{DoxyReturn}{Returns}
+const \doxylink{classRaytracer_1_1Material}{Material}\& Reference to the material 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a4f3f11706602a77f7aa891adac0e6767}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1CompositePrimitive_ae1bae32d698a001156ef9e17aca2a5e6}\index{Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}!getNormal@{getNormal}}
+\index{getNormal@{getNormal}!Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}}
+\doxysubsubsection{\texorpdfstring{getNormal()}{getNormal()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1CompositePrimitive_ae1bae32d698a001156ef9e17aca2a5e6} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} Raytracer\+::\+Composite\+Primitive\+::get\+Normal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the surface normal at a point. 
+
+For a composite, returns the normal of the last primitive that was hit
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & The point on the surface to calculate the normal at \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} The surface normal vector 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a03a1602232f80f319b587902a6884479}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1CompositePrimitive_a9c33e1035c500e20bb0ba16339eaf79d}\index{Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}!getPrimitiveAt@{getPrimitiveAt}}
+\index{getPrimitiveAt@{getPrimitiveAt}!Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}}
+\doxysubsubsection{\texorpdfstring{getPrimitiveAt()}{getPrimitiveAt()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1CompositePrimitive_a9c33e1035c500e20bb0ba16339eaf79d} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{Raytracer\+::\+IPrimitive}} $>$ Raytracer\+::\+Composite\+Primitive\+::get\+Primitive\+At (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets a primitive at the specified index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the primitive to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+IPrimitive$>$ The primitive, or nullptr if index is out of bounds 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1CompositePrimitive_aee5bfd8a8b104de02daa76be69d75801}\index{Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}!getSize@{getSize}}
+\index{getSize@{getSize}!Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1CompositePrimitive_aee5bfd8a8b104de02daa76be69d75801} 
+size\+\_\+t Raytracer\+::\+Composite\+Primitive\+::get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the number of primitives in this composite. 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t The number of primitives 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1CompositePrimitive_ab609d54be7b2128a433365c8f87d6443}\index{Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}!intersect@{intersect}}
+\index{intersect@{intersect}!Raytracer::CompositePrimitive@{Raytracer::CompositePrimitive}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1CompositePrimitive_ab609d54be7b2128a433365c8f87d6443} 
+bool Raytracer\+::\+Composite\+Primitive\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}} \&}]{ray}{, }\item[{float \&}]{t}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Tests if a ray intersects with any primitive in this composite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to test for intersection \\
+\hline
+{\em t} & Output parameter that will contain the distance to intersection if found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If the ray intersects with any primitive 
+
+false If no intersection found 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a71209e0c7a44d5746c9796405b9d1787}{Raytracer\+::\+IPrimitive}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Primitives/\mbox{\hyperlink{CompositePrimitive_8hpp}{Composite\+Primitive.\+hpp}}\item 
+src/\+Primitives/\mbox{\hyperlink{CompositePrimitive_8cpp}{Composite\+Primitive.\+cpp}}\end{DoxyCompactItemize}

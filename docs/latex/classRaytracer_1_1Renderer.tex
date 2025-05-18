@@ -1,0 +1,100 @@
+\doxysection{Raytracer\+::Renderer Class Reference}
+\hypertarget{classRaytracer_1_1Renderer}{}\label{classRaytracer_1_1Renderer}\index{Raytracer::Renderer@{Raytracer::Renderer}}
+
+
+Main rendering engine that converts a \doxylink{classRaytracer_1_1Scene}{Scene} into a 2D image.  
+
+
+
+
+{\ttfamily \#include $<$Renderer.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1Renderer_a8bcaac1abe85360d3919e37a6ba42d40}{Renderer}} (const \mbox{\hyperlink{classRaytracer_1_1Scene}{Scene}} \&scene, int width, int height)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classRaytracer_1_1Renderer}{Renderer} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRaytracer_1_1Renderer_a9abddd4b6654d920ec8e77d86304d3b9}{render}} ()
+\begin{DoxyCompactList}\small\item\em Executes the complete rendering process. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classRaytracer_1_1Color}{Color}} $>$ $>$ \& \mbox{\hyperlink{classRaytracer_1_1Renderer_a2be7acb9fe5e5ea494066555b97826ab}{get\+Image}} () const
+\begin{DoxyCompactList}\small\item\em Get the rendered image buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main rendering engine that converts a \doxylink{classRaytracer_1_1Scene}{Scene} into a 2D image. 
+
+The \doxylink{classRaytracer_1_1Renderer}{Renderer} takes a \doxylink{classRaytracer_1_1Scene}{Scene} description and produces a 2D image by shooting rays through each pixel, computing intersections with scene objects, and applying lighting calculations. It supports\+:
+\begin{DoxyItemize}
+\item Primary ray casting
+\item Recursive reflections
+\item Blinn-\/\+Phong shading model
+\item Hard shadows
+\item \doxylink{classRaytracer_1_1Camera}{Camera} transformations 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1Renderer_a8bcaac1abe85360d3919e37a6ba42d40}\index{Raytracer::Renderer@{Raytracer::Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!Raytracer::Renderer@{Raytracer::Renderer}}
+\doxysubsubsection{\texorpdfstring{Renderer()}{Renderer()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Renderer_a8bcaac1abe85360d3919e37a6ba42d40} 
+Raytracer\+::\+Renderer\+::\+Renderer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Scene}{Scene}} \&}]{scene}{, }\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{classRaytracer_1_1Renderer}{Renderer} object. 
+
+Constructs a new \doxylink{classRaytracer_1_1Renderer}{Renderer}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & Reference to the scene to render \\
+\hline
+{\em width} & Output image width in pixels \\
+\hline
+{\em height} & Output image height in pixels\\
+\hline
+{\em scene} & Reference to the scene to render \\
+\hline
+{\em width} & Width of the output image in pixels \\
+\hline
+{\em height} & Height of the output image in pixels \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1Renderer_a2be7acb9fe5e5ea494066555b97826ab}\index{Raytracer::Renderer@{Raytracer::Renderer}!getImage@{getImage}}
+\index{getImage@{getImage}!Raytracer::Renderer@{Raytracer::Renderer}}
+\doxysubsubsection{\texorpdfstring{getImage()}{getImage()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Renderer_a2be7acb9fe5e5ea494066555b97826ab} 
+const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classRaytracer_1_1Color}{Raytracer\+::\+Color}} $>$ $>$ \& Raytracer\+::\+Renderer\+::get\+Image (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the rendered image buffer. 
+
+Gets the rendered image.
+
+\begin{DoxyReturn}{Returns}
+const std\+::vector$<$std\+::vector$<$\+Color$>$$>$\& 2D array of computed pixel colors 
+\end{DoxyReturn}
+\Hypertarget{classRaytracer_1_1Renderer_a9abddd4b6654d920ec8e77d86304d3b9}\index{Raytracer::Renderer@{Raytracer::Renderer}!render@{render}}
+\index{render@{render}!Raytracer::Renderer@{Raytracer::Renderer}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1Renderer_a9abddd4b6654d920ec8e77d86304d3b9} 
+void Raytracer\+::\+Renderer\+::render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Executes the complete rendering process. 
+
+Executes the main rendering process.
+
+Iterates over all pixels in the output image, computes ray directions, traces rays through the scene, and stores the resulting colors.
+
+Iterates over each pixel of the output image, computes the ray direction, traces the ray through the scene, and stores the resulting color. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Renderer/\mbox{\hyperlink{Renderer_8hpp}{Renderer.\+hpp}}\item 
+src/\+Renderer/\mbox{\hyperlink{Renderer_8cpp}{Renderer.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,52 @@
+\doxysection{Composite\+Primitive.\+hpp}
+\hypertarget{CompositePrimitive_8hpp_source}{}\label{CompositePrimitive_8hpp_source}\index{include/Primitives/CompositePrimitive.hpp@{include/Primitives/CompositePrimitive.hpp}}
+\mbox{\hyperlink{CompositePrimitive_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ raytracer}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ CompositePrimitive}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IPrimitive_8hpp}{Primitives/IPrimitive.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceRaytracer}{Raytracer}}\ \{}
+\DoxyCodeLine{00024\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_a0234dc8eab0536daf7fd99dfa6f5fe68}{CompositePrimitive}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{IPrimitive}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_a0234dc8eab0536daf7fd99dfa6f5fe68}{CompositePrimitive}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_a0234dc8eab0536daf7fd99dfa6f5fe68}{CompositePrimitive}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Material}{Material}}\&\ material);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_ab1af12164040f33fb05ba7e070b484c7}{\string~CompositePrimitive}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_addba36c00820cd92f43a6dd59b9262c7}{addPrimitive}}(std::shared\_ptr<IPrimitive>\ primitive);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_ab609d54be7b2128a433365c8f87d6443}{intersect}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}}\&\ ray,\ \textcolor{keywordtype}{float}\&\ t)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\ \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_ae1bae32d698a001156ef9e17aca2a5e6}{getNormal}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ point)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Color}{Color}}\ \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_ac7e5080d1275ef6f11bcc0cbbac51170}{getColor}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Material}{Material}}\&\ \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_a0ff40eb28baed40545a25189f41b811a}{getMaterial}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\ \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_a448efbea1a650c71a81855ba066c0eb4}{getCenter}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_aee5bfd8a8b104de02daa76be69d75801}{getSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ std::shared\_ptr<IPrimitive>\ \mbox{\hyperlink{classRaytracer_1_1CompositePrimitive_a9c33e1035c500e20bb0ba16339eaf79d}{getPrimitiveAt}}(\textcolor{keywordtype}{size\_t}\ index)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ std::vector<std::shared\_ptr<IPrimitive>>\ m\_primitives;}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \mbox{\hyperlink{classRaytracer_1_1Material}{Material}}\ m\_material;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ std::shared\_ptr<IPrimitive>\ m\_lastHitPrimitive;}
+\DoxyCodeLine{00129\ \ \ \};}
+\DoxyCodeLine{00130\ \}\ }
+
+\end{DoxyCode}

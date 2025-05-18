@@ -1,0 +1,96 @@
+\doxysection{Raytracer\+::Directional\+Light Class Reference}
+\hypertarget{classRaytracer_1_1DirectionalLight}{}\label{classRaytracer_1_1DirectionalLight}\index{Raytracer::DirectionalLight@{Raytracer::DirectionalLight}}
+
+
+Implements directional lighting for a 3D scene.  
+
+
+
+
+{\ttfamily \#include $<$Directional\+Light.\+hpp$>$}
+
+Inheritance diagram for Raytracer\+::Directional\+Light\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRaytracer_1_1DirectionalLight}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1DirectionalLight_addf5d1a941085969a5bfbd94dfc36831}{Directional\+Light}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&position, const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&direction, float intensity=1.\+0f)
+\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1DirectionalLight_a1135c87f7c7f3fb881d06aacb42214f5}{get\+Direction\+From}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Gets the light direction from any point in space. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classRaytracer_1_1DirectionalLight_ad0431ebeb746cd5543851254a15b4d14}{get\+Intensity}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the intensity of the directional light. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classRaytracer_1_1ILight}{Raytracer\+::\+ILight}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classRaytracer_1_1ILight_a8f8b347664941557a53713a43cf55e7a}{\texorpdfstring{$\sim$}{\string~}\+ILight}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic destruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements directional lighting for a 3D scene. 
+
+\doxylink{classRaytracer_1_1DirectionalLight}{Directional\+Light} represents a light source with parallel rays coming from a specific direction, simulating distant light sources like the sun. The light intensity is constant regardless of distance from the source. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1DirectionalLight_addf5d1a941085969a5bfbd94dfc36831}\index{Raytracer::DirectionalLight@{Raytracer::DirectionalLight}!DirectionalLight@{DirectionalLight}}
+\index{DirectionalLight@{DirectionalLight}!Raytracer::DirectionalLight@{Raytracer::DirectionalLight}}
+\doxysubsubsection{\texorpdfstring{DirectionalLight()}{DirectionalLight()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1DirectionalLight_addf5d1a941085969a5bfbd94dfc36831} 
+Raytracer\+::\+Directional\+Light\+::\+Directional\+Light (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{position}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{direction}{, }\item[{float}]{intensity}{ = {\ttfamily 1.0f}}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1DirectionalLight_a1135c87f7c7f3fb881d06aacb42214f5}\index{Raytracer::DirectionalLight@{Raytracer::DirectionalLight}!getDirectionFrom@{getDirectionFrom}}
+\index{getDirectionFrom@{getDirectionFrom}!Raytracer::DirectionalLight@{Raytracer::DirectionalLight}}
+\doxysubsubsection{\texorpdfstring{getDirectionFrom()}{getDirectionFrom()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1DirectionalLight_a1135c87f7c7f3fb881d06aacb42214f5} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Raytracer\+::\+Vector3}} Raytracer\+::\+Directional\+Light\+::get\+Direction\+From (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the light direction from any point in space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & The point in space (unused for directional light). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Constant light direction vector (normalized). 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The direction is the same for all points in space. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1ILight_a62b8eabf93415a4cf0531a1b58979e81}{Raytracer\+::\+ILight}}.
+
+\Hypertarget{classRaytracer_1_1DirectionalLight_ad0431ebeb746cd5543851254a15b4d14}\index{Raytracer::DirectionalLight@{Raytracer::DirectionalLight}!getIntensity@{getIntensity}}
+\index{getIntensity@{getIntensity}!Raytracer::DirectionalLight@{Raytracer::DirectionalLight}}
+\doxysubsubsection{\texorpdfstring{getIntensity()}{getIntensity()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1DirectionalLight_ad0431ebeb746cd5543851254a15b4d14} 
+float Raytracer\+::\+Directional\+Light\+::get\+Intensity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the intensity of the directional light. 
+
+\begin{DoxyReturn}{Returns}
+Constant intensity value (1.\+0 by default for directional lights). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1ILight_aa61d5ec737f8c14407e821fbe2532845}{Raytracer\+::\+ILight}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Lights/\mbox{\hyperlink{DirectionalLight_8hpp}{Directional\+Light.\+hpp}}\item 
+src/\+Lights/\mbox{\hyperlink{DirectionalLight_8cpp}{Directional\+Light.\+cpp}}\end{DoxyCompactItemize}

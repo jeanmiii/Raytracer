@@ -1,0 +1,176 @@
+\doxysection{Raytracer\+::Tangle\+Cube Class Reference}
+\hypertarget{classRaytracer_1_1TangleCube}{}\label{classRaytracer_1_1TangleCube}\index{Raytracer::TangleCube@{Raytracer::TangleCube}}
+
+
+Represents a Tangle Cube primitive for raytracing.  
+
+
+
+
+{\ttfamily \#include $<$Tangle\+Cube.\+hpp$>$}
+
+Inheritance diagram for Raytracer\+::Tangle\+Cube\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRaytracer_1_1TangleCube}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRaytracer_1_1TangleCube_a1011a36edde97dc754470a8a17700eca}{Tangle\+Cube}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&center, float size, const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&material)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube} primitive. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRaytracer_1_1TangleCube_a1353f2a8318de33167f4183bbab37685}{intersect}} (const \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}} \&ray, float \&t) const override
+\begin{DoxyCompactList}\small\item\em Tests if a ray intersects with this \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1TangleCube_afdb1b144efa58f2e2190554f958834e8}{get\+Normal}} (const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&point) const override
+\begin{DoxyCompactList}\small\item\em Calculates the normal vector at a point on the \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Color}{Color}} \mbox{\hyperlink{classRaytracer_1_1TangleCube_a82dec3675b3392fee812fe6dd9dcb063}{get\+Color}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the color of the \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \mbox{\hyperlink{classRaytracer_1_1TangleCube_aa5c967da77468066a3534b69c317bcf0}{get\+Center}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the center point of the \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube}. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \& \mbox{\hyperlink{classRaytracer_1_1TangleCube_a7e8dbbfdbd29a61166e1e1a006e8b3eb}{get\+Material}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the material of the \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classRaytracer_1_1IPrimitive}{Raytracer\+::\+IPrimitive}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classRaytracer_1_1IPrimitive_aa4aea2318383a59a56b7b10db96d55d0}{\texorpdfstring{$\sim$}{\string~}\+IPrimitive}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic cleanup. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a Tangle Cube primitive for raytracing. 
+
+The \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube} class defines an implicit surface known as a Tangle Cube, which is characterized by its center point and size. The surface is defined by the equation\+: x⁴ -\/ 5x² + y⁴ -\/ 5y² + z⁴ -\/ 5z² + 11.\+8 = 0. This creates a cube-\/like shape with rounded edges and corners. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRaytracer_1_1TangleCube_a1011a36edde97dc754470a8a17700eca}\index{Raytracer::TangleCube@{Raytracer::TangleCube}!TangleCube@{TangleCube}}
+\index{TangleCube@{TangleCube}!Raytracer::TangleCube@{Raytracer::TangleCube}}
+\doxysubsubsection{\texorpdfstring{TangleCube()}{TangleCube()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1TangleCube_a1011a36edde97dc754470a8a17700eca} 
+Raytracer\+::\+Tangle\+Cube\+::\+Tangle\+Cube (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{center}{, }\item[{float}]{size}{, }\item[{const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \&}]{material}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube} primitive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & The center position of the \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube} \\
+\hline
+{\em size} & The overall size/scale of the \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube} \\
+\hline
+{\em material} & The material properties of the \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRaytracer_1_1TangleCube_aa5c967da77468066a3534b69c317bcf0}\index{Raytracer::TangleCube@{Raytracer::TangleCube}!getCenter@{getCenter}}
+\index{getCenter@{getCenter}!Raytracer::TangleCube@{Raytracer::TangleCube}}
+\doxysubsubsection{\texorpdfstring{getCenter()}{getCenter()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1TangleCube_aa5c967da77468066a3534b69c317bcf0} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} Raytracer\+::\+Tangle\+Cube\+::get\+Center (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the center point of the \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube}. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} The center point of the \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a48b3fa15f48633c82d04bdd950c4ba3a}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1TangleCube_a82dec3675b3392fee812fe6dd9dcb063}\index{Raytracer::TangleCube@{Raytracer::TangleCube}!getColor@{getColor}}
+\index{getColor@{getColor}!Raytracer::TangleCube@{Raytracer::TangleCube}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1TangleCube_a82dec3675b3392fee812fe6dd9dcb063} 
+\mbox{\hyperlink{classRaytracer_1_1Color}{Color}} Raytracer\+::\+Tangle\+Cube\+::get\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the color of the \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube}. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Color}{Color} The color derived from the \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube}\textquotesingle{}s material 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_adef7febce98bf6b9066679f63e0c2377}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1TangleCube_a7e8dbbfdbd29a61166e1e1a006e8b3eb}\index{Raytracer::TangleCube@{Raytracer::TangleCube}!getMaterial@{getMaterial}}
+\index{getMaterial@{getMaterial}!Raytracer::TangleCube@{Raytracer::TangleCube}}
+\doxysubsubsection{\texorpdfstring{getMaterial()}{getMaterial()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1TangleCube_a7e8dbbfdbd29a61166e1e1a006e8b3eb} 
+const \mbox{\hyperlink{classRaytracer_1_1Material}{Material}} \& Raytracer\+::\+Tangle\+Cube\+::get\+Material (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the material of the \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube}. 
+
+\begin{DoxyReturn}{Returns}
+const \doxylink{classRaytracer_1_1Material}{Material}\& Reference to the \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube}\textquotesingle{}s material 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a4f3f11706602a77f7aa891adac0e6767}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1TangleCube_afdb1b144efa58f2e2190554f958834e8}\index{Raytracer::TangleCube@{Raytracer::TangleCube}!getNormal@{getNormal}}
+\index{getNormal@{getNormal}!Raytracer::TangleCube@{Raytracer::TangleCube}}
+\doxysubsubsection{\texorpdfstring{getNormal()}{getNormal()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1TangleCube_afdb1b144efa58f2e2190554f958834e8} 
+\mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} Raytracer\+::\+Tangle\+Cube\+::get\+Normal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}} \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculates the normal vector at a point on the \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube}. 
+
+For implicit surfaces, the normal is calculated as the gradient of the defining function at the given point.
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & The point on the \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube}\textquotesingle{}s surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classRaytracer_1_1Vector3}{Vector3} The normalized normal vector 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a03a1602232f80f319b587902a6884479}{Raytracer\+::\+IPrimitive}}.
+
+\Hypertarget{classRaytracer_1_1TangleCube_a1353f2a8318de33167f4183bbab37685}\index{Raytracer::TangleCube@{Raytracer::TangleCube}!intersect@{intersect}}
+\index{intersect@{intersect}!Raytracer::TangleCube@{Raytracer::TangleCube}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily \label{classRaytracer_1_1TangleCube_a1353f2a8318de33167f4183bbab37685} 
+bool Raytracer\+::\+Tangle\+Cube\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRaytracer_1_1Ray}{Ray}} \&}]{ray}{, }\item[{float \&}]{t}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Tests if a ray intersects with this \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube}. 
+
+Uses numerical methods (ray marching) to find intersections with the implicit surface. The intersection distance is stored in the parameter t if an intersection is found.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ray} & The ray to test for intersection \\
+\hline
+{\em t} & Output parameter that will contain the distance to intersection if found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true If the ray intersects with the \doxylink{classRaytracer_1_1TangleCube}{Tangle\+Cube} 
+
+false If no intersection is found 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRaytracer_1_1IPrimitive_a71209e0c7a44d5746c9796405b9d1787}{Raytracer\+::\+IPrimitive}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Primitives/\mbox{\hyperlink{TangleCube_8hpp}{Tangle\+Cube.\+hpp}}\item 
+src/\+Primitives/\mbox{\hyperlink{TangleCube_8cpp}{Tangle\+Cube.\+cpp}}\end{DoxyCompactItemize}

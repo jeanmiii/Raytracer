@@ -1,0 +1,28 @@
+\doxysection{Light\+Factory.\+hpp}
+\hypertarget{LightFactory_8hpp_source}{}\label{LightFactory_8hpp_source}\index{include/Factory/LightFactory.hpp@{include/Factory/LightFactory.hpp}}
+\mbox{\hyperlink{LightFactory_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ Raytracer}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ LightFactory.hpp}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ILight_8hpp}{Lights/ILight.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Vector3_8hpp}{Utils/Vector3.hpp}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceRaytracer}{Raytracer}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRaytracer_1_1LightFactory}{LightFactory}}\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<ILight>\ \mbox{\hyperlink{classRaytracer_1_1LightFactory_a97db84855b38129580de2986ffc3cde9}{createAmbientLight}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ position,\ \textcolor{keywordtype}{float}\ intensity\ =\ 0.1f);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<ILight>\ \mbox{\hyperlink{classRaytracer_1_1LightFactory_aa85eba4a2f2d208df0bda895eb86a2e4}{createPointLight}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ position,\ \textcolor{keywordtype}{float}\ intensity\ =\ 1.0f);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<ILight>\ \mbox{\hyperlink{classRaytracer_1_1LightFactory_a021ef6ed632f59dd6c9a7671191f6270}{createDirectionalLight}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ position,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classRaytracer_1_1Vector3}{Vector3}}\&\ direction,\ \textcolor{keywordtype}{float}\ intensity\ =\ 1.0f);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<ILight>\ \mbox{\hyperlink{classRaytracer_1_1LightFactory_a77b2593c6ec5a76a44f2ef7a134ec85f}{createCompositeLight}}();}
+\DoxyCodeLine{00028\ \ \ \};}
+\DoxyCodeLine{00029\ \}}
+
+\end{DoxyCode}
